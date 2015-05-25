@@ -83,6 +83,13 @@
 			name = Imagens;
 			sourceTree = "<group>";
 		};
+		8464AFFB1B13AB28004BC0B6 /* teste */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = teste;
+			sourceTree = "<group>";
+		};
 		EEFE52981B13911D008CC8F7 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +112,7 @@
 		EEFE52A31B13911D008CC8F7 /* Horta */ = {
 			isa = PBXGroup;
 			children = (
+				8464AFFB1B13AB28004BC0B6 /* teste */,
 				8464AFFA1B13A70A004BC0B6 /* Imagens */,
 				8464AFF91B13A6F3004BC0B6 /* Controladores */,
 				8464AFF71B13A6E1004BC0B6 /* Modelos */,
