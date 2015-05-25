@@ -12,6 +12,7 @@
 		8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */; };
 		8464B0051B13ACE8004BC0B6 /* UserDAODefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B0001B13ACE8004BC0B6 /* UserDAODefaults.swift */; };
 		8464B0061B13ACE8004BC0B6 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B0011B13ACE8004BC0B6 /* UserManager.swift */; };
+		8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B0071B13AD98004BC0B6 /* UserDAO.swift */; };
 		EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */; };
 		EEFE52AA1B13911D008CC8F7 /* Horta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A81B13911D008CC8F7 /* Horta.xcdatamodeld */; };
 		EEFE52AC1B13911D008CC8F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52AB1B13911D008CC8F7 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAOCloudKit.swift; path = Modelos/DAOs/UserDAOCloudKit.swift; sourceTree = "<group>"; };
 		8464B0001B13ACE8004BC0B6 /* UserDAODefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAODefaults.swift; path = Modelos/DAOs/UserDAODefaults.swift; sourceTree = "<group>"; };
 		8464B0011B13ACE8004BC0B6 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = Modelos/DAOs/UserManager.swift; sourceTree = "<group>"; };
+		8464B0071B13AD98004BC0B6 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAO.swift; path = Modelos/DAOs/UserDAO.swift; sourceTree = "<group>"; };
 		EEFE52A11B13911D008CC8F7 /* Horta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFE52A51B13911D008CC8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */,
 				8464B0001B13ACE8004BC0B6 /* UserDAODefaults.swift */,
 				8464B0011B13ACE8004BC0B6 /* UserManager.swift */,
+				8464B0071B13AD98004BC0B6 /* UserDAO.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */,
 				8464B0031B13ACE8004BC0B6 /* User.swift in Sources */,
 				8464B0061B13ACE8004BC0B6 /* UserManager.swift in Sources */,
+				8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

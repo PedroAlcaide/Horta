@@ -10,16 +10,21 @@ import UIKit
 import CloudKit
 class User {
     var name: String?
+    var surname: String?
     var email: String?
     var password: String?
     var recordID: CKRecordID?
+    
     init(){
         self.name = nil
+        self.surname = nil
         self.email = nil
         self.password = nil
+        
     }
-    init(name : String , email : String , password : String){
+    init(name : String, surname : String , email : String , password : String){
         self.name = name
+        self.surname = surname
         self.email = email
         self.password = password
     }

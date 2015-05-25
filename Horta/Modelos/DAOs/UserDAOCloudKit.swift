@@ -16,10 +16,12 @@ protocol UserDAOCKDelegate{
     func errorThrowed(error : NSError)
     func updateSuccesfull()
 }
-class UserDAOCloudKit: UserDAOProtocol{
+
+class UserDAOCloudKit: UserDAO{
     var container : CKContainer
     var publicDB : CKDatabase
-    let NAME = "FULL_NAME"
+    let NAME = "Nome"
+    let SURNAME = "Sobrenome"
     let EMAIL = "EMAIL"
     let PASSWORD = "PASSWORD"
     let USER = "USER"
@@ -30,9 +32,21 @@ class UserDAOCloudKit: UserDAOProtocol{
     }
     var delegate: UserDAOCKDelegate?
     
+    
 
-    func createUser(user: User){
-        var predicate = NSPredicate(format: "EMAIL = %@", String(user.email!))
+    func saveUser(user:User, urlPhoto:NSURL){
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    func createUser(newUser: User){
+        
+        var predicate = NSPredicate(format: "EMAIL = %@", String(newUser.email!))
         
         var query = CKQuery(recordType: USER, predicate: predicate)
         publicDB.performQuery(query, inZoneWithID: nil, completionHandler: {
@@ -45,7 +59,7 @@ class UserDAOCloudKit: UserDAOProtocol{
                     self.delegate?.saveUserFinished(false, user: nil)
                 }
                 else {
-                    self.insertUser(user)
+                    self.insertUser(newUser)
                 }
                 
             }
@@ -53,6 +67,7 @@ class UserDAOCloudKit: UserDAOProtocol{
         })
         
     }
+    /*
     func getUserWithEmail(email : String , password : String){
         var predicate = NSPredicate(format: "EMAIL = %@ && PASSWORD = %@", email , password)
         
@@ -77,9 +92,14 @@ class UserDAOCloudKit: UserDAOProtocol{
         })
         
     }
+    */
+    
+    
+    
     func insertUser(user : User){
         var record = CKRecord(recordType: USER)
         record.setObject(user.name, forKey: NAME)
+        record.setObject(user.surname, forKey: SURNAME)
         record.setObject(user.email, forKey: EMAIL)
         record.setObject(user.password, forKey: PASSWORD)
         var modify = CKModifyRecordsOperation()
@@ -97,16 +117,34 @@ class UserDAOCloudKit: UserDAOProtocol{
         })
         publicDB.addOperation(modify)
     }
+    
+    
     func updateUser(user : User){
-        publicDB.fetchRecordWithID(user.recordID, completionHandler: { (record , error) -> Void in
-            if error != nil {
-                self.delegate?.updateSuccesfull()
-            }
-            else {
+        
+        
+        publicDB.fetchRecordWithID(user.recordID, completionHandler: { (record, error) -> Void in
+            
+            
+            record.setObject(user.name, forKey: self.NAME)
+            record.setObject(user.surname, forKey: self.SURNAME)
+            record.setObject(user.email, forKey: self.EMAIL)
+            record.setObject(user.password, forKey: self.PASSWORD)
+            
+            if  error != nil{
+                
+                self.delegate?.saveUserFinished(true, user: user)
+                
+                
+            }else{
                 self.delegate?.errorThrowed(error)
             }
+            
         })
+        
     }
+    
 }
+    
+
 
 

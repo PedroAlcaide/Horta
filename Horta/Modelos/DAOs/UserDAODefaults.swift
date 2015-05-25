@@ -7,8 +7,9 @@
 //
 
 import Foundation
-protocol UserDAODDelegate{
-    
+@objc protocol UserDAODDelegate{
+    optional
+    func faznada()
 }
 class UserDAODefaults{
     let NAME = "NAME"
