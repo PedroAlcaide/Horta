@@ -62,6 +62,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8464AFF71B13A6E1004BC0B6 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Modelos;
+			sourceTree = "<group>";
+		};
+		8464AFF91B13A6F3004BC0B6 /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controladores;
+			sourceTree = "<group>";
+		};
+		8464AFFA1B13A70A004BC0B6 /* Imagens */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Imagens;
+			sourceTree = "<group>";
+		};
 		EEFE52981B13911D008CC8F7 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +105,9 @@
 		EEFE52A31B13911D008CC8F7 /* Horta */ = {
 			isa = PBXGroup;
 			children = (
+				8464AFFA1B13A70A004BC0B6 /* Imagens */,
+				8464AFF91B13A6F3004BC0B6 /* Controladores */,
+				8464AFF71B13A6E1004BC0B6 /* Modelos */,
 				EEFE52C91B13A1C3008CC8F7 /* Horta.entitlements */,
 				EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */,
 				EEFE52AB1B13911D008CC8F7 /* ViewController.swift */,
@@ -433,6 +457,7 @@
 				EEFE52C51B13911D008CC8F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EEFE52C61B13911D008CC8F7 /* Build configuration list for PBXNativeTarget "HortaTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +466,7 @@
 				EEFE52C81B13911D008CC8F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
