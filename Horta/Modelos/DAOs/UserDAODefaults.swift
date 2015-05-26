@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CloudKit
+
 @objc protocol UserDAODDelegate{
     optional
     func faznada()
@@ -19,6 +21,8 @@ class UserDAODefaults{
     let RECORDID = "RECORDID"
     var delegate :UserDAODDelegate?
     let userDefaults = NSUserDefaults.standardUserDefaults()
+    
+    
     func saveUser(user: User){
         userDefaults.setValue(user.email, forKey: EMAIL)
         userDefaults.setValue(user.name, forKey: NAME)
@@ -27,12 +31,15 @@ class UserDAODefaults{
         userDefaults.setValue(user.recordID?.recordName, forKey: RECORDID)
         
     }
-    func getUserLogged() -> User{
-        let nameSave : String =  userDefaults.objectForKey(NAME) as! String
-        let surnameSave : String = userDefaults.objectForKey(SURNAME) as! String
-        let emailSave : String = userDefaults.objectForKey(EMAIL) as! String
-        let passwordSave : String = userDefaults.objectForKey(PASSWORD) as! String
-        var user : User = User(name: nameSave,surname :surnameSave ,email: emailSave, password: passwordSave)
+    
+    
+    func getUserLogged(user : User) -> User{
+        
+        user.name = userDefaults.objectForKey(NAME) as? String
+        user.surname = userDefaults.objectForKey(SURNAME) as? String
+        user.email = userDefaults.objectForKey(EMAIL) as? String
+        user.password = userDefaults.objectForKey(PASSWORD) as? String
+        user.recordID = userDefaults.objectForKey(RECORDID) as? CKRecordID
         return user
     }
 }

@@ -10,11 +10,17 @@ import Foundation
 import CloudKit
 
 protocol UserDAOCKDelegate{
+
+
+    func saveSuccefull(user:User)
+/*
     func getUserWithPassword(user : User , password : String)
     func saveUserFinished(validate : Bool , user : User!)
     func getUserFinished(user : User! )
     func errorThrowed(error : NSError)
     func updateSuccesfull()
+
+*/
 }
 
 class UserDAOCloudKit: UserDAO{
@@ -53,10 +59,10 @@ class UserDAOCloudKit: UserDAO{
             (records: [AnyObject]!, error: NSError!) in
             
             if error != nil{
-                self.delegate?.errorThrowed(error)
+                //self.delegate?.errorThrowed(error)
             } else {
                 if records.count != 0 {
-                    self.delegate?.saveUserFinished(false, user: nil)
+                    //self.delegate?.saveUserFinished(false, user: nil)
                 }
                 else {
                     self.insertUser(newUser)
@@ -108,11 +114,12 @@ class UserDAOCloudKit: UserDAO{
         publicDB.saveRecord(record, completionHandler: { (record, error) in
             
             if error != nil {
-                self.delegate?.errorThrowed(error)
+                //self.delegate?.errorThrowed(error)
                 
             } else {
-                
-                self.delegate?.saveUserFinished(true, user: user)
+                user.recordID = record.recordID
+                self.delegate?.saveSuccefull(user)
+                //self.delegate?.saveUserFinished(true, user: user)
             }
         })
         publicDB.addOperation(modify)
@@ -132,11 +139,11 @@ class UserDAOCloudKit: UserDAO{
             
             if  error != nil{
                 
-                self.delegate?.saveUserFinished(true, user: user)
+                //self.delegate?.saveUserFinished(true, user: user)
                 
                 
             }else{
-                self.delegate?.errorThrowed(error)
+                //self.delegate?.errorThrowed(error)
             }
             
         })

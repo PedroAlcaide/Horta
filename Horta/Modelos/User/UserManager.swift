@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserManager {
+class UserManager : UserDAOCKDelegate{
     
     var daoCloudKit : UserDAOCloudKit
     var daoDefaults : UserDAODefaults
@@ -32,5 +32,21 @@ class UserManager {
         daoCloudKit.createUser(user)
         
     }
+    
+    
+    func getUserLogged(user:User)->User{
+        
+       return daoDefaults.getUserLogged(user)
+        
+    }
+    
+    // UserDAOCloudKit Delegate
+    
+    func saveSuccefull(user: User) {
+        daoDefaults.saveUser(user)
+        
+    }
+    
+    
     
 }
