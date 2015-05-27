@@ -2,12 +2,25 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb104617583208830</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookDisplayName</key>
+	<string>Hortas Comunitarias</string>
+	<key>FacebookAppID</key>
+	<string>104617583208830</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>Alcaide.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>Senac.BEPiD.MiniChallenge.02.$(PRODUCT_NAME:rfc1034identifier)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

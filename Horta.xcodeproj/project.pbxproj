@@ -20,6 +20,8 @@
 		84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF041B1649E300E66A13 /* UserNotFound.swift */; };
 		84F7FF071B164B5300E66A13 /* UnconnectedIcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF061B164B5300E66A13 /* UnconnectedIcloud.swift */; };
 		84F7FF091B164BF400E66A13 /* ExceptionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF081B164BF400E66A13 /* ExceptionFactory.swift */; };
+		D600350D1B165919008C9962 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D600350B1B165919008C9962 /* FBSDKCoreKit.framework */; };
+		D600350E1B165919008C9962 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D600350C1B165919008C9962 /* FBSDKLoginKit.framework */; };
 		EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */; };
 		EEFE52AA1B13911D008CC8F7 /* Horta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A81B13911D008CC8F7 /* Horta.xcdatamodeld */; };
 		EEFE52AC1B13911D008CC8F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52AB1B13911D008CC8F7 /* ViewController.swift */; };
@@ -54,6 +56,8 @@
 		84F7FF041B1649E300E66A13 /* UserNotFound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserNotFound.swift; path = Modelos/Tools/Exceptions/UserNotFound.swift; sourceTree = "<group>"; };
 		84F7FF061B164B5300E66A13 /* UnconnectedIcloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnconnectedIcloud.swift; path = Modelos/Tools/Exceptions/UnconnectedIcloud.swift; sourceTree = "<group>"; };
 		84F7FF081B164BF400E66A13 /* ExceptionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionFactory.swift; path = Modelos/Tools/Exceptions/ExceptionFactory.swift; sourceTree = "<group>"; };
+		D600350B1B165919008C9962 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		D600350C1B165919008C9962 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		EEFE52A11B13911D008CC8F7 /* Horta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFE52A51B13911D008CC8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEFE52CB1B13A1CD008CC8F7 /* CloudKit.framework in Frameworks */,
+				D600350D1B165919008C9962 /* FBSDKCoreKit.framework in Frameworks */,
+				D600350E1B165919008C9962 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +163,8 @@
 		EEFE52981B13911D008CC8F7 = {
 			isa = PBXGroup;
 			children = (
+				D600350B1B165919008C9962 /* FBSDKCoreKit.framework */,
+				D600350C1B165919008C9962 /* FBSDKLoginKit.framework */,
 				EEFE52CA1B13A1CD008CC8F7 /* CloudKit.framework */,
 				EEFE52A31B13911D008CC8F7 /* Horta */,
 				EEFE52BC1B13911D008CC8F7 /* HortaTests */,
@@ -265,7 +273,6 @@
 				TargetAttributes = {
 					EEFE52A01B13911D008CC8F7 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = FH5CMKBGNN;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -467,6 +474,10 @@
 				CODE_SIGN_ENTITLEMENTS = Horta/Horta.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/felipedeluca_bepid/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Horta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -481,6 +492,10 @@
 				CODE_SIGN_ENTITLEMENTS = Horta/Horta.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/felipedeluca_bepid/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = Horta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
