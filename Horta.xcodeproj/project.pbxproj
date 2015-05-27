@@ -36,6 +36,8 @@
 		EEFE52B41B13911D008CC8F7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFE52B21B13911D008CC8F7 /* LaunchScreen.xib */; };
 		EEFE52C01B13911D008CC8F7 /* HortaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52BF1B13911D008CC8F7 /* HortaTests.swift */; };
 		EEFE52CB1B13A1CD008CC8F7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEFE52CA1B13A1CD008CC8F7 /* CloudKit.framework */; };
+D600350D1B165919008C9962 /* FBSDKCoreKit.framework in Frameworks */,
+D600350E1B165919008C9962 /* FBSDKLoginKit.framework in Frameworks */,
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +111,9 @@
 		8464AFF71B13A6E1004BC0B6 /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
-				84F7FF0E1B16646000E66A13 /* Product */,
+D600350B1B165919008C9962 /* FBSDKCoreKit.framework */,
+D600350C1B165919008C9962 /* FBSDKLoginKit.framework */,
+84F7FF0E1B16646000E66A13 /* Product */,
 				D691FF581B16658C00D413FC /* Login */,
 				84F7FEF61B163FFF00E66A13 /* Tools */,
 				84C62CED1B14F1AF00DBC5E0 /* User */,
