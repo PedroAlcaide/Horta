@@ -121,7 +121,7 @@ class UserDAOCloudKit: UserDAO{
         publicDB.saveRecord(record, completionHandler: { (record, error) in
             
             if error != nil {
-                //self.delegate?.errorThrowed(error)
+                self.delegate?.errorThrowed(error)
                 
             } else {
                 user.recordID = record.recordID
