@@ -13,11 +13,13 @@ protocol UserDAOCKDelegate{
 
 
     func saveSuccefull(user:User)
+    func errorThrowed(error : NSError)
+    
 /*
     func getUserWithPassword(user : User , password : String)
     func saveUserFinished(validate : Bool , user : User!)
     func getUserFinished(user : User! )
-    func errorThrowed(error : NSError)
+    
     func updateSuccesfull()
 
 */
@@ -39,18 +41,7 @@ class UserDAOCloudKit: UserDAO{
     var delegate: UserDAOCKDelegate?
     
     
-
-    func saveUser(user:User, urlPhoto:NSURL){
-        
-        
-        
-        
-        
-        
-    }
-    
-    
-    func createUser(newUser: User){
+    func consultUserEmail(newUser: User,aux:Int){
         
         var predicate = NSPredicate(format: "EMAIL = %@", String(newUser.email!))
         
@@ -65,7 +56,16 @@ class UserDAOCloudKit: UserDAO{
                     //self.delegate?.saveUserFinished(false, user: nil)
                 }
                 else {
-                    self.insertUser(newUser)
+                    
+                    switch (aux){
+                    case 1:
+                        self.saveUser(newUser)
+                        break
+                    default:
+                        self.updateUser(newUser)
+                    }
+                    
+                    
                 }
                 
             }
@@ -73,7 +73,7 @@ class UserDAOCloudKit: UserDAO{
         })
         
     }
-    /*
+    
     func getUserWithEmail(email : String , password : String){
         var predicate = NSPredicate(format: "EMAIL = %@ && PASSWORD = %@", email , password)
         
@@ -82,15 +82,22 @@ class UserDAOCloudKit: UserDAO{
             (records: [AnyObject]!, error: NSError!) in
             
             if error != nil{
-                self.delegate?.errorThrowed(error)
+                //self.delegate?.errorThrowed(error)
             } else {
                 if records.count != 0 {
+                    
+                    // retorno Login Efetuado
+                    
+                    
+                    /*
                     var record: CKRecord = records[0] as! CKRecord
                     var user : User = User(name: record.objectForKey("NAME") as! String, email: record.objectForKey("EMAIL") as! String, password: record.objectForKey("PASSWORD") as! String)
-                    self.delegate?.getUserFinished(user)
+                    //self.delegate?.getUserFinished(user) */
                 }
                 else {
-                    self.delegate?.getUserFinished(nil)
+                    
+                    // usuário ou senha incorretos
+                    //self.delegate?.getUserFinished(nil)
                 }
                 
             }
@@ -98,11 +105,11 @@ class UserDAOCloudKit: UserDAO{
         })
         
     }
-    */
+
     
     
     
-    func insertUser(user : User){
+    func saveUser(user : User){
         var record = CKRecord(recordType: USER)
         record.setObject(user.name, forKey: NAME)
         record.setObject(user.surname, forKey: SURNAME)
@@ -139,11 +146,12 @@ class UserDAOCloudKit: UserDAO{
             
             if  error != nil{
                 
+                self.delegate?.saveSuccefull(user)
                 //self.delegate?.saveUserFinished(true, user: user)
                 
                 
             }else{
-                //self.delegate?.errorThrowed(error)
+                self.delegate?.errorThrowed(error)
             }
             
         })

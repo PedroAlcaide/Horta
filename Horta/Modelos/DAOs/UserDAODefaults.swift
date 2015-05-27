@@ -29,7 +29,7 @@ class UserDAODefaults{
         userDefaults.setValue(user.surname, forKey: SURNAME)
         userDefaults.setValue(user.password, forKey: PASSWORD)
         userDefaults.setValue(user.recordID?.recordName, forKey: RECORDID)
-        
+        userDefaults.synchronize()
     }
     
     

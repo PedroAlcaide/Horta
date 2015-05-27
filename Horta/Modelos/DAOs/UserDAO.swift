@@ -11,9 +11,10 @@ import CloudKit
 
  protocol UserDAO{
     
-    //func saveUser(user:User)
-    func saveUser(user:User, urlPhoto:NSURL)
-    func createUser(newUser :User)
+    func saveUser(user:User)
+    func updateUser(user : User)
+    //func saveUser(user:User, urlPhoto:NSURL)
+    //func createUser(newUser :User)
     //func getUserWithEmail(email:String, password:String)
     //func getUserWithId(iduser:CKRecord)
    

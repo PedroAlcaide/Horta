@@ -13,6 +13,13 @@
 		8464B0051B13ACE8004BC0B6 /* UserDAODefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B0001B13ACE8004BC0B6 /* UserDAODefaults.swift */; };
 		8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B0071B13AD98004BC0B6 /* UserDAO.swift */; };
 		84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */; };
+		84F7FEFA1B16420900E66A13 /* CloudKitException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FEF91B16420900E66A13 /* CloudKitException.swift */; };
+		84F7FEFF1B16447100E66A13 /* DivergenceException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FEFE1B16447100E66A13 /* DivergenceException.swift */; };
+		84F7FF011B1647C500E66A13 /* EmptyFieldException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF001B1647C500E66A13 /* EmptyFieldException.swift */; };
+		84F7FF031B16488600E66A13 /* OutOfBoundsException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF021B16488600E66A13 /* OutOfBoundsException.swift */; };
+		84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF041B1649E300E66A13 /* UserNotFound.swift */; };
+		84F7FF071B164B5300E66A13 /* UnconnectedIcloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF061B164B5300E66A13 /* UnconnectedIcloud.swift */; };
+		84F7FF091B164BF400E66A13 /* ExceptionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF081B164BF400E66A13 /* ExceptionFactory.swift */; };
 		EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */; };
 		EEFE52AA1B13911D008CC8F7 /* Horta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A81B13911D008CC8F7 /* Horta.xcdatamodeld */; };
 		EEFE52AC1B13911D008CC8F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52AB1B13911D008CC8F7 /* ViewController.swift */; };
@@ -40,6 +47,13 @@
 		8464B0001B13ACE8004BC0B6 /* UserDAODefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAODefaults.swift; path = Modelos/DAOs/UserDAODefaults.swift; sourceTree = "<group>"; };
 		8464B0071B13AD98004BC0B6 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAO.swift; path = Modelos/DAOs/UserDAO.swift; sourceTree = "<group>"; };
 		84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = Modelos/User/UserManager.swift; sourceTree = "<group>"; };
+		84F7FEF91B16420900E66A13 /* CloudKitException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitException.swift; path = Modelos/Tools/Exceptions/CloudKitException.swift; sourceTree = "<group>"; };
+		84F7FEFE1B16447100E66A13 /* DivergenceException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DivergenceException.swift; path = Modelos/Tools/Exceptions/DivergenceException.swift; sourceTree = "<group>"; };
+		84F7FF001B1647C500E66A13 /* EmptyFieldException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyFieldException.swift; path = Modelos/Tools/Exceptions/EmptyFieldException.swift; sourceTree = "<group>"; };
+		84F7FF021B16488600E66A13 /* OutOfBoundsException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OutOfBoundsException.swift; path = Modelos/Tools/Exceptions/OutOfBoundsException.swift; sourceTree = "<group>"; };
+		84F7FF041B1649E300E66A13 /* UserNotFound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserNotFound.swift; path = Modelos/Tools/Exceptions/UserNotFound.swift; sourceTree = "<group>"; };
+		84F7FF061B164B5300E66A13 /* UnconnectedIcloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnconnectedIcloud.swift; path = Modelos/Tools/Exceptions/UnconnectedIcloud.swift; sourceTree = "<group>"; };
+		84F7FF081B164BF400E66A13 /* ExceptionFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExceptionFactory.swift; path = Modelos/Tools/Exceptions/ExceptionFactory.swift; sourceTree = "<group>"; };
 		EEFE52A11B13911D008CC8F7 /* Horta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFE52A51B13911D008CC8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +91,7 @@
 		8464AFF71B13A6E1004BC0B6 /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				84F7FEF61B163FFF00E66A13 /* Tools */,
 				84C62CED1B14F1AF00DBC5E0 /* User */,
 				8464AFFC1B13AC15004BC0B6 /* DAO */,
 			);
@@ -115,6 +130,28 @@
 				84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		84F7FEF61B163FFF00E66A13 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				84F7FEFB1B1642EC00E66A13 /* Exceptions */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		84F7FEFB1B1642EC00E66A13 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				84F7FEF91B16420900E66A13 /* CloudKitException.swift */,
+				84F7FEFE1B16447100E66A13 /* DivergenceException.swift */,
+				84F7FF001B1647C500E66A13 /* EmptyFieldException.swift */,
+				84F7FF021B16488600E66A13 /* OutOfBoundsException.swift */,
+				84F7FF041B1649E300E66A13 /* UserNotFound.swift */,
+				84F7FF061B164B5300E66A13 /* UnconnectedIcloud.swift */,
+				84F7FF081B164BF400E66A13 /* ExceptionFactory.swift */,
+			);
+			name = Exceptions;
 			sourceTree = "<group>";
 		};
 		EEFE52981B13911D008CC8F7 = {
@@ -285,15 +322,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F7FEFA1B16420900E66A13 /* CloudKitException.swift in Sources */,
+				84F7FF071B164B5300E66A13 /* UnconnectedIcloud.swift in Sources */,
 				EEFE52AC1B13911D008CC8F7 /* ViewController.swift in Sources */,
+				84F7FF011B1647C500E66A13 /* EmptyFieldException.swift in Sources */,
 				EEFE52AA1B13911D008CC8F7 /* Horta.xcdatamodeld in Sources */,
 				8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */,
 				8464B0051B13ACE8004BC0B6 /* UserDAODefaults.swift in Sources */,
 				EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */,
+				84F7FF091B164BF400E66A13 /* ExceptionFactory.swift in Sources */,
+				84F7FEFF1B16447100E66A13 /* DivergenceException.swift in Sources */,
 				8464B0031B13ACE8004BC0B6 /* User.swift in Sources */,
 				8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */,
+				84F7FF031B16488600E66A13 /* OutOfBoundsException.swift in Sources */,
 				84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,
+				84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

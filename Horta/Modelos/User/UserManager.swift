@@ -8,10 +8,19 @@
 
 import Foundation
 
+
+protocol UserManagerDelegate{
+    
+    
+    func errorThrowed(error:NSError)
+    
+}
+
 class UserManager : UserDAOCKDelegate{
     
     var daoCloudKit : UserDAOCloudKit
     var daoDefaults : UserDAODefaults
+    var delegate :UserManagerDelegate?
     
     init(){
         
@@ -29,14 +38,19 @@ class UserManager : UserDAOCKDelegate{
     
     func saveUser(user:User){
         
-        daoCloudKit.createUser(user)
+        daoCloudKit.consultUserEmail(user, aux: 1)
+    }
+    
+    func editUser(user:User){
+        
+        daoCloudKit.consultUserEmail(user, aux: 2)
         
     }
     
     
-    func getUserLogged(user:User)->User{
+    func getUserLogged()->User{
         
-       return daoDefaults.getUserLogged(user)
+        return daoDefaults.getUserLogged(self.creatuser())
         
     }
     
@@ -45,6 +59,10 @@ class UserManager : UserDAOCKDelegate{
     func saveSuccefull(user: User) {
         daoDefaults.saveUser(user)
         
+    }
+    
+    func errorThrowed(error: NSError) {
+        self.delegate?.errorThrowed(error)
     }
     
     
