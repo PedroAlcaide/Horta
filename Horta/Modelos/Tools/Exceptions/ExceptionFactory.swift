@@ -35,5 +35,11 @@ class ExceptionFactory {
         
     }
     
+    func getUnconnected(reason:String)->UnconnectedICloud{
+        
+        return UnconnectedICloud().initWithReason(reason) as! UnconnectedICloud
+        
+    }
+    
     
 }

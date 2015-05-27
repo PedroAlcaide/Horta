@@ -14,6 +14,11 @@ class DaoFactory {
     func getUserDAODefaults()->UserDAODefaults{
         return UserDAODefaults()
     }
+    
+    func getProductCloudKit()->ProductDAOCloudKit{
+        return ProductDAOCloudKit()
+    }
+    
 }
 
 //+(UserDAOCloudKit*)getUserDAOCloudKit;
