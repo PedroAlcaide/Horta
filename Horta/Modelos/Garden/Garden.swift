@@ -13,7 +13,7 @@ class Garden {
     
     var recordID : CKRecordID?
     var name : String?
-    var address : Address?
+    var address : CKReference?
     var photo : NSData?
     
     
