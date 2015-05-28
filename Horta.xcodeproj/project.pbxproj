@@ -17,6 +17,7 @@
 		84F5D3631B16BA4500D8304C /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D3621B16BA4500D8304C /* Garden.swift */; };
 		84F5D3661B16BBEE00D8304C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D3651B16BBEE00D8304C /* Address.swift */; };
 		84F5D36A1B16C4B400D8304C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F5D3691B16C4B400D8304C /* CloudKit.framework */; };
+		84F5D36C1B16C5F500D8304C /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F5D36B1B16C5F500D8304C /* iphone.png */; };
 		84F7FEFA1B16420900E66A13 /* CloudKitException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FEF91B16420900E66A13 /* CloudKitException.swift */; };
 		84F7FEFF1B16447100E66A13 /* DivergenceException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FEFE1B16447100E66A13 /* DivergenceException.swift */; };
 		84F7FF011B1647C500E66A13 /* EmptyFieldException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF001B1647C500E66A13 /* EmptyFieldException.swift */; };
@@ -61,6 +62,7 @@
 		84F5D3621B16BA4500D8304C /* Garden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Garden.swift; path = Modelos/Garden/Garden.swift; sourceTree = "<group>"; };
 		84F5D3651B16BBEE00D8304C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Modelos/Others/Address.swift; sourceTree = "<group>"; };
 		84F5D3691B16C4B400D8304C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		84F5D36B1B16C5F500D8304C /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone.png; path = Imagens/iphone.png; sourceTree = "<group>"; };
 		84F7FEF91B16420900E66A13 /* CloudKitException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitException.swift; path = Modelos/Tools/Exceptions/CloudKitException.swift; sourceTree = "<group>"; };
 		84F7FEFE1B16447100E66A13 /* DivergenceException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DivergenceException.swift; path = Modelos/Tools/Exceptions/DivergenceException.swift; sourceTree = "<group>"; };
 		84F7FF001B1647C500E66A13 /* EmptyFieldException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyFieldException.swift; path = Modelos/Tools/Exceptions/EmptyFieldException.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 		EEFE52A31B13911D008CC8F7 /* Horta */ = {
 			isa = PBXGroup;
 			children = (
+				84F5D36B1B16C5F500D8304C /* iphone.png */,
 				8464AFFA1B13A70A004BC0B6 /* Imagens */,
 				8464AFF91B13A6F3004BC0B6 /* Controladores */,
 				8464AFF71B13A6E1004BC0B6 /* Modelos */,
@@ -366,6 +369,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F5D36C1B16C5F500D8304C /* iphone.png in Resources */,
 				EEFE52AF1B13911D008CC8F7 /* Main.storyboard in Resources */,
 				EEFE52B41B13911D008CC8F7 /* LaunchScreen.xib in Resources */,
 				EEFE52B11B13911D008CC8F7 /* Images.xcassets in Resources */,

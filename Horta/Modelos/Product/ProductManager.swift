@@ -49,4 +49,9 @@ class ProductManager : ProductDAOCKDelegate {
     }
     
     
+    
+//    var image = UIImage(named: "iphone.png")
+//    var data = UIImagePNGRepresentation(image)
+    
+    
 }
