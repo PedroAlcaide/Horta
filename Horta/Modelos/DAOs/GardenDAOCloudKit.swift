@@ -45,7 +45,7 @@ class GardenDAOCLoudKit {
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
-            if  error != nil
+            //if  error != nil
             
             
             
