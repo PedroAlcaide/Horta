@@ -19,6 +19,14 @@ class DaoFactory {
         return ProductDAOCloudKit()
     }
     
+    func getGardenDAOCloudKit()->GardenDAOCLoudKit{
+        return GardenDAOCLoudKit()
+    }
+    
+    func getAddressDAOCloudKit()->AddressDAOCLoudKit{
+        return AddressDAOCLoudKit()
+    }
+    
 }
 
 //+(UserDAOCloudKit*)getUserDAOCloudKit;

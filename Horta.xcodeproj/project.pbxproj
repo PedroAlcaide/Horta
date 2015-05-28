@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84024FD31B17982B0089B9DD /* GardenDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD21B17982B0089B9DD /* GardenDB.swift */; };
+		84024FD51B1799980089B9DD /* AddressDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD41B1799980089B9DD /* AddressDAOCloudKit.swift */; };
+		84024FD71B17A2520089B9DD /* GardenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD61B17A2520089B9DD /* GardenManager.swift */; };
+		84024FD91B17A2E90089B9DD /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD81B17A2E90089B9DD /* AddressManager.swift */; };
 		8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFD1B13ACE8004BC0B6 /* DaoFactory.swift */; };
 		8464B0031B13ACE8004BC0B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFE1B13ACE8004BC0B6 /* User.swift */; };
 		8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */; };
@@ -53,6 +57,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		84024FD21B17982B0089B9DD /* GardenDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenDB.swift; path = Modelos/Garden/GardenDB.swift; sourceTree = "<group>"; };
+		84024FD41B1799980089B9DD /* AddressDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressDAOCloudKit.swift; path = Modelos/DAOs/AddressDAOCloudKit.swift; sourceTree = "<group>"; };
+		84024FD61B17A2520089B9DD /* GardenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenManager.swift; path = Modelos/Garden/GardenManager.swift; sourceTree = "<group>"; };
+		84024FD81B17A2E90089B9DD /* AddressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressManager.swift; path = Modelos/Others/AddressManager.swift; sourceTree = "<group>"; };
 		8464AFFD1B13ACE8004BC0B6 /* DaoFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DaoFactory.swift; path = Modelos/DAOs/DaoFactory.swift; sourceTree = "<group>"; };
 		8464AFFE1B13ACE8004BC0B6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Modelos/DAOs/User.swift; sourceTree = "<group>"; };
 		8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAOCloudKit.swift; path = Modelos/DAOs/UserDAOCloudKit.swift; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 				8464B0071B13AD98004BC0B6 /* UserDAO.swift */,
 				84F7FF0C1B165DB500E66A13 /* ProductDAOCloudKit.swift */,
 				84F5D36D1B16CA7200D8304C /* GardenDAOCloudKit.swift */,
+				84024FD41B1799980089B9DD /* AddressDAOCloudKit.swift */,
 			);
 			name = DAO;
 			sourceTree = "<group>";
@@ -177,6 +186,8 @@
 			isa = PBXGroup;
 			children = (
 				84F5D3621B16BA4500D8304C /* Garden.swift */,
+				84024FD21B17982B0089B9DD /* GardenDB.swift */,
+				84024FD61B17A2520089B9DD /* GardenManager.swift */,
 			);
 			name = Garden;
 			sourceTree = "<group>";
@@ -185,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				84F5D3651B16BBEE00D8304C /* Address.swift */,
+				84024FD81B17A2E90089B9DD /* AddressManager.swift */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -403,6 +415,7 @@
 				84F5D3661B16BBEE00D8304C /* Address.swift in Sources */,
 				84F7FF0D1B165DB500E66A13 /* ProductDAOCloudKit.swift in Sources */,
 				84F7FF0B1B165C4400E66A13 /* Product.swift in Sources */,
+				84024FD71B17A2520089B9DD /* GardenManager.swift in Sources */,
 				8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */,
 				84F7FF101B1664ED00E66A13 /* ProductManager.swift in Sources */,
 				84F5D3601B16B89A00D8304C /* Plat.swift in Sources */,
@@ -413,11 +426,14 @@
 				84F7FF091B164BF400E66A13 /* ExceptionFactory.swift in Sources */,
 				84F7FEFF1B16447100E66A13 /* DivergenceException.swift in Sources */,
 				8464B0031B13ACE8004BC0B6 /* User.swift in Sources */,
+				84024FD91B17A2E90089B9DD /* AddressManager.swift in Sources */,
 				8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */,
 				84F7FF031B16488600E66A13 /* OutOfBoundsException.swift in Sources */,
+				84024FD31B17982B0089B9DD /* GardenDB.swift in Sources */,
 				84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,
 				84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */,
+				84024FD51B1799980089B9DD /* AddressDAOCloudKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

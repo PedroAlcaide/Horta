@@ -22,7 +22,7 @@ class GardenDAOCLoudKit {
     var delegate : GardenDAOCKDelegate?
     let NAME = "Nome"
     let PHOTO = "Foto"
-    let GARDEN = "Garden"
+    let GARDENDB = "GardenDB"
     let ADDRESS = "Endereco"
     
     
@@ -32,9 +32,10 @@ class GardenDAOCLoudKit {
         publicBD = container.publicCloudDatabase
     }
     
-    func saveGarden(newGarden:Garden){
+    
+    func saveGardenBD(newGarden:GardenDB){
         
-        var record = CKRecord(recordType: GARDEN)
+        var record = CKRecord(recordType: GARDENDB)
         record.setObject(newGarden.name, forKey: NAME)
         record.setObject(newGarden.address, forKey: ADDRESS)
         record.setObject(newGarden.photo, forKey: PHOTO)
@@ -45,13 +46,15 @@ class GardenDAOCLoudKit {
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
-            //if  error != nil
-            
-            
+            if  (error != nil){
+                self.delegate?.errorThrowed(error)
+            }else{
+                print("Gravou")
+            }
             
         })
         
-        
+        publicBD.addOperation(modify)
         
     }
     

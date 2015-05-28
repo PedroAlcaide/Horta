@@ -49,6 +49,8 @@ class ProductDAOCloudKit{
             
             if error != nil{
                 self.delegate?.errorThrowed(error)
+            }else{
+                print("gravou produto")
             }
         })
         publicDB.addOperation(modify)
