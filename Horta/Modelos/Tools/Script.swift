@@ -20,9 +20,8 @@ class Script {
             user.email = "email\(i)@gmail.com"
             user.password = "password\(i)"
             
-            UserManager().saveUser(user)
+            UserManager().rodaScript(user)
         }
-        
         
     }
     

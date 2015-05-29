@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        Script().generateUsersData(10)
+        UserManager().toAuthentication("email0@gmail.com", password: "password0")
     }
 
     override func didReceiveMemoryWarning() {
