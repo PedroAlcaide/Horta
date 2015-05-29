@@ -11,15 +11,17 @@ import UIKit
 class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     
     
-        @IBOutlet var scrollView: UIScrollView!
-        @IBOutlet var pageControl: UIPageControl!
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var pageControl: UIPageControl!
     
     var pageImages: [UIImage] = []
     var pageViews: [UIImageView?] = []
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        scrollView.delegate = self
         // 1
         pageImages = [UIImage(named: "photo1.png")!,
             UIImage(named: "photo2.png")!,
@@ -34,7 +36,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         pageControl.numberOfPages = pageCount
         
         // 3
-        for width in 0..<pageCount {
+        for _ in 0..<pageCount {
             pageViews.append(nil)
         }
         
@@ -46,45 +48,6 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         // 5
         loadVisiblePages()
     }
-
-    func loadPage(page: Int) {
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        
-        // 1
-        if let pageView = pageViews[page] {
-            // Do nothing. The view is already loaded.
-        } else {
-            // 2
-            var frame = scrollView.bounds
-            frame.origin.x = frame.size.width * CGFloat(page)
-            frame.origin.y = 0.0
-            
-            // 3
-            let newPageView = UIImageView(image: pageImages[page])
-            newPageView.contentMode = .ScaleAspectFit
-            newPageView.frame = frame
-            scrollView.addSubview(newPageView)
-            
-            // 4
-            pageViews[page] = newPageView
-        }
-    }
-    
-    func purgePage(page: Int) {
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        
-        // Remove a page from the scroll view and reset the container array
-        if let pageView = pageViews[page] {
-            pageView.removeFromSuperview()
-            pageViews[page] = nil
-        }
-    }
     
     func loadVisiblePages() {
         // First, determine which page is currently visible
@@ -94,9 +57,10 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         // Update the page control
         pageControl.currentPage = page
         
+        
         // Work out which pages you want to load
-        let firstPage = page + 1
-        let lastPage = page - 1
+        let firstPage = page - 1
+        let lastPage = page + 1
         
         // Purge anything before the first page
         for var index = 0; index < firstPage; ++index {
@@ -114,28 +78,63 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func loadPage(page: Int) {
+        if page < 0 || page >= pageImages.count {
+            // If it's outside the range of what you have to display, then do nothing
+            return
+        }
+        
+        // Load an individual page, first checking if you've already loaded it
+        if let pageView = pageViews[page] {
+            // Do nothing. The view is already loaded.
+        } else {
+            var frame = scrollView.bounds
+            frame.origin.x = frame.size.width * CGFloat(page)
+            frame.origin.y = 0.0
+            frame = CGRectInset(frame, 10.0, 0.0)
+            
+            let newPageView = UIImageView(image: pageImages[page])
+            newPageView.contentMode = .ScaleAspectFit
+            newPageView.frame = frame
+            scrollView.addSubview(newPageView)
+            pageViews[page] = newPageView
+        }
+    }
+    
+    func purgePage(page: Int) {
+        if page < 0 || page >= pageImages.count {
+            // If it's outside the range of what you have to display, then do nothing
+            return
+        }
+        
+        // Remove a page from the scroll view and reset the container array
+        if let pageView = pageViews[page] {
+            pageView.removeFromSuperview()
+            pageViews[page] = nil
+        }
+    }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         // Load the pages that are now on screen
         loadVisiblePages()
     }
-        // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
     
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
