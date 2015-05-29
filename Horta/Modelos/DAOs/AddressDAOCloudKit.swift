@@ -13,7 +13,7 @@ protocol AddressDAOCKDelegate{
     
     func errorThrowed(error:NSError)
     func saveSuccessfull(newAddress:Address)
-    func updateSuccessfull(address:Address)
+    func updateSuccessfull()
     
 }
 
@@ -74,7 +74,8 @@ class AddressDAOCLoudKit {
                 self.delegate?.errorThrowed(error)
                 
             }else{
-                self.delegate?.updateSuccessfull(address)
+                self.delegate?.updateSuccessfull()
+                print("atualizou endereco")
             }
         })
         

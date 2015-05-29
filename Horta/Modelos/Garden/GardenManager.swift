@@ -9,22 +9,28 @@
 import Foundation
 import CloudKit
 
-class GardenManager : AddressManagerDelegate{
+protocol GardenManagerDelegate{
+    
+    func errorThrowed(error:NSError)
+    
+}
+
+class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
   
     
         
     var daoCloudKit : GardenDAOCLoudKit
     var addressManager : AddressManager
     var currentGarden : Garden?
-        //var delegate : AddressManagerDelegate?
+    var delegate : GardenManagerDelegate?
         
         
     init(){
             
         daoCloudKit = DaoFactory().getGardenDAOCloudKit()
-        //daoCloudKit.delegate = self
         addressManager = AddressManager()
         addressManager.delegate = self
+        daoCloudKit.delegate = self
     }
         
         
@@ -51,28 +57,25 @@ class GardenManager : AddressManagerDelegate{
         
     }
     
+    func updateGardenAndAddress(garden:Garden){
+        
+        currentGarden = garden
+        addressManager.saveAddress(garden.address!)
+        
+    }
+
+    
     func gardenToGardenDB(garden: Garden)->GardenDB{
         
         var newGardenDB = self.getNewGardenDB()
         newGardenDB.name = garden.name
         newGardenDB.photo = garden.photo
-        newGardenDB.address = CKReference(recordID: garden.address?.recordID, action: CKReferenceAction.None)
+        newGardenDB.address = Tools().recordIDToReference(garden.address?.recordID)
         
         return newGardenDB
-        
-    
     }
-//        func saveAddress(newAddress:Address){
-//            
-//            daoCloudKit.saveAddress(newAddress)
-//            
-//        }
-//        
-//        func updateAddress(address:Address){
-//            
-//            daoCloudKit.updateAddress(address)
-//            
-//        }
+    
+    
     
         
         // Methods AddressManagerDelegate
@@ -82,17 +85,36 @@ class GardenManager : AddressManagerDelegate{
             daoCloudKit.saveGardenBD(self.gardenToGardenDB(currentGarden!))
         }
         
-        func updateSuccessfull(address: Address) {
-            //self.delegate?.updateSuccessfull(address)
+        func updateSuccessfull() {
+            daoCloudKit.updateGarden(self.gardenToGardenDB(currentGarden!))
         }
         
         func errorThrowed(error: NSError) {
-            //self.delegate?.errorThrowed(error)
+            self.delegate?.errorThrowed(error)
         }
         
         
         
+    // Methods Horta and User
+    
+    func toParticipateGarden(gardenID:CKRecordID, userID:CKRecordID){
         
+        var gardenRef = Tools().recordIDToReference(gardenID)
+        var userRef = Tools().recordIDToReference(userID)
+        
+        daoCloudKit.saveRelationshipParticipant(gardenRef, userRef: userRef)
+        
+    }
+    
+    func addAdmin(gardenID:CKRecordID, userID:CKRecordID){
+        
+        var gardenRef = Tools().recordIDToReference(gardenID)
+        var userRef = Tools().recordIDToReference(userID)
+        
+        daoCloudKit.saveRelationshipAdmin(gardenRef, adminRef: userRef)
+        
+    }
+    
     
     
     

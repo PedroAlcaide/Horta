@@ -11,7 +11,7 @@ import Foundation
 protocol AddressManagerDelegate{
     
     func saveSuccessfull(newAddress: Address)
-    func updateSuccessfull(address:Address)
+    func updateSuccessfull()
     func errorThrowed(error:NSError)
     
 }
@@ -53,8 +53,8 @@ class AddressManager :AddressDAOCKDelegate {
         self.delegate?.saveSuccessfull(newAddress)
     }
     
-    func updateSuccessfull(address: Address) {
-        self.delegate?.updateSuccessfull(address)
+    func updateSuccessfull() {
+        self.delegate?.updateSuccessfull()
     }
     
     func errorThrowed(error: NSError) {
