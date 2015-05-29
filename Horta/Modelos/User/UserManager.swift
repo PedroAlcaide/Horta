@@ -38,7 +38,7 @@ class UserManager : UserDAOCKDelegate{
     
     func saveUser(user:User){
         
-        daoCloudKit.consultUserEmail(user, aux: 1)
+        daoCloudKit.saveUser(user)
     }
     
     func editUser(user:User){
@@ -63,6 +63,10 @@ class UserManager : UserDAOCKDelegate{
     
     func errorThrowed(error: NSError) {
         self.delegate?.errorThrowed(error)
+    }
+    
+    func getUserAuthenticated(ser:User){
+        print("autenticou")
     }
     
     

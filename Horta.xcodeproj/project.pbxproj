@@ -34,6 +34,7 @@
 		84F7FF0B1B165C4400E66A13 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF0A1B165C4400E66A13 /* Product.swift */; };
 		84F7FF0D1B165DB500E66A13 /* ProductDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF0C1B165DB500E66A13 /* ProductDAOCloudKit.swift */; };
 		84F7FF101B1664ED00E66A13 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF0F1B1664ED00E66A13 /* ProductManager.swift */; };
+		84FB98C91B18F19C003E62C0 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB98C81B18F19C003E62C0 /* Script.swift */; };
 		D691FF651B1670E700D413FC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691FF631B1670E700D413FC /* FBSDKCoreKit.framework */; };
 		D691FF661B1670E700D413FC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691FF641B1670E700D413FC /* FBSDKLoginKit.framework */; };
 		D691FF691B1672C000D413FC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691FF681B1672C000D413FC /* LoginController.swift */; };
@@ -85,6 +86,7 @@
 		84F7FF0A1B165C4400E66A13 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Product.swift; path = Modelos/Product.swift; sourceTree = "<group>"; };
 		84F7FF0C1B165DB500E66A13 /* ProductDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductDAOCloudKit.swift; path = Modelos/DAOs/ProductDAOCloudKit.swift; sourceTree = "<group>"; };
 		84F7FF0F1B1664ED00E66A13 /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductManager.swift; path = Modelos/Product/ProductManager.swift; sourceTree = "<group>"; };
+		84FB98C81B18F19C003E62C0 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Script.swift; path = Modelos/Tools/Script.swift; sourceTree = "<group>"; };
 		D691FF631B1670E700D413FC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Horta/Frameworks/Facebook/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		D691FF641B1670E700D413FC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Horta/Frameworks/Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		D691FF681B1672C000D413FC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Modelos/User/LoginController.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				84F5D3651B16BBEE00D8304C /* Address.swift */,
 				84024FD81B17A2E90089B9DD /* AddressManager.swift */,
+				84FB98C81B18F19C003E62C0 /* Script.swift */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,
 				84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */,
+				84FB98C91B18F19C003E62C0 /* Script.swift in Sources */,
 				84024FD51B1799980089B9DD /* AddressDAOCloudKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
