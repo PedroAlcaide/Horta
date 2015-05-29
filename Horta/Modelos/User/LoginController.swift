@@ -4,7 +4,8 @@
 //
 //  Created by Felipe R. de Luca on 5/27/15.
 //  Copyright (c) 2015 Pedro Alcaide. All rights reserved.
-//
+//  
+//  Controlador de login do usuário.
 
 import Foundation
 import FBSDKCoreKit
@@ -12,33 +13,68 @@ import FBSDKLoginKit
 
 //------------------------------------------------------------------------------------------
 class LoginController {
-    private let usuarioLogado: Bool;
+    private var userLogged: Int? {
+        // 0: não conectado
+        // 1: app
+        // 2: facebook
+        // 3: google
+        didSet {
+            closeAllLoggedAccounts(); // Não deixa que haja mais de uma conta ativa ao mesmo tempo
+        }
+    }
     
+    private let facebookLoginManager = FBSDKLoginManager();
+    private var facebookLoginResult  = FBSDKLoginManagerLoginResult();
+    private var facebookError        = NSError();
+    private var facebookLoginHandler: FBSDKLoginManagerRequestTokenHandler?;
+    private var facebookConnectionStatus: Int? = 0 // 0: recusado, 1: cancelado, 2: conectado
+
+    private var nomeUsuario : String?;
+    private var emailUsuario: String?;
+    private var userIsAdmin : Bool;
     
     init(){
-        usuarioLogado = false;
+//        println( "Conectar inicializado" );
+        nomeUsuario   = nil;
+        emailUsuario  = nil;
+        userLogged    = 0;
+        userIsAdmin   = false;
     }
     //------------------------------------------------------------------------------------------
-    final func conectarUsuario( facebook: Bool, google: Bool, nome: String?, senha: String? ) -> ( nome: String?, email: String? ){
-        
-        var nomeUsuario : String?;
-        var emailUsuario: String?;
-        
-        if facebook {
-            // Conectar usando facebook
-        }
-        else if google {
-            // Conectar usando gmail, google+
-            
-        }
-        else if ( nome != nil && senha != nil ) {
-            // Conectar através do próprio aplicativo
-        }
-        
+    final func loginFacebook() -> ( nome: String?, email: String? ) {
+
+        userLogged = 0; // desconecta todas as conexoes
+        facebook();
         
         return ( nomeUsuario, emailUsuario );
     }
     //------------------------------------------------------------------------------------------
-    
+    private func closeAllLoggedAccounts() -> () {
+
+        facebookLoginManager.logOut();
+        
+    }
+    //------------------------------------------------------------------------------------------
+    private func facebook() -> Bool {
+        facebookLoginManager.logInWithReadPermissions( ["public_profile"], handler: facebookLoginHandler );
+        
+//        loginFacebook.
+//        [login logInWithReadPermissions:@[@"email"] handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+//            if (error) {
+//                // Process error
+//            } else if (result.isCancelled) {
+//                // Handle cancellations
+//            } else {
+//                // If you ask for multiple permissions at once, you
+//                // should check if specific permissions missing
+//                if ([result.grantedPermissions containsObject:@"email"]) {
+//                    // Do work
+//                }
+//            }
+//        }];
+        
+        
+        return false;
+    }
 }
 //------------------------------------------------------------------------------------------
