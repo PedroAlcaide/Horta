@@ -14,6 +14,7 @@ protocol UserDAOCKDelegate{
 
     func saveSuccefull(user:User)
     func errorThrowed(error : NSError)
+    func getUserAuthenticated(ser:User)
     
 /*
     func getUserWithPassword(user : User , password : String)
@@ -155,6 +156,41 @@ class UserDAOCloudKit: UserDAO{
             }
             
         })
+        
+    }
+    
+    func getUser(email:String, password:String){
+        
+        var predicate = NSPredicate(format: "EMAIL = %@ && PASSWORD = %@", email , password)
+        var query = CKQuery(recordType: USER, predicate: predicate)
+        
+        publicDB.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+            
+            if  (error == nil){
+                
+                if  (results.count > 0){
+                    
+                    var queryResult = results[0] as! CKRecord
+                    var user = UserManager().creatuser()
+                    
+                    user.recordID = queryResult.recordID
+                    user.name = queryResult.objectForKey(self.NAME) as? String
+                    user.surname = queryResult.objectForKey(self.SURNAME) as? String
+                    user.email = queryResult.objectForKey(self.EMAIL) as? String
+                    user.password = queryResult.objectForKey(self.PASSWORD) as? String
+                    
+                    self.delegate?.getUserAuthenticated(user)
+                    
+                }else{
+                    print("Usuario nao localizado")
+                }
+                
+            }else{
+                self.delegate?.errorThrowed(error)
+            }
+            
+            
+        }
         
     }
     

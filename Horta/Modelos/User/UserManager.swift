@@ -36,14 +36,24 @@ class UserManager : UserDAOCKDelegate{
         
     }
     
+    func rodaScript(user:User){
+        daoCloudKit.saveUser(user)
+    }
+    
     func saveUser(user:User){
-        
         daoCloudKit.consultUserEmail(user, aux: 1)
+        //daoCloudKit.saveUser(user)
     }
     
     func editUser(user:User){
         
         daoCloudKit.consultUserEmail(user, aux: 2)
+        
+    }
+    
+    func toAuthentication(email:String, password:String){
+        
+        daoCloudKit.getUser(email, password: password)
         
     }
     
@@ -63,6 +73,10 @@ class UserManager : UserDAOCKDelegate{
     
     func errorThrowed(error: NSError) {
         self.delegate?.errorThrowed(error)
+    }
+    
+    func getUserAuthenticated(ser:User){
+        print("autenticou")
     }
     
     
