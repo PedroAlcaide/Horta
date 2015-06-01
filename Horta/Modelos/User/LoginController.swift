@@ -8,71 +8,119 @@
 //  Controlador de login do usuário.
 
 import Foundation
-import FBSDKCoreKit
-import FBSDKLoginKit
+//import FBSDKCoreKit
+//import FBSDKLoginKit
 
 //------------------------------------------------------------------------------------------
 class LoginController {
-    private var userLogged: Int? {
-        // 0: não conectado
-        // 1: app
-        // 2: facebook
-        // 3: google
-        didSet {
-            closeAllLoggedAccounts(); // Não deixa que haja mais de uma conta ativa ao mesmo tempo
-        }
-    }
+    static let sharedInstance = LoginController(); // Singleton
+    
+    // 0: não conectado
+    // 1: app
+    // 2: facebook
+    // 3: google
+    private var userLogged: Int?;
+    
+    private var classId: Int = 0; // Id da instancia atual da classe
     
     private let facebookLoginManager = FBSDKLoginManager();
-    private var facebookLoginResult  = FBSDKLoginManagerLoginResult();
-    private var facebookError        = NSError();
-    private var facebookLoginHandler: FBSDKLoginManagerRequestTokenHandler?;
     private var facebookConnectionStatus: Int? = 0 // 0: recusado, 1: cancelado, 2: conectado
 
-    private var nomeUsuario : String?;
-    private var emailUsuario: String?;
+    private var nomeUsuario : NSString!;
+    private var emailUsuario: NSString!;
     private var userIsAdmin : Bool;
+//    private var userFBPicture: FBSDKProfilePictureView = FBSDKProfilePictureView?;//UIImage = UIImage();
     
     init(){
 //        println( "Conectar inicializado" );
-        nomeUsuario   = nil;
-        emailUsuario  = nil;
+        FBSDKProfile.enableUpdatesOnAccessTokenChange( true );
+        classId      += 1;
+        nomeUsuario   = "";
+        emailUsuario  = "";
         userLogged    = 0;
         userIsAdmin   = false;
+        
+        println("Class id: \(classId)");
+    }
+    //------------------------------------------------------------------------------------------
+    final func getUserPicture() -> UIView? {
+//        println("recuperando imagem");
+//        if self.userLogged == 2 {
+//           FBSDKProfilePictureView().profileID = FBSDKProfile.currentProfile().userID;
+//            return FBSDKProfilePictureView();
+//        }
+        
+        return nil;
+    }
+    //------------------------------------------------------------------------------------------
+    final func getUserName() -> String? {
+        if self.userLogged == 2 {
+            println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
+            self.nomeUsuario = FBSDKProfile.currentProfile().name;
+        }
+
+        return nomeUsuario! as String;
+    }
+    //------------------------------------------------------------------------------------------
+    final func getUserEmail() -> String? {
+//        if self.userLogged == 2 {
+//            println( "Get facebook user email: \(FBSDKProfile.currentProfile())" );
+//            self.nomeUsuario = FBSDKProfile.currentProfile().name;
+//        }
+
+        return emailUsuario! as String;
     }
     //------------------------------------------------------------------------------------------
     final func loginFacebook() -> ( nome: String?, email: String? ) {
 
-        userLogged = 0; // desconecta todas as conexoes
+        self.userLogged   = 0; // desconecta todas as conexoes
+        self.nomeUsuario  = "[no name]";
+        self.emailUsuario = "[no email]";
         facebook();
         
-        return ( nomeUsuario, emailUsuario );
+        return ( nomeUsuario! as String, emailUsuario! as String );
+    }
+    //------------------------------------------------------------------------------------------
+    func logout() {
+        println( "User logged out." );
+        userLogged = 0;
+        closeAllLoggedAccounts();
     }
     //------------------------------------------------------------------------------------------
     private func closeAllLoggedAccounts() -> () {
 
+        println( "Desconectando todas as contas..." );
         facebookLoginManager.logOut();
-        
+                
     }
     //------------------------------------------------------------------------------------------
     private func facebook() -> Bool {
-        facebookLoginManager.logInWithReadPermissions( ["public_profile"], handler: facebookLoginHandler );
+        println( "conectando com Facebook..." );
         
-//        loginFacebook.
-//        [login logInWithReadPermissions:@[@"email"] handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
-//            if (error) {
-//                // Process error
-//            } else if (result.isCancelled) {
-//                // Handle cancellations
-//            } else {
-//                // If you ask for multiple permissions at once, you
-//                // should check if specific permissions missing
-//                if ([result.grantedPermissions containsObject:@"email"]) {
-//                    // Do work
-//                }
-//            }
-//        }];
+        // Usuário não está logado
+        if FBSDKAccessToken.currentAccessToken() == nil {
         
+            println( "conectando usuário com o Facebook..." );
+            
+            facebookLoginManager.logInWithReadPermissions( ["public_profile"], handler: {
+                (result: FBSDKLoginManagerLoginResult!, error: NSError!) -> () in
+
+                if error != nil {
+                    println( "\(error.description)" );
+                }
+                
+                if result.grantedPermissions != nil {
+                    if  result.grantedPermissions!.contains( "public_profile" ) {
+                        self.userLogged  = 2;
+                    }
+                }
+
+            })
+        }
+        else {
+            self.userLogged = 2;
+            println( "Conectado com o Facebook. \(self.userLogged)" );
+        }
         
         return false;
     }
