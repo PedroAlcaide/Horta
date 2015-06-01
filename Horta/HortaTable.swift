@@ -14,11 +14,28 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var table: UITableView!
     
+  
+    //@IBOutlet weak var segmentedControl: UISegmentedControl!
+
+    
+    //@IBAction func indexChanged(sender: UISegmentedControl) {
+//        switch segmentedControl.selectedSegmentIndex
+  //      {
+    //    case 0:
+      //      textLabel.text = "First selected";
+       // case 1:
+         //   textLabel.text = "Second Segment selected";
+        //default:
+         //   break;
+       // }
+   // }
     
     
     override func viewDidLoad() {
         self.table.delegate = self
         self.table.dataSource = self
+        
+        
         
     }
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
