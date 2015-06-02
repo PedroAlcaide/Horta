@@ -47,6 +47,8 @@
 		D6C694181B1D073E00827224 /* layout_item_horta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C694171B1D073E00827224 /* layout_item_horta.swift */; };
 		EE7B56FD1B18EA0A00967A33 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */; };
 		EE7B57011B19057300967A33 /* HortaTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B57001B19057300967A33 /* HortaTable.swift */; };
+		EEF139711B1E5278009DC7C2 /* CriarHorta.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF139701B1E5278009DC7C2 /* CriarHorta.swift */; };
+		EEF139731B1E5A0C009DC7C2 /* AdicionarProduto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF139721B1E5A0C009DC7C2 /* AdicionarProduto.swift */; };
 		EEF255841B1663BE00DCC8BF /* PagedScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF255831B1663BE00DCC8BF /* PagedScrollViewController.swift */; };
 		EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */; };
 		EEFE52AA1B13911D008CC8F7 /* Horta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEFE52A81B13911D008CC8F7 /* Horta.xcdatamodeld */; };
@@ -109,6 +111,8 @@
 		D6C694171B1D073E00827224 /* layout_item_horta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = layout_item_horta.swift; path = Layouts/layout_item_horta.swift; sourceTree = "<group>"; };
 		EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		EE7B57001B19057300967A33 /* HortaTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HortaTable.swift; sourceTree = "<group>"; };
+		EEF139701B1E5278009DC7C2 /* CriarHorta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriarHorta.swift; sourceTree = "<group>"; };
+		EEF139721B1E5A0C009DC7C2 /* AdicionarProduto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdicionarProduto.swift; sourceTree = "<group>"; };
 		EEF255831B1663BE00DCC8BF /* PagedScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagedScrollViewController.swift; sourceTree = "<group>"; };
 		EEFE52A11B13911D008CC8F7 /* Horta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Horta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEFE52A51B13911D008CC8F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -308,6 +312,8 @@
 				EEFE52AB1B13911D008CC8F7 /* ViewController.swift */,
 				EEF255831B1663BE00DCC8BF /* PagedScrollViewController.swift */,
 				EEFE52AD1B13911D008CC8F7 /* Main.storyboard */,
+				EEF139701B1E5278009DC7C2 /* CriarHorta.swift */,
+				EEF139721B1E5A0C009DC7C2 /* AdicionarProduto.swift */,
 				EEFE52B01B13911D008CC8F7 /* Images.xcassets */,
 				EEFE52B21B13911D008CC8F7 /* LaunchScreen.xib */,
 				EEFE52A81B13911D008CC8F7 /* Horta.xcdatamodeld */,
@@ -467,6 +473,7 @@
 				EE7B57011B19057300967A33 /* HortaTable.swift in Sources */,
 				84F7FF0B1B165C4400E66A13 /* Product.swift in Sources */,
 				84024FD71B17A2520089B9DD /* GardenManager.swift in Sources */,
+				EEF139711B1E5278009DC7C2 /* CriarHorta.swift in Sources */,
 				8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */,
 				84F7FF101B1664ED00E66A13 /* ProductManager.swift in Sources */,
 				84F5D3601B16B89A00D8304C /* Plat.swift in Sources */,
@@ -482,6 +489,7 @@
 				8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */,
 				84F7FF031B16488600E66A13 /* OutOfBoundsException.swift in Sources */,
 				84024FD31B17982B0089B9DD /* GardenDB.swift in Sources */,
+				EEF139731B1E5A0C009DC7C2 /* AdicionarProduto.swift in Sources */,
 				84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,
 				84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */,
