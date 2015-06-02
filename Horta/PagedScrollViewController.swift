@@ -14,8 +14,9 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var pageControl: UIPageControl!
     
-    var pageImages: [UIImage] = []
-    var pageViews: [UIImageView?] = []
+   // var pageImages: [UIImage] = []
+    var pageImages: [UIView] = [];
+    var pageViews: [UIView?] = []
     
     
     override func viewDidLoad() {
@@ -23,11 +24,16 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.delegate = self
         // 1
-        pageImages = [UIImage(named: "batata.png")!,
-            UIImage(named: "alface.png")!,
-            UIImage(named: "cebola.png")!,
-            UIImage(named: "cenoura.png")!,
-            UIImage(named: "alface.png")!]
+//        pageImages = [UIImage(named: "batata.png")!,
+//            UIImage(named: "alface.png")!,
+//            UIImage(named: "cebola.png")!,
+//            UIImage(named: "cenoura.png")!,
+//            UIImage(named: "alface.png")!]
+        for i in 0...3 {
+            var item = NSBundle.mainBundle().loadNibNamed("layout_item_horta", owner: self, options: nil )[0] as! layout_item_horta;
+            item.setLabelText( String(i) );
+            pageImages.append( item );
+        }
         
         let pageCount = pageImages.count
         
@@ -93,8 +99,10 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
             frame.origin.y = 0.0
             frame = CGRectInset(frame, 10.0, 0.0)
             
-            let newPageView = UIImageView(image: pageImages[page])
-            newPageView.contentMode = .ScaleAspectFit
+            //let newPageView = UIImageView(image: pageImages[page])
+            let newPageView: UIView = UIView();
+            newPageView.addSubview(pageImages[page]);
+          //  newPageView.contentMode = .ScaleAspectFit
             newPageView.frame = frame
             scrollView.addSubview(newPageView)
             pageViews[page] = newPageView

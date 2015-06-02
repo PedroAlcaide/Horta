@@ -11,14 +11,15 @@ import Foundation
 class GardenController {
     static let sharedInstance = GardenController();
     
-    private var item: UIView!;
+    private var item: layout_item_horta!;
         
     init(){
         
     }
     
     //-------------------------------------------------------------------------
-//    func newInventoryItem() -> UIVIew {
+//    func newInventoryItem() -> layout_item_horta {
+//        return item = layout_item_horta();
 //    }
     //-------------------------------------------------------------------------
 }

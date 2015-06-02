@@ -975,9 +975,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gramado" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-B9-BqH">
-                                <rect key="frame" x="58" y="547" width="259" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="rolagem" translatesAutoresizingMaskIntoConstraints="NO" id="dHR-Em-Kh3">
+                                <rect key="frame" x="-5" y="492" width="380" height="181"/>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-oN-gfc">
+                                <rect key="frame" x="-2" y="534" width="377" height="118"/>
+                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lixeira" translatesAutoresizingMaskIntoConstraints="NO" id="vHl-gL-xT8">
                                 <rect key="frame" x="50" y="438" width="76" height="75"/>
                             </imageView>
@@ -999,9 +1002,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placa" translatesAutoresizingMaskIntoConstraints="NO" id="Xfx-U1-Aek">
-                                <rect key="frame" x="108" y="511" width="159" height="148"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="voltar2" translatesAutoresizingMaskIntoConstraints="NO" id="cl6-tl-b7P">
                                 <rect key="frame" x="6" y="20" width="63" height="55"/>
                             </imageView>
@@ -1079,9 +1079,9 @@
                                     <segue destination="Rgt-X0-mhb" kind="show" id="L5k-YF-6c9"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-oN-gfc">
-                                <rect key="frame" x="104" y="511" width="169" height="118"/>
-                            </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gramado" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-B9-BqH">
+                                <rect key="frame" x="-12" y="602" width="391" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -1150,17 +1150,17 @@
         <image name="lixeira" width="120" height="122"/>
         <image name="login" width="505" height="60"/>
         <image name="logout" width="505" height="60"/>
-        <image name="placa" width="145" height="194"/>
         <image name="placa_grande" width="446" height="612"/>
+        <image name="rolagem" width="640" height="307"/>
         <image name="user" width="301" height="290"/>
         <image name="voltar" width="120" height="102"/>
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="L5k-YF-6c9"/>
         <segue reference="ki1-Xg-E5V"/>
-        <segue reference="z6L-ux-f9L"/>
-        <segue reference="AbF-SC-ZPO"/>
         <segue reference="taJ-ka-zMO"/>
-        <segue reference="k74-kw-DU0"/>
+        <segue reference="AbF-SC-ZPO"/>
+        <segue reference="jhb-1K-Tmc"/>
     </inferredMetricsTieBreakers>
 </document>
