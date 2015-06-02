@@ -17,6 +17,8 @@
 		8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */; };
 		8464B0051B13ACE8004BC0B6 /* UserDAODefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B0001B13ACE8004BC0B6 /* UserDAODefaults.swift */; };
 		8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464B0071B13AD98004BC0B6 /* UserDAO.swift */; };
+		848030121B1E56EF00B0B79C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848030111B1E56EF00B0B79C /* Validator.swift */; };
+		848030141B1E754C00B0B79C /* LayoutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848030131B1E754C00B0B79C /* LayoutConfigurator.swift */; };
 		84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */; };
 		84F5D3601B16B89A00D8304C /* Plat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D35F1B16B89A00D8304C /* Plat.swift */; };
 		84F5D3631B16BA4500D8304C /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D3621B16BA4500D8304C /* Garden.swift */; };
@@ -78,6 +80,8 @@
 		8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAOCloudKit.swift; path = Modelos/DAOs/UserDAOCloudKit.swift; sourceTree = "<group>"; };
 		8464B0001B13ACE8004BC0B6 /* UserDAODefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAODefaults.swift; path = Modelos/DAOs/UserDAODefaults.swift; sourceTree = "<group>"; };
 		8464B0071B13AD98004BC0B6 /* UserDAO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAO.swift; path = Modelos/DAOs/UserDAO.swift; sourceTree = "<group>"; };
+		848030111B1E56EF00B0B79C /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Modelos/Tools/Validator.swift; sourceTree = "<group>"; };
+		848030131B1E754C00B0B79C /* LayoutConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutConfigurator.swift; path = Modelos/Tools/LayoutConfigurator.swift; sourceTree = "<group>"; };
 		84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = Modelos/User/UserManager.swift; sourceTree = "<group>"; };
 		84F5D35F1B16B89A00D8304C /* Plat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plat.swift; path = Modelos/Plat/Plat.swift; sourceTree = "<group>"; };
 		84F5D3621B16BA4500D8304C /* Garden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Garden.swift; path = Modelos/Garden/Garden.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 			children = (
 				84F7FEFB1B1642EC00E66A13 /* Exceptions */,
 				84024FDA1B17F92F0089B9DD /* Tools.swift */,
+				848030111B1E56EF00B0B79C /* Validator.swift */,
+				848030131B1E754C00B0B79C /* LayoutConfigurator.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 				D6C694121B1D00DF00827224 /* GardenController.swift in Sources */,
 				D6C694181B1D073E00827224 /* layout_item_horta.swift in Sources */,
 				84F7FF071B164B5300E66A13 /* UnconnectedIcloud.swift in Sources */,
+				848030141B1E754C00B0B79C /* LayoutConfigurator.swift in Sources */,
 				D6C694101B1CFE7300827224 /* ViewControllerLogin.swift in Sources */,
 				EEFE52AC1B13911D008CC8F7 /* ViewController.swift in Sources */,
 				EEF255841B1663BE00DCC8BF /* PagedScrollViewController.swift in Sources */,
@@ -481,6 +488,7 @@
 				84024FD91B17A2E90089B9DD /* AddressManager.swift in Sources */,
 				8464B0081B13AD98004BC0B6 /* UserDAO.swift in Sources */,
 				84F7FF031B16488600E66A13 /* OutOfBoundsException.swift in Sources */,
+				848030121B1E56EF00B0B79C /* Validator.swift in Sources */,
 				84024FD31B17982B0089B9DD /* GardenDB.swift in Sources */,
 				84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,

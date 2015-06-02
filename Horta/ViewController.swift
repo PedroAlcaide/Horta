@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UserManagerDelegate {
     
 //    - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
@@ -39,7 +39,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var senha: UITextField!
     @IBOutlet weak var confirmarsenha: UITextField!
     
+    var manager : UserManager?
+    
     @IBAction func confirma(sender: UIButton) {
+        
+        var array = [nome,sobrenome, email, confirmaremail, senha, confirmarsenha] as Array<UITextField>
+        var correct = Validator.isAllFilledFields(array)
+        Validator.compareEqualFields(email, field2: confirmaremail)
+        if  (correct == true){
+        
+        var user = manager!.creatuser()
+        user.name = nome.text
+        user.surname = sobrenome.text
+        user.email = email.text
+        user.password = senha.text
+        
+        }
+        
+        
+        
     }
     
     
@@ -48,7 +66,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-       
+       manager = UserManager()
+        manager!.delegate = self
+        
         
         var localNotification: UILocalNotification = UILocalNotification()
         localNotification.alertAction = "Testing notifications on iOS8"
@@ -60,6 +80,10 @@ class ViewController: UIViewController {
         UserManager().toAuthentication("email0@gmail.com", password: "password0")
     }
     
+    
+    func errorThrowed(error: NSError) {
+        
+    }
     
     
 
