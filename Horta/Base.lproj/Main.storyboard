@@ -16,13 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-0f-azf">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Senha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-0f-azf">
                                 <rect key="frame" x="26" y="297" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-WT-Y35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-WT-Y35">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
                             <imageView userInteractionEnabled="NO" alpha="0.5499999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Layout-01" translatesAutoresizingMaskIntoConstraints="NO" id="yZG-oY-qNx">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
@@ -42,9 +44,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZe-ju-q7A">
                                 <rect key="frame" x="41" y="372" width="20" height="20"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="RIi-99-yom">
-                                <rect key="frame" x="75" y="482" width="224" height="37"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-Ne-D87">
                                 <rect key="frame" x="39" y="400" width="296" height="38"/>
                             </imageView>
@@ -59,23 +58,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="RIi-99-yok">
-                                <rect key="frame" x="77" y="466" width="224" height="37"/>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Li e concordo com os termos de politica de uso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syo-Rt-TWw"/>
-                                <rect key="frame" x="105" y="365" width="230" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="email" translatesAutoresizingMaskIntoConstraints="NO" id="RIi-99-yol">
-                                <rect key="frame" x="75" y="482" width="224" height="37"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="zva-6J-5wc">
-                                <rect key="frame" x="77" y="516" width="224" height="38"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-hj-0Rz">
-                                <rect key="frame" x="76" y="562" width="225" height="35"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ou cadastre com:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8en-6I-Qax">
                                 <rect key="frame" x="109" y="437" width="166" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -88,15 +70,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-Ne-D86">
                                 <rect key="frame" x="39" y="400" width="296" height="38"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7h-8k-nN1">
-                                <rect key="frame" x="76" y="466" width="225" height="37"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="EMs-2B-ZLQ" kind="show" id="zni-pM-YkP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snd-16-iM8">
                                 <rect key="frame" x="41" y="377" width="294" height="38"/>
                             </button>
@@ -132,6 +105,27 @@
                                     <segue destination="sLv-zy-UMl" kind="show" id="wSt-oo-Gb0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-WT-Y37">
+                                <rect key="frame" x="24" y="230" width="86" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snd-16-iN0">
+                                <rect key="frame" x="42" y="400" width="294" height="38"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rg0-Da-8NQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="NSL-dA-sv9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-Bj-CvK">
+                                <rect key="frame" x="-73" y="616" width="223" height="38"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2F-oM-on2">
                                 <rect key="frame" x="76" y="525" width="223" height="35"/>
                                 <state key="normal" title="btn_loginFacebook" image="facebook">
@@ -148,39 +142,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kRp-WT-Y37">
-                                <rect key="frame" x="24" y="230" width="86" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snd-16-iN0">
-                                <rect key="frame" x="42" y="400" width="294" height="38"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="rg0-Da-8NQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="NSL-dA-sv9"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPE-TU-wmq">
-                                <rect key="frame" x="76" y="562" width="223" height="35"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBx-Bj-CvK">
-                                <rect key="frame" x="75" y="516" width="223" height="38"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20597019429083491" green="0.46464646464646464" blue="0.1882263762082674" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="Ahq-0f-aze"/>
                                 <exclude reference="kRp-WT-Y35"/>
+                                <exclude reference="Ahq-0f-aze"/>
                             </mask>
                         </variation>
                     </view>
@@ -1061,7 +1028,7 @@
                                 <rect key="frame" x="-5" y="492" width="380" height="181"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-oN-gfc">
-                                <rect key="frame" x="-2" y="534" width="377" height="118"/>
+                                <rect key="frame" x="-2" y="502" width="377" height="157"/>
                             </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lixeira" translatesAutoresizingMaskIntoConstraints="NO" id="vHl-gL-xT8">
                                 <rect key="frame" x="50" y="438" width="76" height="75"/>
@@ -1087,11 +1054,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="voltar2" translatesAutoresizingMaskIntoConstraints="NO" id="cl6-tl-b7P">
                                 <rect key="frame" x="6" y="20" width="63" height="55"/>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-ZO-LEQ">
-                                <rect key="frame" x="145" y="628" width="85" height="37"/>
-                                <color key="tintColor" red="0.12965865830000001" green="0.01559173604" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="currentPageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                            </pageControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ii-G0-R9P">
                                 <rect key="frame" x="61" y="209" width="140" height="123"/>
                             </imageView>
@@ -1107,6 +1069,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtQ-ZS-EbW">
                                 <rect key="frame" x="201" y="272" width="44" height="42"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gramado" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-B9-BqI">
+                                <rect key="frame" x="-12" y="602" width="391" height="128"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="5" translatesAutoresizingMaskIntoConstraints="NO" id="eQY-ZO-LEQ">
+                                <rect key="frame" x="145" y="628" width="85" height="37"/>
+                                <color key="tintColor" red="0.12965865830000001" green="0.01559173604" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                            </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21/06/2015" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCh-mN-HFx">
                                 <rect key="frame" x="241" y="282" width="80" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -1161,15 +1131,6 @@
                                     <segue destination="Rgt-X0-mhb" kind="show" id="L5k-YF-6c9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gramado" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-B9-BqI">
-                                <rect key="frame" x="-12" y="602" width="391" height="128"/>
-                            </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-oN-gfd">
-                                <rect key="frame" x="104" y="511" width="169" height="118"/>
-                            </scrollView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gramado" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-B9-BqH">
-                                <rect key="frame" x="0.0" y="547" width="375" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -1225,8 +1186,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Layout-10" width="641" height="1169"/>
         <image name="Layout-01" width="640" height="1170"/>
+        <image name="Layout-10" width="641" height="1169"/>
         <image name="Logotipo" width="404" height="421"/>
         <image name="add" width="120" height="100"/>
         <image name="adicionar" width="154" height="122"/>
@@ -1239,7 +1200,6 @@
         <image name="confirmar" width="167" height="149"/>
         <image name="dados" width="505" height="123"/>
         <image name="edit2" width="123" height="124"/>
-        <image name="email" width="382" height="60"/>
         <image name="facebook" width="381" height="61"/>
         <image name="fechar" width="148" height="112"/>
         <image name="google" width="381" height="61"/>
@@ -1248,26 +1208,21 @@
         <image name="login" width="505" height="60"/>
         <image name="logout" width="505" height="60"/>
         <image name="placa_grande" width="446" height="612"/>
-        <image name="rolagem" width="640" height="307"/>
         <image name="placa_maximizada" width="487" height="888"/>
         <image name="plantar" width="74" height="104"/>
         <image name="regar" width="123" height="109"/>
         <image name="regar_aviso" width="123" height="129"/>
+        <image name="rolagem" width="640" height="307"/>
         <image name="user" width="301" height="290"/>
         <image name="visitar" width="195" height="96"/>
         <image name="voltar" width="120" height="102"/>
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="L5k-YF-6c9"/>
-        <segue reference="Zqd-5b-rqR"/>
-        <segue reference="k74-kw-DU0"/>
-        <segue reference="Xlq-ed-WZN"/>
-        <segue reference="4YR-2K-Xmc"/>
-        <segue reference="hfb-h7-OvA"/>
-        <segue reference="ki1-Xg-E5V"/>
         <segue reference="taJ-ka-zMO"/>
         <segue reference="AbF-SC-ZPO"/>
         <segue reference="jhb-1K-Tmc"/>
+        <segue reference="L5k-YF-6c9"/>
+        <segue reference="ki1-Xg-E5V"/>
     </inferredMetricsTieBreakers>
 </document>
