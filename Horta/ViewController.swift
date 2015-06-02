@@ -32,13 +32,36 @@ class ViewController: UIViewController {
     
   //  }
 
+    @IBOutlet weak var nome: UITextField!
+    @IBOutlet weak var sobrenome: UITextField!
+    @IBOutlet weak var email: UITextField!
+    @IBOutlet weak var confirmaremail: UITextField!
+    @IBOutlet weak var senha: UITextField!
+    @IBOutlet weak var confirmarsenha: UITextField!
+    
+    @IBAction func confirma(sender: UIButton) {
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+       
+        
+        var localNotification: UILocalNotification = UILocalNotification()
+        localNotification.alertAction = "Testing notifications on iOS8"
+        localNotification.alertBody = "Woww it works!!"
+        localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        
         
         UserManager().toAuthentication("email0@gmail.com", password: "password0")
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
