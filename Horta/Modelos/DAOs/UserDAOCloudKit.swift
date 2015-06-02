@@ -161,7 +161,7 @@ class UserDAOCloudKit: UserDAO{
     
     func getUser(email:String, password:String){
         
-        var predicate = NSPredicate(format: "EMAIL = %@ && PASSWORD = %@", email , password)
+        var predicate = NSPredicate(format: "\(EMAIL) = %@ && \(PASSWORD) = %@", email , password)
         var query = CKQuery(recordType: USER, predicate: predicate)
         
         publicDB.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
