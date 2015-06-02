@@ -43,6 +43,10 @@ class LoginController {
         println("Class id: \(classId)");
     }
     //------------------------------------------------------------------------------------------
+    final func getUserStatus() -> Int {
+        return self.userLogged!;
+    }
+    //------------------------------------------------------------------------------------------
     final func getUserPicture() -> UIView? {
 //        println("recuperando imagem");
 //        if self.userLogged == 2 {
@@ -73,9 +77,9 @@ class LoginController {
     //------------------------------------------------------------------------------------------
     final func loginFacebook() -> ( nome: String?, email: String? ) {
 
-        self.userLogged   = 0; // desconecta todas as conexoes
-        self.nomeUsuario  = "[no name]";
-        self.emailUsuario = "[no email]";
+        self.userLogged   = 0;
+        self.nomeUsuario  = "";
+        self.emailUsuario = "";
         facebook();
         
         return ( nomeUsuario! as String, emailUsuario! as String );

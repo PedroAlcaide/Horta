@@ -125,7 +125,7 @@ class UserConfig {
     private func loadUserEmail()-> String {
         let email: String? = userDefaults.stringForKey( "userEmail" );
         
-        if email == nil {
+        if email != nil {
             return email!;
         }
         else {
@@ -134,14 +134,13 @@ class UserConfig {
     }
     //--------------------------------------------------------------------------------
     private func loadUserName()-> String {
-        let name: String? = userDefaults.stringForKey( "userName" );
+        var name: String? = userDefaults.stringForKey( "userName" );
         
-        if name == nil {
-            return name!;
+        if ( name == nil || name == "" ){
+            name = loginController.getUserName()!;
         }
-        else {
-            return loginController.getUserName()!;
-        }
+        
+        return name!;
     }
     //--------------------------------------------------------------------------------
     private func loadUserHortas() -> [String] {
