@@ -66,6 +66,7 @@ class ViewController: UIViewController,UserManagerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+
        manager = UserManager()
         manager!.delegate = self
         
@@ -75,6 +76,15 @@ class ViewController: UIViewController,UserManagerDelegate {
         localNotification.alertBody = "Woww it works!!"
         localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
+       
+//        
+//        var localNotification: UILocalNotification = UILocalNotification()
+//        localNotification.alertAction = "Testing notifications on iOS8"
+//        localNotification.alertBody = "Woww it works!!"
+//        localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
+//        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
         
         
         UserManager().toAuthentication("email0@gmail.com", password: "password0")
