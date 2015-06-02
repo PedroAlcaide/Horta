@@ -10,11 +10,6 @@ import UIKit
 
 class layout_item_horta: UIView {
 
-    private let nib = UINib(nibName: "CustomView", bundle: NSBundle.mainBundle());
-    
-    init(){
-        
-    }
    /*
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

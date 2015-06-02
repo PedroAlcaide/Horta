@@ -261,7 +261,6 @@
 			children = (
 				84F7FF0A1B165C4400E66A13 /* Product.swift */,
 				84F7FF0F1B1664ED00E66A13 /* ProductManager.swift */,
-				D6C694171B1D073E00827224 /* layout_item_horta.swift */,
 			);
 			name = Product;
 			sourceTree = "<group>";
@@ -270,6 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C694151B1D06F300827224 /* layout_item_horta.xib */,
+				D6C694171B1D073E00827224 /* layout_item_horta.swift */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
