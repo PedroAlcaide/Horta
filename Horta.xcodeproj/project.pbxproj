@@ -162,6 +162,7 @@
 		8464AFF91B13A6F3004BC0B6 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				EEF255831B1663BE00DCC8BF /* PagedScrollViewController.swift */,
 				D6C6940F1B1CFE7300827224 /* ViewControllerLogin.swift */,
 				D6C694031B1CEE2F00827224 /* ViewControllerConfig.swift */,
 				EE7B57001B19057300967A33 /* HortaTable.swift */,
@@ -306,7 +307,6 @@
 				EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */,
 				EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */,
 				EEFE52AB1B13911D008CC8F7 /* ViewController.swift */,
-				EEF255831B1663BE00DCC8BF /* PagedScrollViewController.swift */,
 				EEFE52AD1B13911D008CC8F7 /* Main.storyboard */,
 				EEFE52B01B13911D008CC8F7 /* Images.xcassets */,
 				EEFE52B21B13911D008CC8F7 /* LaunchScreen.xib */,
