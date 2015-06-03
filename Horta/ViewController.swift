@@ -43,8 +43,8 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
     var validador : Validator?
     
     @IBAction func confirma(sender: UIButton) {
-        self.navigationController?.popViewControllerAnimated(true)
-        //validador?.iCloudAccountValidation()
+        //self.navigationController?.popViewControllerAnimated(true)
+        validador?.iCloudAccountValidation()
         
     }
     
@@ -98,7 +98,13 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
     }
     
     func userSaveSucessfull() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+
+        })
+        
+        //self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // VALIDATOR DELEGATE

@@ -26,7 +26,9 @@ class UserManager : UserDAOCKDelegate{
     init(){
         
         daoCloudKit = DaoFactory().getUserDAOCloudKit()
+        
         daoDefaults = DaoFactory().getUserDAODefaults()
+        daoCloudKit.delegate = self
         
     }
     
@@ -68,7 +70,8 @@ class UserManager : UserDAOCKDelegate{
     // UserDAOCloudKit Delegate
     
     func saveSuccefull(user: User) {
-        daoDefaults.saveUser(user)
+        //daoDefaults.saveUser(user)
+        print("usuario salvo daoDefault")
         self.delegate?.userSaveSucessfull()
         
     }

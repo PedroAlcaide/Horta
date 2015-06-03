@@ -51,10 +51,11 @@ class UserDAOCloudKit: UserDAO{
             (records: [AnyObject]!, error: NSError!) in
             
             if error != nil{
-                //self.delegate?.errorThrowed(error)
+                self.delegate?.errorThrowed(error)
             } else {
                 if records.count != 0 {
                     //self.delegate?.saveUserFinished(false, user: nil)
+                    print("usuario ja existe")
                 }
                 else {
                     
@@ -126,7 +127,9 @@ class UserDAOCloudKit: UserDAO{
                 
             } else {
                 user.recordID = record.recordID
+                print("usuario salvo")
                 self.delegate?.saveSuccefull(user)
+                
                 //self.delegate?.saveUserFinished(true, user: user)
             }
         })

@@ -22,32 +22,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Horta/ViewControllers/ViewControllerLogin.swift"
-            timestampString = "455033347.818861"
+            filePath = "Horta/Modelos/Tools/Validator.swift"
+            timestampString = "455034588.760661"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "cadastrarEmail(_:)"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "isAllFilledFields(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Horta/Modelos/Tools/Validator.swift"
-            timestampString = "455005714.562095"
+            filePath = "Horta/ViewController.swift"
+            timestampString = "455034994.958816"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "isAllFilledFields(_:)"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "userSaveSucessfull()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Horta/Modelos/User/UserManager.swift"
+            timestampString = "455042555.690565"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "saveSuccefull(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
