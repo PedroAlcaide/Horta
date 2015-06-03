@@ -43,9 +43,15 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
     var validador : Validator?
     
     @IBAction func confirma(sender: UIButton) {
+        self.navigationController?.popViewControllerAnimated(true)
+        //validador?.iCloudAccountValidation()
         
-        validador?.iCloudAccountValidation()
+    }
+    
+    
+    @IBAction func voltar(sender: AnyObject) {
         
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     
@@ -89,6 +95,10 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
             self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
         //})
         
+    }
+    
+    func userSaveSucessfull() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // VALIDATOR DELEGATE

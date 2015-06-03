@@ -13,6 +13,7 @@ protocol UserManagerDelegate{
     
     
     func errorThrowed(error:NSError)
+    func userSaveSucessfull()
     
 }
 
@@ -68,6 +69,7 @@ class UserManager : UserDAOCKDelegate{
     
     func saveSuccefull(user: User) {
         daoDefaults.saveUser(user)
+        self.delegate?.userSaveSucessfull()
         
     }
     
@@ -75,8 +77,8 @@ class UserManager : UserDAOCKDelegate{
         self.delegate?.errorThrowed(error)
     }
     
-    func getUserAuthenticated(ser:User){
-        print("autenticou")
+    func getUserAuthenticated(user:User){
+        daoDefaults.saveUser(user)
     }
     
     

@@ -14,7 +14,7 @@ protocol UserDAOCKDelegate{
 
     func saveSuccefull(user:User)
     func errorThrowed(error : NSError)
-    func getUserAuthenticated(ser:User)
+    func getUserAuthenticated(user:User)
     
 /*
     func getUserWithPassword(user : User , password : String)

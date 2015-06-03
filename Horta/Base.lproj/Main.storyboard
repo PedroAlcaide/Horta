@@ -83,9 +83,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="sLv-zy-UMl" kind="show" id="wSt-oo-Gb0"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snd-16-iN0">
                                 <rect key="frame" x="42" y="400" width="294" height="38"/>
@@ -93,6 +90,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="doLogon:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2dd-Gu-mrU"/>
                                     <segue destination="rg0-Da-8NQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="NSL-dA-sv9"/>
                                 </connections>
                             </button>
@@ -115,7 +113,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="EMs-2B-ZLQ" kind="show" id="JRm-Nr-72I"/>
+                                    <action selector="cadastrarEmail:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1sk-Gc-z21"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkO-v3-ZzA">
@@ -123,9 +121,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="kC1-jY-sr2" kind="show" id="JNJ-Rj-EUy"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="google" translatesAutoresizingMaskIntoConstraints="NO" id="QKW-hj-0Sa">
                                 <rect key="frame" x="76" y="568" width="223" height="35"/>
@@ -141,6 +136,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="txtEmail" destination="7Ph-BN-zFx" id="kVH-E8-3as"/>
+                        <outlet property="txtSenha" destination="Kyo-0z-YOx" id="vHS-8D-o1y"/>
                         <outlet property="userLoginFacebook" destination="l2F-oM-on2" id="0Eo-DD-MOF"/>
                     </connections>
                 </viewController>
@@ -368,7 +365,7 @@
         <!--View Controller-->
         <scene sceneID="lYd-bn-pBX">
             <objects>
-                <viewController id="EMs-2B-ZLQ" customClass="ViewController" customModule="Horta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cadastroView" id="EMs-2B-ZLQ" customClass="ViewController" customModule="Horta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QpC-Qr-R9E"/>
                         <viewControllerLayoutGuide type="bottom" id="gyp-jQ-1jX"/>
@@ -463,7 +460,6 @@
                                 </state>
                                 <connections>
                                     <action selector="confirma:" destination="EMs-2B-ZLQ" eventType="touchUpInside" id="BiS-xA-K4D"/>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="hfb-h7-OvA"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cadastro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVZ-bj-f4m">
@@ -481,7 +477,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="6qa-xs-z0h"/>
+                                    <action selector="voltar:" destination="EMs-2B-ZLQ" eventType="touchUpInside" id="Kif-e1-Oso"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -499,7 +495,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHH-M4-xsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2596.5" y="-1109.5"/>
+            <point key="canvasLocation" x="-2826.5" y="-1109.5"/>
         </scene>
         <!--View Controller Config-->
         <scene sceneID="8ht-62-XhN">
@@ -1395,7 +1391,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jhb-1K-Tmc"/>
-        <segue reference="TdC-fj-RhH"/>
+        <segue reference="Era-d2-Hzl"/>
         <segue reference="4YR-2K-Xmc"/>
         <segue reference="L5k-YF-6c9"/>
         <segue reference="Xlq-ed-WZN"/>
