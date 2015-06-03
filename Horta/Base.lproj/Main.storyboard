@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--View Controller Login-->
@@ -157,45 +157,6 @@
             </objects>
             <point key="canvasLocation" x="-3256.5" y="-1109.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="DwP-1a-e0H">
-            <objects>
-                <viewController id="kC1-jY-sr2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Dpb-KO-SH8"/>
-                        <viewControllerLayoutGuide type="bottom" id="sc3-QJ-uIw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ebX-iG-21k">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fundo_login" translatesAutoresizingMaskIntoConstraints="NO" id="ovB-Q6-YKS">
-                                <rect key="frame" x="-16" y="-118" width="391" height="785"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soon" translatesAutoresizingMaskIntoConstraints="NO" id="aMg-6c-iZX">
-                                <rect key="frame" x="67" y="232" width="240" height="203"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="voltar2" translatesAutoresizingMaskIntoConstraints="NO" id="k5f-9H-CPX">
-                                <rect key="frame" x="16" y="20" width="75" height="53"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN3-2l-COt">
-                                <rect key="frame" x="28" y="20" width="50" height="53"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="Era-d2-Hzl"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wbG-3Z-G1p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1888.5" y="-1109.5"/>
-        </scene>
         <!--Horta View-->
         <scene sceneID="0QD-v0-rNC">
             <objects>
@@ -338,6 +299,7 @@
         <!--View Controller-->
         <scene sceneID="rhX-Z3-pf6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWC-s0-k5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4U5-cg-ZLi" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IFz-kA-iD9"/>
@@ -370,7 +332,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dWC-s0-k5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2937.5" y="-296.5"/>
         </scene>
@@ -507,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHH-M4-xsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2826.5" y="-1109.5"/>
+            <point key="canvasLocation" x="-2798.5" y="-1089.5"/>
         </scene>
         <!--View Controller Config-->
         <scene sceneID="8ht-62-XhN">
@@ -1420,10 +1381,10 @@
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="taJ-ka-zMO"/>
+        <segue reference="wi4-7Z-5E1"/>
         <segue reference="4YR-2K-Xmc"/>
         <segue reference="L5k-YF-6c9"/>
-        <segue reference="ki1-Xg-E5V"/>
-        <segue reference="Zqd-5b-rqR"/>
+        <segue reference="W5n-e9-flp"/>
+        <segue reference="TdC-fj-RhH"/>
     </inferredMetricsTieBreakers>
 </document>

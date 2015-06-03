@@ -110,10 +110,10 @@ class LoginController {
     }
     //------------------------------------------------------------------------------------------
     final func getUserName() -> String? {
-        if self.userLogged == 2 {
-            println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
-            self.nomeUsuario = FBSDKProfile.currentProfile().name;
-        }
+//        if self.userLogged == 2 {
+//            println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
+//            self.nomeUsuario = FBSDKProfile.currentProfile().name;
+//        }
 
         return nomeUsuario! as String;
     }

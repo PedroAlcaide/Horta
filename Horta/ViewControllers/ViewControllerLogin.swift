@@ -34,7 +34,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         // Do any additional setup after loading the view.
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
     {
         textField.resignFirstResponder()
         return true;
@@ -80,7 +80,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         self.presentViewController(nextController, animated: true, completion: nil)
         
         
-    }
+   }
     
     
     

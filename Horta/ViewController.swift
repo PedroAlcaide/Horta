@@ -93,7 +93,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         UserManager().toAuthentication("email0@gmail.com", password: "password0")
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
     {
         textField.resignFirstResponder()
         return true;
