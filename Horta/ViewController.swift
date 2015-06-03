@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UserManagerDelegate {
+class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
     
 //    - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
@@ -40,23 +40,11 @@ class ViewController: UIViewController,UserManagerDelegate {
     @IBOutlet weak var confirmarsenha: UITextField!
     
     var manager : UserManager?
+    var validador : Validator?
     
     @IBAction func confirma(sender: UIButton) {
         
-        var array = [nome,sobrenome, email, confirmaremail, senha, confirmarsenha] as Array<UITextField>
-        var correct = Validator.isAllFilledFields(array)
-        Validator.compareEqualFields(email, field2: confirmaremail)
-        if  (correct == true){
-        
-        var user = manager!.creatuser()
-        user.name = nome.text
-        user.surname = sobrenome.text
-        user.email = email.text
-        user.password = senha.text
-        
-        }
-        
-        
+        validador?.iCloudAccountValidation()
         
     }
     
@@ -69,6 +57,9 @@ class ViewController: UIViewController,UserManagerDelegate {
 
        manager = UserManager()
         manager!.delegate = self
+        
+        validador = Validator()
+        validador?.delegate = self
         
         
         var localNotification: UILocalNotification = UILocalNotification()
@@ -90,8 +81,52 @@ class ViewController: UIViewController,UserManagerDelegate {
         UserManager().toAuthentication("email0@gmail.com", password: "password0")
     }
     
+    // USER MANAGER DELEGATE
     
     func errorThrowed(error: NSError) {
+        
+        //dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+        //})
+        
+    }
+    
+    // VALIDATOR DELEGATE
+    
+    func errorThrowedValidator(error: String) {
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.criaAlerta(error)
+        })
+        
+    }
+    
+    func iCloudAccountAvaliable() {
+        
+        
+        var array = [nome,sobrenome, email, confirmaremail, senha, confirmarsenha] as Array<UITextField>
+        var correct = validador?.validateDataSignUp(array)
+        
+        if  (correct == true){
+        
+        var user = manager!.creatuser()
+        user.name = nome.text
+        user.surname = sobrenome.text
+        user.email = email.text
+        user.password = senha.text
+            
+        manager?.saveUser(user)
+        
+
+        }
+        
+        
+    }
+    
+    func criaAlerta(error:String){
+        
+        var alert = UIAlertView(title: "Error Sign UP", message: error, delegate: self, cancelButtonTitle: "OK")
+        alert.show()
         
     }
     

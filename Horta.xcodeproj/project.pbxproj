@@ -20,6 +20,7 @@
 		848030121B1E56EF00B0B79C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848030111B1E56EF00B0B79C /* Validator.swift */; };
 		848030141B1E754C00B0B79C /* LayoutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848030131B1E754C00B0B79C /* LayoutConfigurator.swift */; };
 		84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */; };
+		84F2F94F1B1EAB4500C1AC72 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2F94E1B1EAB4500C1AC72 /* LoginValidator.swift */; };
 		84F5D3601B16B89A00D8304C /* Plat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D35F1B16B89A00D8304C /* Plat.swift */; };
 		84F5D3631B16BA4500D8304C /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D3621B16BA4500D8304C /* Garden.swift */; };
 		84F5D3661B16BBEE00D8304C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D3651B16BBEE00D8304C /* Address.swift */; };
@@ -85,6 +86,7 @@
 		848030111B1E56EF00B0B79C /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Modelos/Tools/Validator.swift; sourceTree = "<group>"; };
 		848030131B1E754C00B0B79C /* LayoutConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutConfigurator.swift; path = Modelos/Tools/LayoutConfigurator.swift; sourceTree = "<group>"; };
 		84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = Modelos/User/UserManager.swift; sourceTree = "<group>"; };
+		84F2F94E1B1EAB4500C1AC72 /* LoginValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginValidator.swift; path = Modelos/Tools/Validator/LoginValidator.swift; sourceTree = "<group>"; };
 		84F5D35F1B16B89A00D8304C /* Plat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plat.swift; path = Modelos/Plat/Plat.swift; sourceTree = "<group>"; };
 		84F5D3621B16BA4500D8304C /* Garden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Garden.swift; path = Modelos/Garden/Garden.swift; sourceTree = "<group>"; };
 		84F5D3651B16BBEE00D8304C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Modelos/Others/Address.swift; sourceTree = "<group>"; };
@@ -212,6 +214,15 @@
 			name = User;
 			sourceTree = "<group>";
 		};
+		84F2F94D1B1EAB0000C1AC72 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				848030111B1E56EF00B0B79C /* Validator.swift */,
+				84F2F94E1B1EAB4500C1AC72 /* LoginValidator.swift */,
+			);
+			name = Validator;
+			sourceTree = "<group>";
+		};
 		84F5D35E1B16B84800D8304C /* Plat */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,9 +255,9 @@
 		84F7FEF61B163FFF00E66A13 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				84F2F94D1B1EAB0000C1AC72 /* Validator */,
 				84F7FEFB1B1642EC00E66A13 /* Exceptions */,
 				84024FDA1B17F92F0089B9DD /* Tools.swift */,
-				848030111B1E56EF00B0B79C /* Validator.swift */,
 				848030131B1E754C00B0B79C /* LayoutConfigurator.swift */,
 			);
 			name = Tools;
@@ -463,6 +474,7 @@
 			files = (
 				84F5D36E1B16CA7200D8304C /* GardenDAOCloudKit.swift in Sources */,
 				84F7FEFA1B16420900E66A13 /* CloudKitException.swift in Sources */,
+				84F2F94F1B1EAB4500C1AC72 /* LoginValidator.swift in Sources */,
 				D6C694121B1D00DF00827224 /* GardenController.swift in Sources */,
 				D6C694181B1D073E00827224 /* layout_item_horta.swift in Sources */,
 				84F7FF071B164B5300E66A13 /* UnconnectedIcloud.swift in Sources */,
