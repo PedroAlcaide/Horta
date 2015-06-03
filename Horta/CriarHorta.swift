@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CriarHorta: UIViewController {
+class CriarHorta: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var cep: UITextField!
@@ -25,4 +25,23 @@ class CriarHorta: UIViewController {
     @IBOutlet weak var criar4: UIButton!
     @IBOutlet weak var criar5: UIButton!
     @IBOutlet weak var criar6: UIButton!
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        nome.delegate = self
+        cep.delegate = self
+        endereco.delegate = self
+        cidade.delegate = self
+        estado.delegate = self
+        nomehorta.delegate = self
+    }
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
+    
 }

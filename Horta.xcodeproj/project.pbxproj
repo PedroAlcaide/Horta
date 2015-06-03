@@ -47,6 +47,7 @@
 		D6C694101B1CFE7300827224 /* ViewControllerLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C6940F1B1CFE7300827224 /* ViewControllerLogin.swift */; };
 		D6C694121B1D00DF00827224 /* GardenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C694111B1D00DF00827224 /* GardenController.swift */; };
 		D6C694181B1D073E00827224 /* layout_item_horta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C694171B1D073E00827224 /* layout_item_horta.swift */; };
+		D6C81FFA1B1F72AE005F39AC /* layout_item_horta.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C81FF91B1F72AE005F39AC /* layout_item_horta.xib */; };
 		EE7B56FD1B18EA0A00967A33 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */; };
 		EE7B57011B19057300967A33 /* HortaTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B57001B19057300967A33 /* HortaTable.swift */; };
 		EEF139711B1E5278009DC7C2 /* CriarHorta.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF139701B1E5278009DC7C2 /* CriarHorta.swift */; };
@@ -113,6 +114,7 @@
 		D6C6940F1B1CFE7300827224 /* ViewControllerLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerLogin.swift; path = ViewControllers/ViewControllerLogin.swift; sourceTree = "<group>"; };
 		D6C694111B1D00DF00827224 /* GardenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenController.swift; path = Modelos/Garden/GardenController.swift; sourceTree = "<group>"; };
 		D6C694171B1D073E00827224 /* layout_item_horta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = layout_item_horta.swift; path = Layouts/layout_item_horta.swift; sourceTree = "<group>"; };
+		D6C81FF91B1F72AE005F39AC /* layout_item_horta.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = layout_item_horta.xib; path = Layouts/layout_item_horta.xib; sourceTree = "<group>"; };
 		EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		EE7B57001B19057300967A33 /* HortaTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HortaTable.swift; sourceTree = "<group>"; };
 		EEF139701B1E5278009DC7C2 /* CriarHorta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriarHorta.swift; sourceTree = "<group>"; };
@@ -170,6 +172,8 @@
 		8464AFF91B13A6F3004BC0B6 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				EEF139701B1E5278009DC7C2 /* CriarHorta.swift */,
+				EEFE52AB1B13911D008CC8F7 /* ViewController.swift */,
 				EEF255831B1663BE00DCC8BF /* PagedScrollViewController.swift */,
 				D6C6940F1B1CFE7300827224 /* ViewControllerLogin.swift */,
 				D6C694031B1CEE2F00827224 /* ViewControllerConfig.swift */,
@@ -289,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				D6C694171B1D073E00827224 /* layout_item_horta.swift */,
+				D6C81FF91B1F72AE005F39AC /* layout_item_horta.xib */,
 			);
 			name = Layouts;
 			sourceTree = "<group>";
@@ -324,9 +329,7 @@
 				EEFE52C91B13A1C3008CC8F7 /* Horta.entitlements */,
 				EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */,
 				EEFE52A61B13911D008CC8F7 /* AppDelegate.swift */,
-				EEFE52AB1B13911D008CC8F7 /* ViewController.swift */,
 				EEFE52AD1B13911D008CC8F7 /* Main.storyboard */,
-				EEF139701B1E5278009DC7C2 /* CriarHorta.swift */,
 				EEF139721B1E5A0C009DC7C2 /* AdicionarProduto.swift */,
 				EEFE52B01B13911D008CC8F7 /* Images.xcassets */,
 				EEFE52B21B13911D008CC8F7 /* LaunchScreen.xib */,
@@ -447,6 +450,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C81FFA1B1F72AE005F39AC /* layout_item_horta.xib in Resources */,
 				84F5D36C1B16C5F500D8304C /* iphone.png in Resources */,
 				EEFE52AF1B13911D008CC8F7 /* Main.storyboard in Resources */,
 				EEFE52B41B13911D008CC8F7 /* LaunchScreen.xib in Resources */,

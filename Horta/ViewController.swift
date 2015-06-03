@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
+class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, UITextFieldDelegate {
     
 //    - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
@@ -67,6 +67,12 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
         validador = Validator()
         validador?.delegate = self
         
+        nome.delegate = self
+        sobrenome.delegate = self
+        email.delegate = self
+        confirmaremail.delegate = self
+        confirmarsenha.delegate = self
+        senha.delegate = self
         
         var localNotification: UILocalNotification = UILocalNotification()
         localNotification.alertAction = "Testing notifications on iOS8"
@@ -87,6 +93,11 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate {
         UserManager().toAuthentication("email0@gmail.com", password: "password0")
     }
     
+    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
     // USER MANAGER DELEGATE
     
     func errorThrowed(error: NSError) {

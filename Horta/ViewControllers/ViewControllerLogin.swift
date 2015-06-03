@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDelegate {
+class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDelegate, UITextFieldDelegate {
     
     let userLogin = LoginController.sharedInstance;
     var validator : Validator?
@@ -29,15 +29,16 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         validator?.delegate = self
         userManager = UserManager()
         userManager?.delegate = self
-        
-        
-        
-        
-
+        txtEmail.delegate = self
+        txtSenha.delegate = self
         // Do any additional setup after loading the view.
     }
     
-    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool // called when 'return' key pressed. return NO to ignore.
+    {
+        textField.resignFirstResponder()
+        return true;
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

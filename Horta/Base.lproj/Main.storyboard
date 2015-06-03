@@ -50,7 +50,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kyo-0z-YOx">
                                 <rect key="frame" x="39" y="339" width="295" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ou cadastre com:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8en-6I-Qax">
                                 <rect key="frame" x="109" y="437" width="166" height="21"/>
@@ -76,7 +76,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ph-BN-zFx">
                                 <rect key="frame" x="39" y="296" width="297" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tF-mU-I7b">
                                 <rect key="frame" x="109" y="622" width="154" height="25"/>
@@ -428,32 +428,32 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jzo-vT-Nmq">
                                 <rect key="frame" x="38" y="513" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-HJ-W6W">
                                 <rect key="frame" x="38" y="433" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mm0-WQ-WTI">
                                 <rect key="frame" x="38" y="362" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jej-4q-fkq">
                                 <rect key="frame" x="38" y="288" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tne-7h-yOd">
                                 <rect key="frame" x="38" y="216" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZfA-Jc-fYX">
                                 <rect key="frame" x="38" y="146" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Li e concordo com os termos de politica de uso" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3Q-aR-TRs">
                                 <rect key="frame" x="114" y="571" width="245" height="21"/>
@@ -613,14 +613,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npS-JM-ZOu">
-                                <rect key="frame" x="38" y="244" width="294" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
-                                <connections>
-                                    <action selector="userConfig_setUserEmail:" destination="hjz-VH-KCz" eventType="editingChanged" id="gvs-4c-JGs"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fqj-sW-lkd">
                                 <rect key="frame" x="38" y="277" width="294" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -678,6 +670,14 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="userConfig_setUserName:" destination="hjz-VH-KCz" eventType="editingChanged" id="0AR-Xj-ygv"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="npS-JM-ZOu">
+                                <rect key="frame" x="38" y="245" width="294" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="userConfig_setUserEmail:" destination="hjz-VH-KCz" eventType="editingChanged" id="gvs-4c-JGs"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -741,22 +741,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plantar" translatesAutoresizingMaskIntoConstraints="NO" id="k5O-jX-g4N">
                                 <rect key="frame" x="146" y="166" width="68" height="81"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-oF-Fsx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cenoura-icon" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-oF-Fsx">
                                 <rect key="frame" x="216" y="397" width="84" height="77"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colher" translatesAutoresizingMaskIntoConstraints="NO" id="fbW-8L-yHz">
                                 <rect key="frame" x="70" y="482" width="75" height="60"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="UGI-dq-nSc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alface_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UGI-dq-nSc">
                                 <rect key="frame" x="79" y="323" width="81" height="77"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-3t-nE9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="abobora-icon" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-3t-nE9">
                                 <rect key="frame" x="217" y="323" width="83" height="77"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oJ6-In-NCl">
                                 <rect key="frame" x="146" y="323" width="83" height="77"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="79P-z3-Wre">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brocolis-icon" translatesAutoresizingMaskIntoConstraints="NO" id="79P-z3-Wre">
                                 <rect key="frame" x="146" y="397" width="83" height="77"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confirmar" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-Ru-2dq">
@@ -825,7 +825,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fechar" translatesAutoresizingMaskIntoConstraints="NO" id="SS4-13-rT4">
                                 <rect key="frame" x="278" y="30" width="81" height="63"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-zw-YL4">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="batata-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-zw-YL4">
                                 <rect key="frame" x="77" y="397" width="83" height="77"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o24-Mm-kBR">
@@ -961,22 +961,22 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CEP" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YxH-Bh-nmU">
                                 <rect key="frame" x="71" y="230" width="238" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAd-iP-EHP">
                                 <rect key="frame" x="71" y="268" width="238" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cidade" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BWL-Qc-V9r">
                                 <rect key="frame" x="71" y="306" width="238" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hBS-q8-9A2">
                                 <rect key="frame" x="71" y="344" width="238" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXc-ho-jz9">
                                 <rect key="frame" x="140" y="562" width="95" height="85"/>
@@ -1041,12 +1041,12 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome da Horta" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mb2-Vd-wPT">
                                 <rect key="frame" x="71" y="192" width="238" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do criador " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1nw-J2-QRV">
                                 <rect key="frame" x="71" y="154" width="238" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1128,9 +1128,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adubo" translatesAutoresizingMaskIntoConstraints="NO" id="U1H-NN-Pzr">
-                                <rect key="frame" x="185" y="380" width="75" height="69"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="visitar" translatesAutoresizingMaskIntoConstraints="NO" id="epe-dk-S06">
                                 <rect key="frame" x="133" y="580" width="113" height="56"/>
                             </imageView>
@@ -1140,20 +1137,20 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="41s-B1-P6E" kind="show" id="Xlq-ed-WZN"/>
+                                    <segue destination="41s-B1-P6E" kind="show" id="W5n-e9-flp"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0N-uZ-uqF">
                                 <rect key="frame" x="34" y="464" width="311" height="96"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regar_aviso" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-ts-iBO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regar_aviso" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-ts-iBO">
                                 <rect key="frame" x="59" y="369" width="75" height="80"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adubo_aviso" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-Wc-Aw6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adubo_aviso" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-Wc-Aw6">
                                 <rect key="frame" x="251" y="369" width="75" height="80"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOR-4w-ISl">
@@ -1165,8 +1162,11 @@
                                     <segue destination="hjz-VH-KCz" kind="show" id="4YR-2K-Xmc"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regar" translatesAutoresizingMaskIntoConstraints="NO" id="YmP-Ne-xrz">
-                                <rect key="frame" x="120" y="380" width="73" height="69"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regar" translatesAutoresizingMaskIntoConstraints="NO" id="YmP-Ne-xrz">
+                                <rect key="frame" x="121" y="380" width="73" height="69"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adubo" translatesAutoresizingMaskIntoConstraints="NO" id="U1H-NN-Pzr">
+                                <rect key="frame" x="186" y="380" width="75" height="69"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1230,9 +1230,6 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colher" translatesAutoresizingMaskIntoConstraints="NO" id="dtQ-ZS-EbW">
                                 <rect key="frame" x="211" y="284" width="38" height="34"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola" translatesAutoresizingMaskIntoConstraints="NO" id="2Ii-G0-R9P">
-                                <rect key="frame" x="71" y="213" width="172" height="159"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gramado" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-B9-BqI">
                                 <rect key="frame" x="-12" y="602" width="391" height="128"/>
@@ -1314,6 +1311,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ViV-oN-gfc">
                                 <rect key="frame" x="-2" y="502" width="377" height="180"/>
                             </scrollView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola" translatesAutoresizingMaskIntoConstraints="NO" id="2Ii-G0-R9P">
+                                <rect key="frame" x="69" y="229" width="134" height="127"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -1377,12 +1377,17 @@
     </scenes>
     <resources>
         <image name="Logotipo" width="404" height="421"/>
+        <image name="abobora-icon" width="145" height="139"/>
         <image name="add" width="120" height="100"/>
         <image name="adicionar" width="154" height="122"/>
         <image name="adubo" width="127" height="109"/>
         <image name="adubo_aviso" width="127" height="132"/>
+        <image name="alface_icon" width="145" height="139"/>
+        <image name="batata-icon" width="145" height="139"/>
+        <image name="brocolis-icon" width="145" height="139"/>
         <image name="cebola" width="272" height="308"/>
         <image name="cebola-icon" width="145" height="139"/>
+        <image name="cenoura-icon" width="145" height="139"/>
         <image name="colher" width="103" height="107"/>
         <image name="config" width="121" height="101"/>
         <image name="confirmar" width="167" height="149"/>
@@ -1415,10 +1420,10 @@
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="jhb-1K-Tmc"/>
-        <segue reference="Era-d2-Hzl"/>
+        <segue reference="taJ-ka-zMO"/>
         <segue reference="4YR-2K-Xmc"/>
         <segue reference="L5k-YF-6c9"/>
-        <segue reference="Xlq-ed-WZN"/>
+        <segue reference="ki1-Xg-E5V"/>
+        <segue reference="Zqd-5b-rqR"/>
     </inferredMetricsTieBreakers>
 </document>
