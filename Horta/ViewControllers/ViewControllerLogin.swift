@@ -49,6 +49,10 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         userLogin.loginFacebook();
     }
     
+    @IBAction func prepareForUnwind(segue:UIStoryboardSegue){
+        
+    }
+    
     
     
     
@@ -73,12 +77,13 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     /*    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
 */
-       var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var nextController = storyboard.instantiateViewControllerWithIdentifier("cadastroView") as! UIViewController
+//       var storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        var nextController = storyboard.instantiateViewControllerWithIdentifier("cadastroView") as! UIViewController
+//        
+//        
+//        self.presentViewController(nextController, animated: true, completion: nil)
         
-        
-        self.presentViewController(nextController, animated: true, completion: nil)
-        
+        self.performSegueWithIdentifier("CadastroSegue", sender: self)
         
    }
     
@@ -98,7 +103,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     func iCloudAccountAvaliable() {
         
         
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+       // dispatch_async(dispatch_get_main_queue(), { () -> Void in
             var array = [self.txtEmail,self.txtSenha] as Array<UITextField>
             
             
@@ -106,7 +111,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
             if (self.validator?.isAllFilledFields(array) == true){
                 self.userManager?.toAuthentication(self.txtEmail.text, password: self.txtSenha.text)
             }
-        })
+        //})
         
         
         
@@ -121,6 +126,12 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     }
     
     func userSaveSucessfull() {
+       dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        
+            self.performSegueWithIdentifier("ListaHortaSegue", sender: self)
+        
+       })
+        
         
     }
     

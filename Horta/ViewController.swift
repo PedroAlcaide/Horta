@@ -49,11 +49,12 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     }
     
     
-    @IBAction func voltar(sender: AnyObject) {
-        
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
     
+    
+    @IBAction func back(sender: AnyObject) {
+    
+    self.performSegueWithIdentifier("BackLoginSegue", sender: self)
+    }
     
     
     override func viewDidLoad() {
@@ -102,16 +103,18 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     
     func errorThrowed(error: NSError) {
         
-        //dispatch_async(dispatch_get_main_queue(), { () -> Void in
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
-        //})
+        })
         
     }
     
     func userSaveSucessfull() {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
+            
+            self.performSegueWithIdentifier("BackLoginSegue", sender: self)
+            
 
         })
         

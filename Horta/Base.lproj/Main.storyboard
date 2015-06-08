@@ -66,9 +66,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="rg0-Da-8NQ" kind="show" id="NSL-dA-sx9"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="entrar" translatesAutoresizingMaskIntoConstraints="NO" id="LMj-hF-NZx">
                                 <rect key="frame" x="109" y="622" width="154" height="25"/>
@@ -97,7 +94,6 @@
                                 </state>
                                 <connections>
                                     <action selector="doLogon:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2dd-Gu-mrU"/>
-                                    <segue destination="rg0-Da-8NQ" kind="presentation" modalTransitionStyle="flipHorizontal" id="NSL-dA-sv9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2F-oM-on2">
@@ -107,7 +103,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login_ConnectToFacebook:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ih0-fr-MzJ"/>
-                                    <segue destination="rg0-Da-8NQ" kind="presentation" id="jhb-1K-Tmc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Senha" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahq-0f-aze">
@@ -151,11 +146,13 @@
                         <outlet property="txtEmail" destination="7Ph-BN-zFx" id="kVH-E8-3as"/>
                         <outlet property="txtSenha" destination="Kyo-0z-YOx" id="vHS-8D-o1y"/>
                         <outlet property="userLoginFacebook" destination="l2F-oM-on2" id="0Eo-DD-MOF"/>
+                        <segue destination="rg0-Da-8NQ" kind="presentation" identifier="ListaHortaSegue" modalTransitionStyle="flipHorizontal" id="aNA-Hs-7iE"/>
+                        <segue destination="EMs-2B-ZLQ" kind="show" identifier="CadastroSegue" id="YLc-Yg-R16"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3256.5" y="-1109.5"/>
+            <point key="canvasLocation" x="-3232.5" y="-1089.5"/>
         </scene>
         <!--Horta View-->
         <scene sceneID="0QD-v0-rNC">
@@ -299,7 +296,6 @@
         <!--View Controller-->
         <scene sceneID="rhX-Z3-pf6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dWC-s0-k5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="4U5-cg-ZLi" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IFz-kA-iD9"/>
@@ -332,6 +328,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dWC-s0-k5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2937.5" y="-296.5"/>
         </scene>
@@ -450,7 +447,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="voltar:" destination="EMs-2B-ZLQ" eventType="touchUpInside" id="Kif-e1-Oso"/>
+                                    <action selector="back:" destination="EMs-2B-ZLQ" eventType="touchUpInside" id="Bb6-Jk-bJq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -464,9 +461,11 @@
                         <outlet property="nome" destination="ZfA-Jc-fYX" id="6ci-hn-nDL"/>
                         <outlet property="senha" destination="Aht-HJ-W6W" id="PVV-nB-fW1"/>
                         <outlet property="sobrenome" destination="tne-7h-yOd" id="yZ5-jG-FO2"/>
+                        <segue destination="2qY-N9-e7s" kind="unwind" identifier="BackLoginSegue" unwindAction="prepareForUnwind:" id="mrz-Ph-ihL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHH-M4-xsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="2qY-N9-e7s" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-2798.5" y="-1089.5"/>
         </scene>
@@ -1381,10 +1380,10 @@
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wi4-7Z-5E1"/>
-        <segue reference="4YR-2K-Xmc"/>
-        <segue reference="L5k-YF-6c9"/>
-        <segue reference="W5n-e9-flp"/>
         <segue reference="TdC-fj-RhH"/>
+        <segue reference="aNA-Hs-7iE"/>
+        <segue reference="W5n-e9-flp"/>
+        <segue reference="L5k-YF-6c9"/>
+        <segue reference="4YR-2K-Xmc"/>
     </inferredMetricsTieBreakers>
 </document>

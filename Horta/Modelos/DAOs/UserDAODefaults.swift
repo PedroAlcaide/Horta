@@ -11,7 +11,7 @@ import CloudKit
 
 @objc protocol UserDAODDelegate{
     optional
-    func faznada()
+    func userSalveinDefaults()
 }
 class UserDAODefaults{
     let NAME = "NAME"

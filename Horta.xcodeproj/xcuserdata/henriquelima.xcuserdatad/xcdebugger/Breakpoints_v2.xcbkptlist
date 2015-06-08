@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Horta/ViewController.swift"
-            timestampString = "455034994.958816"
+            filePath = "Horta/Modelos/DAOs/UserDAOCloudKit.swift"
+            timestampString = "455470152.195209"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "userSaveSucessfull()"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "consultUserEmail(_:aux:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Horta/Modelos/User/UserManager.swift"
-            timestampString = "455042555.690565"
+            filePath = "Horta/Modelos/DAOs/UserDAOCloudKit.swift"
+            timestampString = "455470146.524017"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "saveSuccefull(_:)"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "saveUser(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -82,6 +82,7 @@ class UserManager : UserDAOCKDelegate{
     
     func getUserAuthenticated(user:User){
         daoDefaults.saveUser(user)
+        self.delegate?.userSaveSucessfull()
     }
     
     
