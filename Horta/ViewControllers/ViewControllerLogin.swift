@@ -13,6 +13,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     let userLogin = LoginController.sharedInstance;
     var validator : Validator?
     var userManager : UserManager?
+    var alertLoading : AlertViewLoading?
     
     
     @IBOutlet var txtEmail: UITextField!
@@ -85,6 +86,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     
     
     // Validator Delegate
+
     
     func errorThrowedValidator(errorIndex: Int) {
         
@@ -101,10 +103,14 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         
        // dispatch_async(dispatch_get_main_queue(), { () -> Void in
             var array = [self.txtEmail,self.txtSenha] as Array<UITextField>
-            
-            
+        
             
             if (self.validator?.validateDataSignIn(array) == true){
+                
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.alertLoading = AlertViewLoading()
+                    self.alertLoading?.show()
+                })
                 self.userManager?.toAuthentication(self.txtEmail.text, password: self.txtSenha.text)
             }
         //})
@@ -116,7 +122,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     func errorCloudKitThrowed(error: NSError) {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+            self.alertLoading?.close()
             var alert = ErrorManager().errorsCloudKit(error.code)
             alert.delegate = self
             alert.show()
@@ -126,6 +132,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     
     func othersErrosThrowed(errorIndex: Int) {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.alertLoading?.close()
             var alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
@@ -134,7 +141,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     
     func userSaveSucessfull() {
        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-        
+            self.alertLoading?.close()
             self.performSegueWithIdentifier("ListaHortaSegue", sender: self)
         
        })

@@ -41,6 +41,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     
     var manager : UserManager?
     var validador : Validator?
+    var alertLoading : AlertViewLoading?
     
     @IBAction func confirma(sender: UIButton) {
         //self.navigationController?.popViewControllerAnimated(true)
@@ -101,6 +102,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+            self.alertLoading?.close()
             var alert = ErrorManager().errorsCloudKit(error.code)
             alert.delegate = self
             alert.show()
@@ -112,6 +114,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+            self.alertLoading?.close()
             var alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
@@ -122,7 +125,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     func userSaveSucessfull() {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            
+            self.alertLoading?.close()
             self.performSegueWithIdentifier("BackLoginSegue", sender: self)
             
 
@@ -136,6 +139,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     func errorThrowedValidator(errorIndex: Int) {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            
             var alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
@@ -150,7 +154,10 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         var correct = validador?.validateDataSignUp(array)
         
         if  (correct == true){
-        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.alertLoading = AlertViewLoading()
+            self.alertLoading?.show()
+        })
         var user = manager!.creatuser()
         user.name = nome.text
         user.surname = sobrenome.text

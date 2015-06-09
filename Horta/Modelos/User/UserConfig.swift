@@ -25,6 +25,7 @@ class UserConfig {
 
     private var userAlertColheitaAdubar: Bool;
     private var userAlertSomenteHortasUsuario: Bool;
+
     
     //--------------------------------------------------------------------------------
     init(){
