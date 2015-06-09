@@ -50,6 +50,8 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     }
     
     @IBAction func prepareForUnwind(segue:UIStoryboardSegue){
+        // METODO É CHAMADO APOS RETORNAR DA PROXIMA VIEW
+        // AINDA SERA IMPLEMENTADO
         
     }
     
@@ -63,14 +65,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         //self.navigationController?.popViewControllerAnimated(true)
         
     }
-    
-    func criaAlerta(error:String){
-        
-        var alert = UIAlertView(title: "Error ao Autenticar", message: error, delegate: self, cancelButtonTitle: "OK")
-        alert.show()
-        
-    }
-    
+
     
     @IBAction func cadastrarEmail(sender: AnyObject) {
         
@@ -91,13 +86,14 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     
     // Validator Delegate
     
-    func errorThrowedValidator(error: String) {
+    func errorThrowedValidator(errorIndex: Int) {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.criaAlerta(error)
+            
+            var alert = ErrorManager().errorToIndex(errorIndex)
+            alert.delegate = self
+            alert.show()
         })
-        
-        
     }
     
     func iCloudAccountAvaliable() {
@@ -108,21 +104,32 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
             
             
             
-            if (self.validator?.isAllFilledFields(array) == true){
+            if (self.validator?.validateDataSignIn(array) == true){
                 self.userManager?.toAuthentication(self.txtEmail.text, password: self.txtSenha.text)
             }
         //})
-        
-        
-        
-    
         
     }
     
     // UserManagerDelegate
     
-    func errorThrowed(error: NSError) {
-        self.criaAlerta("Erro ao autenticar")
+    func errorCloudKitThrowed(error: NSError) {
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+            var alert = ErrorManager().errorsCloudKit(error.code)
+            alert.delegate = self
+            alert.show()
+        })
+        
+    }
+    
+    func othersErrosThrowed(errorIndex: Int) {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            var alert = ErrorManager().errorToIndex(errorIndex)
+            alert.delegate = self
+            alert.show()
+        })
     }
     
     func userSaveSucessfull() {

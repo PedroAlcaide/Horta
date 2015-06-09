@@ -13,17 +13,10 @@ protocol UserDAOCKDelegate{
 
 
     func saveSuccefull(user:User)
-    func errorThrowed(error : NSError)
+    func errorCloudKitThrowed(error : NSError)
     func getUserAuthenticated(user:User)
+    func othersErrosThrowed(errorIndex:Int)
     
-/*
-    func getUserWithPassword(user : User , password : String)
-    func saveUserFinished(validate : Bool , user : User!)
-    func getUserFinished(user : User! )
-    
-    func updateSuccesfull()
-
-*/
 }
 
 class UserDAOCloudKit: UserDAO{
@@ -51,11 +44,13 @@ class UserDAOCloudKit: UserDAO{
             (records: [AnyObject]!, error: NSError!) in
             
             if error != nil{
-                self.delegate?.errorThrowed(error)
+                // DEU ERRO NO CLOUD KIT
+                self.delegate?.errorCloudKitThrowed(error)
             } else {
                 if records.count != 0 {
-                    //self.delegate?.saveUserFinished(false, user: nil)
-                    print("usuario ja existe")
+                    // DADOS JA CADASTRADOS
+                    self.delegate?.othersErrosThrowed(ErrorManager.ERROR1)
+                    //print("usuario ja existe")
                 }
                 else {
                     
@@ -75,7 +70,7 @@ class UserDAOCloudKit: UserDAO{
         })
         
     }
-    
+    /*
     func getUserWithEmail(email : String , password : String){
         var predicate = NSPredicate(format: "EMAIL = %@ && PASSWORD = %@", email , password)
         
@@ -84,7 +79,7 @@ class UserDAOCloudKit: UserDAO{
             (records: [AnyObject]!, error: NSError!) in
             
             if error != nil{
-                //self.delegate?.errorThrowed(error)
+               // self.delegate?.errorThrowed(error)
             } else {
                 if records.count != 0 {
                     
@@ -108,7 +103,7 @@ class UserDAOCloudKit: UserDAO{
         
     }
 
-    
+    */
     
     
     func saveUser(user : User){
@@ -123,14 +118,15 @@ class UserDAOCloudKit: UserDAO{
         publicDB.saveRecord(record, completionHandler: { (record, error) in
             
             if error != nil {
-                self.delegate?.errorThrowed(error)
+                // ERROR NO CLOUD KIT
+                self.delegate?.errorCloudKitThrowed(error)
                 
             } else {
+                // USUARIO SALVO
                 user.recordID = record.recordID
-                print("usuario salvo")
+                //print("usuario salvo")
                 self.delegate?.saveSuccefull(user)
                 
-                //self.delegate?.saveUserFinished(true, user: user)
             }
         })
         publicDB.addOperation(modify)
@@ -150,12 +146,18 @@ class UserDAOCloudKit: UserDAO{
             
             if  error != nil{
                 
-                self.delegate?.saveSuccefull(user)
-                //self.delegate?.saveUserFinished(true, user: user)
+                // ERROR CLOUD KIT
+                
+                self.delegate?.errorCloudKitThrowed(error)
+                
+                
                 
                 
             }else{
-                self.delegate?.errorThrowed(error)
+                
+                // USUARIO ATUALIZADO
+                
+                self.delegate?.saveSuccefull(user)
             }
             
         })
@@ -173,6 +175,8 @@ class UserDAOCloudKit: UserDAO{
                 
                 if  (results.count > 0){
                     
+                    // USUARIO LOCALIZADO
+                    
                     var queryResult = results[0] as! CKRecord
                     var user = UserManager().creatuser()
                     
@@ -185,11 +189,16 @@ class UserDAOCloudKit: UserDAO{
                     self.delegate?.getUserAuthenticated(user)
                     
                 }else{
-                    print("Usuario nao localizado")
+                    // USUARIO NAO LOCALIZADO
+                    self.delegate?.othersErrosThrowed(ErrorManager.ERROR2)
+                    //print("Usuario nao localizado")
                 }
                 
             }else{
-                self.delegate?.errorThrowed(error)
+                
+                // ERROR CLOUD KIT
+                
+                self.delegate?.errorCloudKitThrowed(error)
             }
             
             

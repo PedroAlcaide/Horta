@@ -12,16 +12,22 @@ import UIKit
 class LayoutConfigurator {
     
     static func personalizeFieldError(textField:UITextField){
-        textField.layer.cornerRadius = 8.0
-        textField.layer.masksToBounds = true
-        textField.layer.borderColor = UIColor.redColor().CGColor
-        textField.layer.borderWidth = 1.0
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            textField.layer.cornerRadius = 8.0
+            textField.layer.masksToBounds = true
+            textField.layer.borderColor = UIColor.redColor().CGColor
+            textField.layer.borderWidth = 1.0
+        })
+        
     }
     
     static func removeTextFieldError(textField:UITextField){
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            textField.layer.borderWidth = 0
+            textField.layer.masksToBounds = false
+        })
         
-        textField.layer.borderWidth = 0
-        textField.layer.masksToBounds = false
     }
     
     

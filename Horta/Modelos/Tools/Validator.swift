@@ -12,8 +12,9 @@ import CloudKit
 
 protocol ValidatorDelegate{
     
-    func errorThrowedValidator(error:String)
+    func errorThrowedValidator(errorIndex:Int)
     func iCloudAccountAvaliable()
+    
     
     
 }
@@ -28,42 +29,19 @@ class Validator {
         CKContainer.defaultContainer().accountStatusWithCompletionHandler { (accountStatus, error) -> Void in
             
             if (accountStatus == CKAccountStatus.NoAccount){
-                print("nao logado cloud kit")
-                self.delegate?.errorThrowedValidator("Sign in to your iCloud account to write records. On the Home screen, launch Settings, tap iCloud, and enter your Apple ID. Turn iCloud Drive on. If you don't have an iCloud account, tap Create a new Apple ID.")
+                // DISPOSITIVO NAO LOGADO NO CLOUD KIT
+                
+                self.delegate?.errorThrowedValidator(ErrorManager.ERROR3)
                 
                 
             }else{
-                print("logado clodkit")
+                // DISPOSITIVO LOGADO NO CLOUD KIT
                 self.delegate?.iCloudAccountAvaliable()
             }
             
             
         }
     }
-    /*
-    -(void)icloudAccountValidation{
-    //VERIFICA SE O USUÁRIO NÃO ESTÁ LOGADO NO ICLOUD
-    
-    [[CKContainer defaultContainer] accountStatusWithCompletionHandler:^(CKAccountStatus accountStatus, NSError *error) {
-    if (accountStatus == CKAccountStatusNoAccount) {
-    [self performSelectorOnMainThread:@selector(showUnconnectedIcloud) withObject:nil waitUntilDone:NO];
-    }
-    else {
-    // Insert your just-in-time schema code here
-    }
-    }];
-    
-    }
-    
-    -(void)showUnconnectedIcloud{
-    [alertLoading close];
-    UnconnectedIcloud *exception = [ExceptionFactory getUnconnectedIcloudReason:@"Sign in to your iCloud account to write records. On the Home screen, launch Settings, tap iCloud, and enter your Apple ID. Turn iCloud Drive on. If you don't have an iCloud account, tap Create a new Apple ID."];
-    
-    [self showAlertWithTitle:exception.name message:exception.reason];
-    }
-    
-    */
-    
     
     func validateDataSignUp(fields:Array<UITextField>)->Bool{
         
@@ -76,26 +54,50 @@ class Validator {
                 
                 if (self.checkPassword(fields[4]) == false){
                     
-                    self.delegate?.errorThrowedValidator("Requerido 6 caracteres")
+                    self.delegate?.errorThrowedValidator(ErrorManager.ERROR4)
                     return false
                     
                 }
                 
             }else{
-                self.delegate?.errorThrowedValidator("Campos Divergentes")
+                self.delegate?.errorThrowedValidator(ErrorManager.ERROR5)
                 return false
             }
             
             
         }else{
-            self.delegate?.errorThrowedValidator("Campos não preenchidos")
+            self.delegate?.errorThrowedValidator(ErrorManager.ERROR6)
             return false
             
         }
         return true
         
     }
+    
+    func validateDataSignIn(fields:Array<UITextField>)->Bool{
+        
+        
+        if  (self.isAllFilledFields(fields) == true){
+            
+            if (self.checkPassword(fields[1])  != true){
+                
+                self.delegate?.errorThrowedValidator(ErrorManager.ERROR4)
+                return false
+                
+            }
+            
+            
+        }else{
+            self.delegate?.errorThrowedValidator(ErrorManager.ERROR6)
+            return false
+        }
+        
+        return true
+        
+    }
 
+    
+    
     func isAllFilledFields(fields:Array<UITextField>)->Bool{
         
         var isCorrect = true
@@ -107,6 +109,7 @@ class Validator {
             if (count(stringTrim) < 1){
                 
                 LayoutConfigurator.personalizeFieldError(textField)
+                
                 isCorrect = false
                 
                 

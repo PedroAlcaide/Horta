@@ -88,10 +88,6 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
 //        localNotification.alertBody = "Woww it works!!"
 //        localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
 //        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-
-        
-        
-        UserManager().toAuthentication("email0@gmail.com", password: "password0")
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
@@ -101,10 +97,24 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     }
     // USER MANAGER DELEGATE
     
-    func errorThrowed(error: NSError) {
+    func errorCloudKitThrowed(error: NSError) {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+            //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+            var alert = ErrorManager().errorsCloudKit(error.code)
+            alert.delegate = self
+            alert.show()
+        })
+        
+    }
+    
+    func othersErrosThrowed(errorIndex: Int) {
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
+            var alert = ErrorManager().errorToIndex(errorIndex)
+            alert.delegate = self
+            alert.show()
         })
         
     }
@@ -123,10 +133,12 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     
     // VALIDATOR DELEGATE
     
-    func errorThrowedValidator(error: String) {
+    func errorThrowedValidator(errorIndex: Int) {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.criaAlerta(error)
+            var alert = ErrorManager().errorToIndex(errorIndex)
+            alert.delegate = self
+            alert.show()
         })
         
     }
@@ -152,14 +164,6 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         
         
     }
-    
-    func criaAlerta(error:String){
-        
-        var alert = UIAlertView(title: "Error Sign UP", message: error, delegate: self, cancelButtonTitle: "OK")
-        alert.show()
-        
-    }
-    
     
 
     override func didReceiveMemoryWarning() {

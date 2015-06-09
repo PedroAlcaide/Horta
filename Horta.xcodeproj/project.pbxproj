@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840175541B26125200202AFD /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840175531B26125200202AFD /* Messenger.swift */; };
+		840175561B261E7600202AFD /* ErrorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840175551B261E7600202AFD /* ErrorManager.swift */; };
 		84024FD31B17982B0089B9DD /* GardenDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD21B17982B0089B9DD /* GardenDB.swift */; };
 		84024FD51B1799980089B9DD /* AddressDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD41B1799980089B9DD /* AddressDAOCloudKit.swift */; };
 		84024FD71B17A2520089B9DD /* GardenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD61B17A2520089B9DD /* GardenManager.swift */; };
@@ -20,13 +22,13 @@
 		848030121B1E56EF00B0B79C /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848030111B1E56EF00B0B79C /* Validator.swift */; };
 		848030141B1E754C00B0B79C /* LayoutConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848030131B1E754C00B0B79C /* LayoutConfigurator.swift */; };
 		84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */; };
-		84F2F94F1B1EAB4500C1AC72 /* LoginValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F2F94E1B1EAB4500C1AC72 /* LoginValidator.swift */; };
 		84F5D3601B16B89A00D8304C /* Plat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D35F1B16B89A00D8304C /* Plat.swift */; };
 		84F5D3631B16BA4500D8304C /* Garden.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D3621B16BA4500D8304C /* Garden.swift */; };
 		84F5D3661B16BBEE00D8304C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D3651B16BBEE00D8304C /* Address.swift */; };
 		84F5D36A1B16C4B400D8304C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F5D3691B16C4B400D8304C /* CloudKit.framework */; };
 		84F5D36C1B16C5F500D8304C /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F5D36B1B16C5F500D8304C /* iphone.png */; };
 		84F5D36E1B16CA7200D8304C /* GardenDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F5D36D1B16CA7200D8304C /* GardenDAOCloudKit.swift */; };
+		84F7A5931B267A3B0047A29B /* ValidadorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7A5921B267A3B0047A29B /* ValidadorManager.swift */; };
 		84F7FEFA1B16420900E66A13 /* CloudKitException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FEF91B16420900E66A13 /* CloudKitException.swift */; };
 		84F7FEFF1B16447100E66A13 /* DivergenceException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FEFE1B16447100E66A13 /* DivergenceException.swift */; };
 		84F7FF011B1647C500E66A13 /* EmptyFieldException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF001B1647C500E66A13 /* EmptyFieldException.swift */; };
@@ -73,6 +75,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840175531B26125200202AFD /* Messenger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Messenger.swift; path = Modelos/Tools/Messenger.swift; sourceTree = "<group>"; };
+		840175551B261E7600202AFD /* ErrorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ErrorManager.swift; path = Modelos/Tools/ErrorManager.swift; sourceTree = "<group>"; };
 		84024FD21B17982B0089B9DD /* GardenDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenDB.swift; path = Modelos/Garden/GardenDB.swift; sourceTree = "<group>"; };
 		84024FD41B1799980089B9DD /* AddressDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressDAOCloudKit.swift; path = Modelos/DAOs/AddressDAOCloudKit.swift; sourceTree = "<group>"; };
 		84024FD61B17A2520089B9DD /* GardenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenManager.swift; path = Modelos/Garden/GardenManager.swift; sourceTree = "<group>"; };
@@ -86,13 +90,13 @@
 		848030111B1E56EF00B0B79C /* Validator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Validator.swift; path = Modelos/Tools/Validator.swift; sourceTree = "<group>"; };
 		848030131B1E754C00B0B79C /* LayoutConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LayoutConfigurator.swift; path = Modelos/Tools/LayoutConfigurator.swift; sourceTree = "<group>"; };
 		84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserManager.swift; path = Modelos/User/UserManager.swift; sourceTree = "<group>"; };
-		84F2F94E1B1EAB4500C1AC72 /* LoginValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginValidator.swift; path = Modelos/Tools/Validator/LoginValidator.swift; sourceTree = "<group>"; };
 		84F5D35F1B16B89A00D8304C /* Plat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Plat.swift; path = Modelos/Plat/Plat.swift; sourceTree = "<group>"; };
 		84F5D3621B16BA4500D8304C /* Garden.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Garden.swift; path = Modelos/Garden/Garden.swift; sourceTree = "<group>"; };
 		84F5D3651B16BBEE00D8304C /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Address.swift; path = Modelos/Others/Address.swift; sourceTree = "<group>"; };
 		84F5D3691B16C4B400D8304C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		84F5D36B1B16C5F500D8304C /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone.png; path = Imagens/iphone.png; sourceTree = "<group>"; };
 		84F5D36D1B16CA7200D8304C /* GardenDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenDAOCloudKit.swift; path = Modelos/DAOs/GardenDAOCloudKit.swift; sourceTree = "<group>"; };
+		84F7A5921B267A3B0047A29B /* ValidadorManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidadorManager.swift; path = Modelos/Tools/ValidadorManager.swift; sourceTree = "<group>"; };
 		84F7FEF91B16420900E66A13 /* CloudKitException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloudKitException.swift; path = Modelos/Tools/Exceptions/CloudKitException.swift; sourceTree = "<group>"; };
 		84F7FEFE1B16447100E66A13 /* DivergenceException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DivergenceException.swift; path = Modelos/Tools/Exceptions/DivergenceException.swift; sourceTree = "<group>"; };
 		84F7FF001B1647C500E66A13 /* EmptyFieldException.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyFieldException.swift; path = Modelos/Tools/Exceptions/EmptyFieldException.swift; sourceTree = "<group>"; };
@@ -221,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				848030111B1E56EF00B0B79C /* Validator.swift */,
-				84F2F94E1B1EAB4500C1AC72 /* LoginValidator.swift */,
+				84F7A5921B267A3B0047A29B /* ValidadorManager.swift */,
 			);
 			name = Validator;
 			sourceTree = "<group>";
@@ -262,6 +266,8 @@
 				84F7FEFB1B1642EC00E66A13 /* Exceptions */,
 				84024FDA1B17F92F0089B9DD /* Tools.swift */,
 				848030131B1E754C00B0B79C /* LayoutConfigurator.swift */,
+				840175531B26125200202AFD /* Messenger.swift */,
+				840175551B261E7600202AFD /* ErrorManager.swift */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -474,7 +480,6 @@
 			files = (
 				84F5D36E1B16CA7200D8304C /* GardenDAOCloudKit.swift in Sources */,
 				84F7FEFA1B16420900E66A13 /* CloudKitException.swift in Sources */,
-				84F2F94F1B1EAB4500C1AC72 /* LoginValidator.swift in Sources */,
 				D6C694121B1D00DF00827224 /* GardenController.swift in Sources */,
 				D6C694181B1D073E00827224 /* layout_item_horta.swift in Sources */,
 				84F7FF071B164B5300E66A13 /* UnconnectedIcloud.swift in Sources */,
@@ -488,6 +493,7 @@
 				D6C694041B1CEE2F00827224 /* ViewControllerConfig.swift in Sources */,
 				84F5D3661B16BBEE00D8304C /* Address.swift in Sources */,
 				84F7FF0D1B165DB500E66A13 /* ProductDAOCloudKit.swift in Sources */,
+				840175541B26125200202AFD /* Messenger.swift in Sources */,
 				84024FDB1B17F92F0089B9DD /* Tools.swift in Sources */,
 				EE7B57011B19057300967A33 /* HortaTable.swift in Sources */,
 				84F7FF0B1B165C4400E66A13 /* Product.swift in Sources */,
@@ -496,6 +502,7 @@
 				8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */,
 				84F7FF101B1664ED00E66A13 /* ProductManager.swift in Sources */,
 				84F5D3601B16B89A00D8304C /* Plat.swift in Sources */,
+				84F7A5931B267A3B0047A29B /* ValidadorManager.swift in Sources */,
 				D691FF691B1672C000D413FC /* LoginController.swift in Sources */,
 				8464B0051B13ACE8004BC0B6 /* UserDAODefaults.swift in Sources */,
 				D6C694071B1CEF3900827224 /* UserConfig.swift in Sources */,
@@ -511,6 +518,7 @@
 				84024FD31B17982B0089B9DD /* GardenDB.swift in Sources */,
 				EEF139731B1E5A0C009DC7C2 /* AdicionarProduto.swift in Sources */,
 				84C62CEF1B14F1DC00DBC5E0 /* UserManager.swift in Sources */,
+				840175561B261E7600202AFD /* ErrorManager.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,
 				84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */,
 				84FB98C91B18F19C003E62C0 /* Script.swift in Sources */,

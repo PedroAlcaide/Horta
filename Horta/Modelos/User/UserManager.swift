@@ -12,8 +12,9 @@ import Foundation
 protocol UserManagerDelegate{
     
     
-    func errorThrowed(error:NSError)
+    func errorCloudKitThrowed(error:NSError)
     func userSaveSucessfull()
+    func othersErrosThrowed(errorIndex:Int)
     
 }
 
@@ -76,13 +77,17 @@ class UserManager : UserDAOCKDelegate{
         
     }
     
-    func errorThrowed(error: NSError) {
-        self.delegate?.errorThrowed(error)
+    func errorCloudKitThrowed(error: NSError) {
+        self.delegate?.errorCloudKitThrowed(error)
     }
     
     func getUserAuthenticated(user:User){
         daoDefaults.saveUser(user)
         self.delegate?.userSaveSucessfull()
+    }
+    
+    func othersErrosThrowed(errorIndex:Int){
+        self.delegate?.othersErrosThrowed(errorIndex)
     }
     
     
