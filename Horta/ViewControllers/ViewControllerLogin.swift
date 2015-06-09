@@ -26,6 +26,8 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        IHKeyboardAvoiding.setAvoidingView(self.view)
+        
         validator = Validator()
         validator?.delegate = self
         userManager = UserManager()

@@ -16,6 +16,7 @@
 		84024FDB1B17F92F0089B9DD /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FDA1B17F92F0089B9DD /* Tools.swift */; };
 		8449C4981B27645E00EEBE36 /* AlertViewLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449C4951B27645D00EEBE36 /* AlertViewLoading.m */; };
 		8449C4991B27645E00EEBE36 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449C4971B27645D00EEBE36 /* CustomIOSAlertView.m */; };
+		8449C49C1B276B5F00EEBE36 /* IHKeyboardAvoiding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449C49B1B276B5F00EEBE36 /* IHKeyboardAvoiding.m */; };
 		8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFD1B13ACE8004BC0B6 /* DaoFactory.swift */; };
 		8464B0031B13ACE8004BC0B6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFE1B13ACE8004BC0B6 /* User.swift */; };
 		8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */; };
@@ -88,6 +89,8 @@
 		8449C4951B27645D00EEBE36 /* AlertViewLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertViewLoading.m; path = Modelos/Tools/CustomAlerts/AlertViewLoading.m; sourceTree = "<group>"; };
 		8449C4961B27645D00EEBE36 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomIOSAlertView.h; path = Modelos/Tools/CustomAlerts/CustomIOSAlertView.h; sourceTree = "<group>"; };
 		8449C4971B27645D00EEBE36 /* CustomIOSAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomIOSAlertView.m; path = Modelos/Tools/CustomAlerts/CustomIOSAlertView.m; sourceTree = "<group>"; };
+		8449C49A1B276B5F00EEBE36 /* IHKeyboardAvoiding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IHKeyboardAvoiding.h; path = Modelos/Tools/IHKeyboardAvoiding.h; sourceTree = "<group>"; };
+		8449C49B1B276B5F00EEBE36 /* IHKeyboardAvoiding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IHKeyboardAvoiding.m; path = Modelos/Tools/IHKeyboardAvoiding.m; sourceTree = "<group>"; };
 		8464AFFD1B13ACE8004BC0B6 /* DaoFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DaoFactory.swift; path = Modelos/DAOs/DaoFactory.swift; sourceTree = "<group>"; };
 		8464AFFE1B13ACE8004BC0B6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Modelos/DAOs/User.swift; sourceTree = "<group>"; };
 		8464AFFF1B13ACE8004BC0B6 /* UserDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDAOCloudKit.swift; path = Modelos/DAOs/UserDAOCloudKit.swift; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 		84F7FEF61B163FFF00E66A13 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8449C49A1B276B5F00EEBE36 /* IHKeyboardAvoiding.h */,
+				8449C49B1B276B5F00EEBE36 /* IHKeyboardAvoiding.m */,
 				8449C4931B2763CC00EEBE36 /* CustomAlerts */,
 				84F2F94D1B1EAB0000C1AC72 /* Validator */,
 				84F7FEFB1B1642EC00E66A13 /* Exceptions */,
@@ -520,6 +525,7 @@
 				EEF139711B1E5278009DC7C2 /* CriarHorta.swift in Sources */,
 				8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */,
 				84F7FF101B1664ED00E66A13 /* ProductManager.swift in Sources */,
+				8449C49C1B276B5F00EEBE36 /* IHKeyboardAvoiding.m in Sources */,
 				84F5D3601B16B89A00D8304C /* Plat.swift in Sources */,
 				84F7A5931B267A3B0047A29B /* ValidadorManager.swift in Sources */,
 				D691FF691B1672C000D413FC /* LoginController.swift in Sources */,
