@@ -69,15 +69,6 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     
     @IBAction func cadastrarEmail(sender: AnyObject) {
         
-    /*    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"viewController"];
-*/
-//       var storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        var nextController = storyboard.instantiateViewControllerWithIdentifier("cadastroView") as! UIViewController
-//        
-//        
-//        self.presentViewController(nextController, animated: true, completion: nil)
-        
         self.performSegueWithIdentifier("CadastroSegue", sender: self)
         
    }
@@ -105,6 +96,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
             
             
             if (self.validator?.validateDataSignIn(array) == true){
+                //var alert = AlertViewloading
                 self.userManager?.toAuthentication(self.txtEmail.text, password: self.txtSenha.text)
             }
         //})
