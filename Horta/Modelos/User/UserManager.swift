@@ -13,7 +13,7 @@ protocol UserManagerDelegate{
     
     
     func errorCloudKitThrowed(error:NSError)
-    func userSaveSucessfull()
+    func userOperationSucessfull(user:User)
     func othersErrosThrowed(errorIndex:Int)
     
 }
@@ -62,18 +62,23 @@ class UserManager : UserDAOCKDelegate{
     }
     
     
-    func getUserLogged()->User{
+    func getUserLogged()->User?{
         
-        return daoDefaults.getUserLogged(self.creatuser())
+        var user = daoDefaults.getUserLogged(self.creatuser())
+        if  (user.email == nil){
+            return nil
+        }
+        
+        return user
         
     }
     
     // UserDAOCloudKit Delegate
     
     func saveSuccefull(user: User) {
-        //daoDefaults.saveUser(user)
-        print("usuario salvo daoDefault")
-        self.delegate?.userSaveSucessfull()
+        daoDefaults.saveUser(user)
+        //print("usuario salvo daoDefault")
+        self.delegate?.userOperationSucessfull(user)
         
     }
     
@@ -83,7 +88,7 @@ class UserManager : UserDAOCKDelegate{
     
     func getUserAuthenticated(user:User){
         daoDefaults.saveUser(user)
-        self.delegate?.userSaveSucessfull()
+        self.delegate?.userOperationSucessfull(user)
     }
     
     func othersErrosThrowed(errorIndex:Int){

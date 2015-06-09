@@ -42,6 +42,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     var manager : UserManager?
     var validador : Validator?
     var alertLoading : AlertViewLoading?
+    var user : User?
     
     @IBAction func confirma(sender: UIButton) {
         //self.navigationController?.popViewControllerAnimated(true)
@@ -122,13 +123,13 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         
     }
     
-    func userSaveSucessfull() {
+    func userOperationSucessfull(user: User) {
+     
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.user = user
             self.alertLoading?.close()
             self.performSegueWithIdentifier("BackLoginSegue", sender: self)
-            
-
         })
         
         //self.dismissViewControllerAnimated(true, completion: nil)

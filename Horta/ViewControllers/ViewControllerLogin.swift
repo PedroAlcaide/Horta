@@ -37,6 +37,14 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if (userManager?.getUserLogged() != nil){
+            self.performSegueWithIdentifier("ListaHortaSegue", sender: self)
+        }
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
     {
         textField.resignFirstResponder()
@@ -141,9 +149,11 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         })
     }
     
-    func userSaveSucessfull() {
+    func userOperationSucessfull(user: User) {
+        
+    
        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.alertLoading?.close()
+        self.alertLoading?.close()
             self.performSegueWithIdentifier("ListaHortaSegue", sender: self)
         
        })
