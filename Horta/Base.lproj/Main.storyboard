@@ -266,26 +266,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-pX-JYV">
-                                <rect key="frame" x="0.0" y="90" width="184" height="37"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeS-0H-lFK">
-                                <rect key="frame" x="183" y="90" width="192" height="37"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FfF-Nk-APl">
-                                <rect key="frame" x="262" y="94" width="46" height="30"/>
-                                <state key="normal" title="Mapa">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jj9-rf-tFQ">
+                                <rect key="frame" x="0.0" y="96" width="375" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
                                 <connections>
-                                    <segue destination="4U5-cg-ZLi" kind="show" id="HuY-f4-y6q"/>
+                                    <action selector="changeViews:" destination="rg0-Da-8NQ" eventType="valueChanged" id="vbE-JJ-2Ai"/>
                                 </connections>
-                            </button>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="segmentControl" destination="Jj9-rf-tFQ" id="Xas-Eq-eP1"/>
                         <outlet property="table" destination="KVq-Xb-MCb" id="Fuc-pR-vNm"/>
                     </connections>
                 </viewController>
@@ -1380,10 +1377,10 @@
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="TdC-fj-RhH"/>
         <segue reference="aNA-Hs-7iE"/>
+        <segue reference="TdC-fj-RhH"/>
+        <segue reference="k74-kw-DU0"/>
+        <segue reference="AbF-SC-ZPO"/>
         <segue reference="W5n-e9-flp"/>
-        <segue reference="L5k-YF-6c9"/>
-        <segue reference="4YR-2K-Xmc"/>
     </inferredMetricsTieBreakers>
 </document>

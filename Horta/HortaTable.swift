@@ -14,6 +14,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var table: UITableView!
     
+    @IBOutlet var segmentControl: UISegmentedControl!
 
     
     
@@ -21,9 +22,25 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.table.delegate = self
         self.table.dataSource = self
         
+        self.segmentControl.setTitle("Participo", forSegmentAtIndex: 0)
+        
+        self.segmentControl.setTitle("Admin", forSegmentAtIndex: 1)
+        
+        self.segmentControl.setTitle("Mapa", forSegmentAtIndex: 2)
         
         
     }
+    
+    
+    @IBAction func changeViews(sender: AnyObject) {
+        
+        print("mudou view")
+        
+    }
+    
+    
+    
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
         

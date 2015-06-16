@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>97077353-5E8E-4B5E-8F27-01A7E4AA8C0A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Horta</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>A43AD129C03871EAE729BD6E846511BD205330B7</key>
 		<string>https://github.com/PedroAlcaide/Horta.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Horta.xcodeproj</string>
+	<string>Horta.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>A43AD129C03871EAE729BD6E846511BD205330B7</key>

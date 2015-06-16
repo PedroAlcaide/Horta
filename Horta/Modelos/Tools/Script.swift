@@ -26,5 +26,19 @@ class Script {
     }
     
     
+    func generateGardensData(quant:Int){
+        
+        for (var i = 0; i < quant;i++){
+            
+            var garden = GardenManager().getNewGarden()
+            garden.name = "name\(i)"
+            garden.address?.address = "adress\(i)"
+            
+        }
+        
+        
+    }
+    
+    
     
 }
