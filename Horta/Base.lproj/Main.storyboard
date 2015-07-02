@@ -904,6 +904,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="submitData:" destination="4DF-Rx-iC0" eventType="touchUpInside" id="Nu0-IH-k1R"/>
                                     <segue destination="rg0-Da-8NQ" kind="show" id="26Y-bN-DLJ"/>
                                 </connections>
                             </button>

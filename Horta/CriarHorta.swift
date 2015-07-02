@@ -17,7 +17,7 @@ class CriarHorta: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var estado: UITextField!
     
-    @IBOutlet weak var nomehorta: UITextField!
+    @IBOutlet weak var bairro: UITextField!
     
     @IBOutlet weak var criar1: UIButton!
     @IBOutlet weak var criar2: UIButton!
@@ -25,6 +25,9 @@ class CriarHorta: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var criar4: UIButton!
     @IBOutlet weak var criar5: UIButton!
     @IBOutlet weak var criar6: UIButton!
+    
+    var gardenManager : GardenManager?
+    var garden : Garden?
     
 
     override func viewDidLoad() {
@@ -35,7 +38,14 @@ class CriarHorta: UIViewController, UITextFieldDelegate {
         endereco.delegate = self
         cidade.delegate = self
         estado.delegate = self
-        nomehorta.delegate = self
+        bairro.delegate = self
+        
+        // Preparando jardim
+        gardenManager = GardenManager()
+        garden = gardenManager?.getNewGarden()
+        
+        
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
@@ -43,5 +53,22 @@ class CriarHorta: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         return true;
     }
+    
+    @IBAction func submitData(sender: AnyObject) {
+        
+        garden?.name = nome.text
+        garden?.address?.address = endereco.text
+        garden?.address?.postCode = cep.text
+        garden?.address?.district = bairro.text
+        garden?.address?.city = cidade.text
+        garden?.address?.state = estado.text
+        
+        
+        gardenManager?.saveGardenAndAddress(garden!)
+        
+        
+        
+    }
+    
     
 }
