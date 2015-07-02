@@ -11,7 +11,7 @@ import CloudKit
 
 protocol GardenDAOCKDelegate{
     
-    func errorThrowed(error:NSError)
+    func gardenSavedSuccessfull()
     
 }
 
@@ -53,9 +53,9 @@ class GardenDAOCLoudKit {
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
             if  (error != nil){
-                self.delegate?.errorThrowed(error)
+                    print("falha ao gravar jardim")
             }else{
-                print("Gravou jardim")
+                self.delegate?.gardenSavedSuccessfull()
             }
             
         })
@@ -64,13 +64,15 @@ class GardenDAOCLoudKit {
         
     }
     
+    
+    
     func updateGarden(garden :GardenDB){
         
         publicBD.fetchRecordWithID(garden.recordID, completionHandler: { (record, error) -> Void in
             
             if  error != nil{
                 
-                self.delegate?.errorThrowed(error)
+                print("falar ao atualizar jardim")
                 
             }else{
                 print("atualizou garden")
@@ -93,7 +95,7 @@ class GardenDAOCLoudKit {
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
             if  (error != nil){
-                self.delegate?.errorThrowed(error)
+                //self.delegate?.errorThrowed(error)
             }else{
                 print("Gravou participante")
             }
@@ -117,7 +119,7 @@ class GardenDAOCLoudKit {
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
             if  (error != nil){
-                self.delegate?.errorThrowed(error)
+                //self.delegate?.errorThrowed(error)
             }else{
                 print("Gravou admin")
             }

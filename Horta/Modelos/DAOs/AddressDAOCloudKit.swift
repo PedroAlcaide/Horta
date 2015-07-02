@@ -11,7 +11,7 @@ import CloudKit
 
 protocol AddressDAOCKDelegate{
     
-    func errorThrowed(error:NSError)
+    //func errorThrowed(error:NSError)
     func saveSuccessfull(newAddress:Address)
     func updateSuccessfull()
     
@@ -29,6 +29,7 @@ class AddressDAOCLoudKit {
     let CITY = "Cidade"
     let STATE = "Estado"
     let ADDRESS = "Endereco"
+    let DISTRICT = "Bairro"
     
     init(){
         
@@ -40,9 +41,10 @@ class AddressDAOCLoudKit {
         
         var record = CKRecord(recordType: ADDRESS)
         record.setObject(newAddress.address, forKey: LOGRADOURO)
-        record.setObject(newAddress.number, forKey: NUMBER)
-        record.setObject(newAddress.complement, forKey: COMPLEMENT)
+        //record.setObject(newAddress.number, forKey: NUMBER)
+        //record.setObject(newAddress.complement, forKey: COMPLEMENT)
         record.setObject(newAddress.postCode, forKey: POSTCODE)
+        record.setObject(newAddress.district, forKey: DISTRICT)
         record.setObject(newAddress.city, forKey: CITY)
         record.setObject(newAddress.state, forKey: STATE)
         
@@ -54,7 +56,7 @@ class AddressDAOCLoudKit {
             
             if  (error != nil){
                 
-                self.delegate?.errorThrowed(error)
+                print("falha ao gravar endereco")
             }else{
                 newAddress.recordID = record.recordID
                 self.delegate?.saveSuccessfull(newAddress)
@@ -71,7 +73,7 @@ class AddressDAOCLoudKit {
             
             if  error != nil{
                 
-                self.delegate?.errorThrowed(error)
+                print("falha ao atualizar endereco")
                 
             }else{
                 self.delegate?.updateSuccessfull()

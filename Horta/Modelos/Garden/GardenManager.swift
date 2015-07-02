@@ -12,6 +12,7 @@ import CloudKit
 protocol GardenManagerDelegate{
     
     func errorThrowed(error:NSError)
+    func gardenOperationSuccessfull()
     
 }
 
@@ -76,11 +77,10 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     }
     
     
-    
         
         // Methods AddressManagerDelegate
         
-        func saveSuccessfull(newAddress: Address) {
+        func addressSavedSuccessfull(newAddress: Address) {
             self.currentGarden?.address = newAddress
             daoCloudKit.saveGardenBD(self.gardenToGardenDB(currentGarden!))
         }
@@ -88,11 +88,20 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         func updateSuccessfull() {
             daoCloudKit.updateGarden(self.gardenToGardenDB(currentGarden!))
         }
+    
+    
+    
+    
+    
+    // Methods GardenDAODelegate
+    
+    func gardenSavedSuccessfull(){
+        print("gravou jardim")
+        self.delegate?.gardenOperationSuccessfull()
         
-        func errorThrowed(error: NSError) {
-            self.delegate?.errorThrowed(error)
-        }
-        
+    }
+    
+    
         
         
     // Methods Horta and User
