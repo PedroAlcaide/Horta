@@ -23,10 +23,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.table.dataSource = self
         
         self.segmentControl.setTitle("Participo", forSegmentAtIndex: 0)
-        
-        self.segmentControl.setTitle("Admin", forSegmentAtIndex: 1)
-        
-        self.segmentControl.setTitle("Mapa", forSegmentAtIndex: 2)
+        self.segmentControl.setTitle("Mapa", forSegmentAtIndex: 1)
         
         
     }

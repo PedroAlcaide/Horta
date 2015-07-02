@@ -271,7 +271,6 @@
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
-                                    <segment title=""/>
                                 </segments>
                                 <connections>
                                     <action selector="changeViews:" destination="rg0-Da-8NQ" eventType="valueChanged" id="vbE-JJ-2Ai"/>
