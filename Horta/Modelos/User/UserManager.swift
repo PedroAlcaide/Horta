@@ -45,8 +45,9 @@ class UserManager : UserDAOCKDelegate{
     }
     
     func saveUser(user:User){
-        daoCloudKit.consultUserEmail(user, aux: 1)
-        //daoCloudKit.saveUser(user)
+        
+        //daoCloudKit.consultUserEmail(user, aux: 1)
+        daoCloudKit.saveUser(user)
     }
     
     func editUser(user:User){
