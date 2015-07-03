@@ -13,8 +13,6 @@ class Address {
     
     var recordID : CKRecordID?
     var address : String?
-    var number : String?
-    var complement : String?
     var postCode : String?
     var district : String?
     var city : String?
