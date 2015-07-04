@@ -94,7 +94,7 @@ class GardenDAOCLoudKit {
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
-            if  (error != nil){
+            if  (error != nil && error.code != 23){
                 //self.delegate?.errorThrowed(error)
             }else{
                 print("Gravou participante")
@@ -118,7 +118,7 @@ class GardenDAOCLoudKit {
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
-            if  (error != nil){
+            if  (error != nil && error.code != 23){
                 //self.delegate?.errorThrowed(error)
             }else{
                 print("Gravou admin")
