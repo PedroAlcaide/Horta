@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CriarHorta: UIViewController, UITextFieldDelegate {
+class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate {
     
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var cep: UITextField!
@@ -28,13 +28,15 @@ class CriarHorta: UIViewController, UITextFieldDelegate {
     
     var gardenManager : GardenManager?
     var garden : Garden?
-    
+    var validador : Validator?
+    var alertLoading : AlertViewLoading?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nome.delegate = self
         cep.delegate = self
+        cep.keyboardType = UIKeyboardType.NumberPad
         endereco.delegate = self
         cidade.delegate = self
         estado.delegate = self
@@ -56,19 +58,57 @@ class CriarHorta: UIViewController, UITextFieldDelegate {
     
     @IBAction func submitData(sender: AnyObject) {
         
-        garden?.name = nome.text
-        garden?.address?.address = endereco.text
-        garden?.address?.postCode = cep.text
-        garden?.address?.district = bairro.text
-        garden?.address?.city = cidade.text
-        garden?.address?.state = estado.text
         
         
-        gardenManager?.saveGardenAndAddress(garden!)
-        
+        validador = Validator()
+        validador?.delegate = self
+        validador?.iCloudAccountValidation()
         
         
     }
     
+    @IBAction func back(sender: AnyObject) {
+        
+        self.performSegueWithIdentifier("BackHortaTable", sender: self)
+    }
+    
+    // VALIDATOR DELEGATE
+    
+    func errorThrowedValidator(errorIndex: Int) {
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            
+            var alert = ErrorManager().errorToIndex(errorIndex)
+            alert.delegate = self
+            alert.show()
+        })
+        
+    }
+    
+    func iCloudAccountAvaliable() {
+        
+        
+        var array = [nome, cep, endereco, bairro, cidade, estado] as Array<UITextField>
+        var correct = validador?.isAllFilledFields(array)
+        
+        if  (correct == true){
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.alertLoading = AlertViewLoading()
+                self.alertLoading?.show()
+            })
+            garden?.name = nome.text
+            garden?.address?.address = endereco.text
+            garden?.address?.postCode = cep.text
+            garden?.address?.district = bairro.text
+            garden?.address?.city = cidade.text
+            garden?.address?.state = estado.text
+            
+            gardenManager?.saveGardenAndAddress(garden!)
+            
+            
+        }
+        
+        
+    }
     
 }

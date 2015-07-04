@@ -96,7 +96,7 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     // Methods GardenDAODelegate
     
     func gardenSavedSuccessfull(){
-        print("gravou jardim")
+        //print("gravou jardim")
         self.delegate?.gardenOperationSuccessfull()
         
     }

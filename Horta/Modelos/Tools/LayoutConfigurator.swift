@@ -17,7 +17,7 @@ class LayoutConfigurator {
             textField.layer.cornerRadius = 8.0
             textField.layer.masksToBounds = true
             textField.layer.borderColor = UIColor.redColor().CGColor
-            textField.layer.borderWidth = 1.0
+            textField.layer.borderWidth = 2.0
         })
         
     }

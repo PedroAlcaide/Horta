@@ -35,6 +35,12 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    @IBAction func hortaTableBack(segue:UIStoryboardSegue){
+        // METODO É CHAMADO APOS RETORNAR DA PROXIMA VIEW
+        // AINDA SERA IMPLEMENTADO
+        
+    }
+    
     
     
     
