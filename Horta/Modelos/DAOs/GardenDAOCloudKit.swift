@@ -135,16 +135,31 @@ class GardenDAOCLoudKit {
     }
     
     
-    // GET GARDEN PARTICIPANTE
+    // GET GARDEN BY ADMIN AND PARTICIPANT
     
-    func getGardenByParticipant(participant:CKRecordID){
+    func getGardenByUser(userID:CKRecordID, isAdmin:Bool){
         
-        var defaultContainer = CKContainer.defaultContainer()
-        var predicate = NSPredicate(format: "\(ID_PART) == %@", participant)
-        var publicDatabase = defaultContainer.publicCloudDatabase
-        var query = CKQuery(recordType: TABLE_PARTICIPANTE, predicate: predicate)
+        var predicate : NSPredicate?
+        var query : CKQuery?
         
-        publicDatabase.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+        if  (isAdmin){
+            
+            // QUERY FOR FETCH GARDEN BY ADMIN
+            
+            predicate = NSPredicate(format: "\(ID_ADMIN) == %@", userID)
+            var query = CKQuery(recordType: TABLE_ADMIN, predicate: predicate)
+
+            
+        }else{
+            
+            // QUERY FOR FETCH GARDEN ON PARTICIPANT
+            
+            predicate = NSPredicate(format: "\(ID_PART) == %@", userID)
+            var query = CKQuery(recordType: TABLE_PARTICIPANTE, predicate: predicate)
+        }
+        
+        
+        self.publicBD.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
             
             
             // VERIFICA SE DEU ERRO
@@ -155,17 +170,24 @@ class GardenDAOCLoudKit {
                 
                 if  (results.count > 0){
                     
-                        var idGardenArray = Array <CKRecordID>()
-                    for idGarden in results{
-                        var garden = idGarden as! CKRecordID
-                        idGardenArray.append(garden)
+                        var idGardenArray = NSMutableArray()
+                    for record in results{
+                        
+                        var gardenReference: CKReference = record.objectForKey(self.ID_ADMIN) as! CKReference
+                        idGardenArray.addObject(gardenReference)
                         
                     }
                     
+                    self.getListGarden(idGardenArray, gardensArray: NSMutableArray(), garden: nil)
                     
+                    
+                }else{
+                    print("nenhum dado encontrado")
                 }
                 
                 
+            }else{
+                print("algum erro no cloudkit")
             }
             
             
@@ -243,7 +265,5 @@ class GardenDAOCLoudKit {
         
         
     }
-
-    
     
 }

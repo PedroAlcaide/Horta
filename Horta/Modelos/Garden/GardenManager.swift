@@ -78,6 +78,13 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     }
     
     
+    func getGardenByUser(userID:CKRecordID,isAdmin:Bool){
+        
+        daoCloudKit.getGardenByUser(userID, isAdmin: isAdmin)
+        
+    }
+    
+    
     
         
         // Methods AddressManagerDelegate
