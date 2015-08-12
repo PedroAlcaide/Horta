@@ -52,6 +52,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 10;
         
     }
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = self.table.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
         //var cell = self.table.dequeueReusableCellWithIdentifier("CustomCell") as! UITableViewCell

@@ -106,6 +106,8 @@ class GardenDAOCLoudKit {
         
     }
     
+    
+    
     func saveRelationshipAdmin(gardenRef:CKReference,adminRef:CKReference){
         
         var record = CKRecord(recordType: TABLE_ADMIN)
@@ -127,6 +129,116 @@ class GardenDAOCLoudKit {
         })
         
         publicBD.addOperation(modify)
+        
+        
+        
+    }
+    
+    
+    // GET GARDEN PARTICIPANTE
+    
+    func getGardenByParticipant(participant:CKRecordID){
+        
+        var defaultContainer = CKContainer.defaultContainer()
+        var predicate = NSPredicate(format: "\(ID_PART) == %@", participant)
+        var publicDatabase = defaultContainer.publicCloudDatabase
+        var query = CKQuery(recordType: TABLE_PARTICIPANTE, predicate: predicate)
+        
+        publicDatabase.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+            
+            
+            // VERIFICA SE DEU ERRO
+            
+            if  (error != nil){
+                
+                // VERIFICA SE RECUPEROU ALGUM VALOR DO BD
+                
+                if  (results.count > 0){
+                    
+                        var idGardenArray = Array <CKRecordID>()
+                    for idGarden in results{
+                        var garden = idGarden as! CKRecordID
+                        idGardenArray.append(garden)
+                        
+                    }
+                    
+                    
+                }
+                
+                
+            }
+            
+            
+        }
+    }
+    
+    
+    func getListGarden(idGardenArray:NSMutableArray, gardensArray:NSMutableArray, garden:Garden?){
+        
+        
+        if (garden != nil){
+            
+            gardensArray.addObject(garden!)
+            
+        }
+        
+        if  (idGardenArray.count == 0){
+            
+            //chamar delegate
+            return
+            
+            
+        }
+        
+        
+        
+        var gardenReference: CKReference = idGardenArray.lastObject as! CKReference
+        var gardenID = gardenReference.recordID
+        idGardenArray.removeLastObject()
+        
+        self.getGarden(gardenID, idGardensArray: idGardenArray, gardensArray: gardensArray)
+        
+    }
+    
+    func getGarden(gardenID:CKRecordID, idGardensArray:NSMutableArray, gardensArray:NSMutableArray){
+        
+        var predicate = NSPredicate(format: "\(ID_GARDEN) == %@", gardenID)
+        var query = CKQuery(recordType: GARDENDB, predicate: predicate)
+        
+        publicBD.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+            
+            if  (error != nil){
+                
+                
+                if  (results.count > 0){
+                    
+                    var gardenResult = results[0] as! CKRecord
+                    var getGarden = GardenDB()
+                    
+                    getGarden.recordID = gardenResult.recordID
+                    getGarden.name = gardenResult.objectForKey(self.NAME) as? String
+                    getGarden.address = gardenResult.objectForKey(self.ADDRESS) as? CKReference
+                    getGarden.photo = gardenResult.objectForKey(self.PHOTO) as? NSData
+                    
+                    
+                    // implementar delegate
+                    
+                    
+                    
+                }else{
+                    // NENHUM DADO ENCONTRADO - implementar delegate
+                }
+                
+                
+            }else{
+                
+                // error cloud kit - implementar delegate
+            }
+            
+            
+            
+        }
+        
         
         
         

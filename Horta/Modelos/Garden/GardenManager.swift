@@ -32,6 +32,7 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         addressManager = AddressManager()
         addressManager.delegate = self
         daoCloudKit.delegate = self
+        
     }
         
         
@@ -75,6 +76,7 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         
         return newGardenDB
     }
+    
     
     
         
