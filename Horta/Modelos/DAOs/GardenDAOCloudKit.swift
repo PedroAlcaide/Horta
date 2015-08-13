@@ -11,7 +11,7 @@ import CloudKit
 
 protocol GardenDAOCKDelegate{
     
-    func gardenSavedSuccessfull()
+    func gardenSavedSuccessfull(gardenID:CKRecordID)
     
 }
 
@@ -46,21 +46,21 @@ class GardenDAOCLoudKit {
         record.setObject(newGarden.address, forKey: ADDRESS)
         record.setObject(newGarden.photo, forKey: PHOTO)
         
-        var modify = CKModifyRecordsOperation()
-        modify.recordsToSave = [CKRecord] (arrayLiteral: record)
-        modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
+        //var modify = CKModifyRecordsOperation()
+        //modify.recordsToSave = [CKRecord] (arrayLiteral: record)
+        //modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
             if  (error != nil && error.code != 23){
                     print("falha ao gravar jardim")
             }else{
-                self.delegate?.gardenSavedSuccessfull()
+                self.delegate?.gardenSavedSuccessfull(record.recordID)
             }
             
         })
         
-        publicBD.addOperation(modify)
+        //publicBD.addOperation(modify)
         
     }
     
@@ -108,27 +108,41 @@ class GardenDAOCLoudKit {
     
     
     
-    func saveRelationshipAdmin(gardenRef:CKReference,adminRef:CKReference){
+    func saveRelationshipUserAndGarden(gardenRef:CKReference,adminRef:CKReference, isAdmin:Bool){
         
-        var record = CKRecord(recordType: TABLE_ADMIN)
-        record.setObject(gardenRef, forKey: ID_GARDEN)
-        record.setObject(adminRef, forKey: ID_ADMIN)
+        var record :CKRecord?
         
-        var modify = CKModifyRecordsOperation()
-        modify.recordsToSave = [CKRecord] (arrayLiteral: record)
-        modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
+        if  (isAdmin){
+            
+            record = CKRecord(recordType: TABLE_ADMIN)
+            record!.setObject(gardenRef, forKey: ID_GARDEN)
+            record!.setObject(adminRef, forKey: ID_ADMIN)
+            
+        }else{
+            
+            record = CKRecord(recordType: TABLE_PARTICIPANTE)
+            record!.setObject(gardenRef, forKey: ID_GARDEN)
+            record!.setObject(adminRef, forKey: ID_PART)
+            
+        }
+        
+        
+        
+//        var modify = CKModifyRecordsOperation()
+//        modify.recordsToSave = [CKRecord] (arrayLiteral: record!)
+//        modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
-            if  (error != nil && error.code != 23){
+            if  (error != nil){
                 //self.delegate?.errorThrowed(error)
             }else{
-                print("Gravou admin")
+                print("Gravou relacionamento")
             }
             
         })
         
-        publicBD.addOperation(modify)
+        //publicBD.addOperation(modify)
         
         
         

@@ -104,9 +104,17 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     
     // Methods GardenDAODelegate
     
-    func gardenSavedSuccessfull(){
+    func gardenSavedSuccessfull(gardenID:CKRecordID){
+        
+        var gardenReference = Tools().recordIDToReference(gardenID)
+        var user = UserManager().getUserLogged()
+        
+        var userReference = Tools().recordIDToReference(user?.recordID)
+        
+        daoCloudKit.saveRelationshipUserAndGarden(gardenReference, adminRef: userReference, isAdmin: true)
+        
         //print("gravou jardim")
-        self.delegate?.gardenOperationSuccessfull()
+        //self.delegate?.gardenOperationSuccessfull()
         
     }
     
@@ -124,14 +132,14 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         
     }
     
-    func addAdmin(gardenID:CKRecordID, userID:CKRecordID){
-        
-        var gardenRef = Tools().recordIDToReference(gardenID)
-        var userRef = Tools().recordIDToReference(userID)
-        
-        daoCloudKit.saveRelationshipAdmin(gardenRef, adminRef: userRef)
-        
-    }
+//    func addAdmin(gardenID:CKRecordID, userID:CKRecordID){
+//        
+//        var gardenRef = Tools().recordIDToReference(gardenID)
+//        var userRef = Tools().recordIDToReference(userID)
+//        
+//        daoCloudKit.saveRelationshipAdmin(gardenRef, adminRef: userRef)
+//        
+//    }
     
     
     

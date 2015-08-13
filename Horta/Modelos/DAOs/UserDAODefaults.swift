@@ -39,7 +39,9 @@ class UserDAODefaults{
         user.surname = userDefaults.objectForKey(SURNAME) as? String
         user.email = userDefaults.objectForKey(EMAIL) as? String
         user.password = userDefaults.objectForKey(PASSWORD) as? String
-        user.recordID = userDefaults.objectForKey(RECORDID) as? CKRecordID
+        var stringID = userDefaults.objectForKey(RECORDID) as? String
+        
+        user.recordID = CKRecordID(recordName: stringID)
         return user
     }
 }

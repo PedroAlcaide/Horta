@@ -54,7 +54,7 @@ class AddressDAOCLoudKit {
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
-            if  (error != nil && error.code != 23){
+            if  (error != nil){
                 
                 print("falha ao gravar endereco")
             }else{
