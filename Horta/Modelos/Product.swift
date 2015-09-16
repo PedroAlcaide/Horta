@@ -15,6 +15,7 @@ class Product {
     var name:String?
     var description : String?
     var quantity : Int?
-    var photo : NSData?
+    var photo : String?
+    var gardenID : CKReference?
     
 }

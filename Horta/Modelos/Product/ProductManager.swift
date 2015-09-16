@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import CloudKit
 
 protocol ProductManagerDelegate{
     
     func errorThrowed(error:NSError)
+    func receiveProducts(productArray:Array<Product>)
+    func operationSucessfull()
     
 }
 
@@ -32,9 +35,11 @@ class ProductManager : ProductDAOCKDelegate {
         
     }
     
-    func saveProduct(product : Product){
+    func saveProduct(product : Product, gardenID : CKRecordID){
         
-        daoCloudKit.saveProduct(product)
+        var gardenReference : CKReference = Tools().recordIDToReference(gardenID)
+        
+        daoCloudKit.saveProduct(product, gardenID: gardenReference)
         
     }
     
@@ -46,6 +51,19 @@ class ProductManager : ProductDAOCKDelegate {
     
     func errorThrowed(error: NSError) {
         self.delegate?.errorThrowed(error)
+    }
+    
+    func receiveProducts(productArray: Array<Product>) {
+        // vamos ver
+        
+        self.delegate?.receiveProducts(productArray)
+    }
+    
+    func operationSucessfull() {
+        
+        self.delegate?.operationSucessfull()
+        
+        
     }
     
     

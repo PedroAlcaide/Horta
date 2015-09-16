@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller Login-->
@@ -822,7 +822,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSq-h6-EJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1260.5" y="-282.5"/>
+            <point key="canvasLocation" x="-1171.5" y="-226.5"/>
         </scene>
         <!--Criar Horta-->
         <scene sceneID="x7c-Bn-S72">
@@ -1342,10 +1342,10 @@
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="L5k-YF-6c9"/>
-        <segue reference="W5n-e9-flp"/>
-        <segue reference="4YR-2K-Xmc"/>
-        <segue reference="z6L-ux-f9L"/>
         <segue reference="taJ-ka-zMO"/>
+        <segue reference="AbF-SC-ZPO"/>
+        <segue reference="aNA-Hs-7iE"/>
+        <segue reference="k74-kw-DU0"/>
+        <segue reference="ki1-Xg-E5V"/>
     </inferredMetricsTieBreakers>
 </document>
