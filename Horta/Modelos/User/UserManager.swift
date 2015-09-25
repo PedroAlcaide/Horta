@@ -65,8 +65,8 @@ class UserManager : UserDAOCKDelegate{
     
     func getUserLogged()->User?{
         
-        var user = daoDefaults.getUserLogged(self.creatuser())
-        if  (user.email == nil){
+        let user = daoDefaults.getUserLogged(self.creatuser())
+        if  (user == nil){
             return nil
         }
         

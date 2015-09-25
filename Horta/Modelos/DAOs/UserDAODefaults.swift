@@ -33,15 +33,18 @@ class UserDAODefaults{
     }
     
     
-    func getUserLogged(user : User) -> User{
+    func getUserLogged(user : User) -> User?{
         
         user.name = userDefaults.objectForKey(NAME) as? String
         user.surname = userDefaults.objectForKey(SURNAME) as? String
         user.email = userDefaults.objectForKey(EMAIL) as? String
         user.password = userDefaults.objectForKey(PASSWORD) as? String
-        var stringID = userDefaults.objectForKey(RECORDID) as? String
-        
-        user.recordID = CKRecordID(recordName: stringID)
+        let stringID = userDefaults.objectForKey(RECORDID) as? String
+       // print(stringID
+            if (stringID == nil){
+                return nil
+            }
+        user.recordID = CKRecordID(recordName: stringID!)
         return user
     }
 }

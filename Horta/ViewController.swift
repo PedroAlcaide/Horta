@@ -77,7 +77,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         confirmarsenha.delegate = self
         senha.delegate = self
         
-        var localNotification: UILocalNotification = UILocalNotification()
+        let localNotification: UILocalNotification = UILocalNotification()
         localNotification.alertAction = "Testing notifications on iOS8"
         localNotification.alertBody = "Woww it works!!"
         localNotification.fireDate = NSDate(timeIntervalSinceNow: 30)
@@ -104,7 +104,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
             self.alertLoading?.close()
-            var alert = ErrorManager().errorsCloudKit(error.code)
+            let alert = ErrorManager().errorsCloudKit(error.code)
             alert.delegate = self
             alert.show()
         })
@@ -116,7 +116,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             //self.criaAlerta("Erro ao Gravar os dados, tente novamente!")
             self.alertLoading?.close()
-            var alert = ErrorManager().errorToIndex(errorIndex)
+            let alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
         })
@@ -141,7 +141,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             
-            var alert = ErrorManager().errorToIndex(errorIndex)
+            let alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
         })
@@ -151,15 +151,15 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     func iCloudAccountAvaliable() {
         
         
-        var array = [nome,sobrenome, email, confirmaremail, senha, confirmarsenha] as Array<UITextField>
-        var correct = validador?.validateDataSignUp(array)
+        let array = [nome,sobrenome, email, confirmaremail, senha, confirmarsenha] as Array<UITextField>
+        let correct = validador?.validateDataSignUp(array)
         
         if  (correct == true){
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.alertLoading = AlertViewLoading()
             self.alertLoading?.show()
         })
-        var user = manager!.creatuser()
+        let user = manager!.creatuser()
         user.name = nome.text
         user.surname = sobrenome.text
         user.email = email.text

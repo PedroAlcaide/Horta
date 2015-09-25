@@ -38,7 +38,7 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         
     func getNewGarden()->Garden{
             
-        var newGarden = Garden()
+        let newGarden = Garden()
         newGarden.address = addressManager.getNewAddress()
         return newGarden
             
@@ -65,11 +65,12 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         addressManager.saveAddress(garden.address!)
         
     }
+    
 
     
     func gardenToGardenDB(garden: Garden)->GardenDB{
         
-        var newGardenDB = self.getNewGardenDB()
+        let newGardenDB = self.getNewGardenDB()
         newGardenDB.name = garden.name
         newGardenDB.photo = garden.photo
         newGardenDB.address = Tools().recordIDToReference(garden.address?.recordID)
@@ -77,10 +78,22 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         return newGardenDB
     }
     
+    func gardenDBtoGarden(gardenDB: GardenDB)->Garden{
+        
+        let newGarden = self.getNewGarden()
+        newGarden.name = gardenDB.name
+        newGarden.recordID = gardenDB.recordID
+        newGarden.photo = gardenDB.photo
+        newGarden.address?.recordID = gardenDB.address?.recordID
+        
+        return newGarden
+        
+    }
+    
     
     func getGardenByUser(userRecord:CKRecordID,isAdmin:Bool){
         
-        var userID : CKReference = Tools().recordIDToReference(userRecord)
+        let userID : CKReference = Tools().recordIDToReference(userRecord)
         daoCloudKit.getGardenByUser(userID, isAdmin: isAdmin)
         
     }
@@ -107,10 +120,10 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     
     func gardenSavedSuccessfull(gardenID:CKRecordID){
         
-        var gardenReference = Tools().recordIDToReference(gardenID)
-        var user = UserManager().getUserLogged()
+        let gardenReference = Tools().recordIDToReference(gardenID)
+        let user = UserManager().getUserLogged()
         
-        var userReference = Tools().recordIDToReference(user?.recordID)
+        let userReference = Tools().recordIDToReference(user?.recordID)
         
         daoCloudKit.saveRelationshipUserAndGarden(gardenReference, adminRef: userReference, isAdmin: true)
         
@@ -119,6 +132,29 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         
     }
     
+    func savedRelationashipSucessfull(){
+        
+        self.delegate?.gardenOperationSuccessfull()
+        
+        
+    }
+    
+    func getGardensByUser(gardenDBArray: NSMutableArray) {
+        
+        let arrayGarden = NSMutableArray()
+        
+        while (gardenDBArray.count == 0){
+            let gardenDB = gardenDBArray.lastObject as! GardenDB
+            gardenDBArray.removeLastObject()
+            arrayGarden.addObject(self.gardenDBtoGarden(gardenDB))
+            
+        }
+        
+        
+        
+        
+        
+    }
     
         
         
@@ -126,8 +162,8 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     
     func toParticipateGarden(gardenID:CKRecordID, userID:CKRecordID){
         
-        var gardenRef = Tools().recordIDToReference(gardenID)
-        var userRef = Tools().recordIDToReference(userID)
+        let gardenRef = Tools().recordIDToReference(gardenID)
+        let userRef = Tools().recordIDToReference(userID)
         
         daoCloudKit.saveRelationshipParticipant(gardenRef, userRef: userRef)
         

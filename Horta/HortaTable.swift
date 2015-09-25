@@ -34,14 +34,14 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBAction func changeViews(sender: AnyObject) {
         
         if  self.segmentControl.selectedSegmentIndex == 1{
-            var id = self.user?.recordID
+            let id = self.user?.recordID
             self.gardenManager?.getGardenByUser(id!, isAdmin: true)
             
         }
         
         //self.segmentControl.selectedSegmentIndex
         
-        print("mudou view")
+        print("mudou view", terminator: "")
         
     }
     
@@ -64,7 +64,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = self.table.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
+        let cell = self.table.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
         //var cell = self.table.dequeueReusableCellWithIdentifier("CustomCell") as! UITableViewCell
         cell.lblHorta.text = "Danado"
         return cell

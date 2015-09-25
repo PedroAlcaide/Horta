@@ -20,7 +20,7 @@ class Tools {
     
     func TRIM(oldSrting:String)-> String{
         
-        var trimString : String = oldSrting.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        let trimString : String = oldSrting.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
         
        return trimString
         

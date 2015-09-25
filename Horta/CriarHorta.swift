@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate {
+class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, GardenManagerDelegate {
     
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var cep: UITextField!
@@ -44,9 +44,17 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate {
         
         // Preparando jardim
         gardenManager = GardenManager()
+        gardenManager?.delegate = self
         garden = gardenManager?.getNewGarden()
         
         
+        
+    }
+    
+    func closeAlert(){
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.alertLoading?.close()
+        }
         
     }
     
@@ -78,7 +86,7 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             
-            var alert = ErrorManager().errorToIndex(errorIndex)
+            let alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
         })
@@ -88,8 +96,8 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate {
     func iCloudAccountAvaliable() {
         
         
-        var array = [nome, cep, endereco, bairro, cidade, estado] as Array<UITextField>
-        var correct = validador?.isAllFilledFields(array)
+        let array = [nome, cep, endereco, bairro, cidade, estado] as Array<UITextField>
+        let correct = validador?.isAllFilledFields(array)
         
         if  (correct == true){
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -109,6 +117,19 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate {
         }
         
         
+    }
+    
+    // Garden Manager Delegate
+    
+    func gardenOperationSuccessfull() {
+        
+        
+        self.closeAlert()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func errorThrowed(error: NSError) {
+        self.errorThrowedValidator(error.code)
     }
     
 }

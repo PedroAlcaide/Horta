@@ -37,7 +37,7 @@ class ProductManager : ProductDAOCKDelegate {
     
     func saveProduct(product : Product, gardenID : CKRecordID){
         
-        var gardenReference : CKReference = Tools().recordIDToReference(gardenID)
+        let gardenReference : CKReference = Tools().recordIDToReference(gardenID)
         
         daoCloudKit.saveProduct(product, gardenID: gardenReference)
         

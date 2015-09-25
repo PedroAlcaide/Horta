@@ -41,7 +41,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         gardenController.linkNomeItemWithUI( nomeItem );
         
         for i in 0...3 {
-            var img = UIImage( named: "cebola" );
+            let img = UIImage( named: "cebola" );
             gardenController.addItem( idCanteiro: i, imgItem: img! );
 //            var item = NSBundle.mainBundle().loadNibNamed("layout_item_horta", owner: self, options: nil )[0] as! layout_item_horta;
             //item.setTextLabelIDCanteiro( "#" + String(i + 1) );
@@ -49,7 +49,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate {
         }
         
         // Carrega os itens da horta
-        var itens = gardenController.getItens();
+        let itens = gardenController.getItens();
         for i in itens {
             pageImages.append( i );
         }

@@ -46,6 +46,12 @@ class AddressManager :AddressDAOCKDelegate {
         
     }
     
+    func getAddress(gardenArray:NSMutableArray){
+        
+        
+        
+    }
+    
     
     // Methods AddressDAOCKDelegate
     
