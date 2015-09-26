@@ -196,6 +196,7 @@
 		8464AFF91B13A6F3004BC0B6 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				D691FF681B1672C000D413FC /* LoginController.swift */,
 				EEF139701B1E5278009DC7C2 /* CriarHorta.swift */,
 				EEFE52AB1B13911D008CC8F7 /* ViewController.swift */,
 				EEF255831B1663BE00DCC8BF /* PagedScrollViewController.swift */,
@@ -236,7 +237,6 @@
 				D6C694021B1CED5600827224 /* facebook_bridging_header.h */,
 				8464AFFE1B13ACE8004BC0B6 /* User.swift */,
 				84C62CEE1B14F1DC00DBC5E0 /* UserManager.swift */,
-				D691FF681B1672C000D413FC /* LoginController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -437,6 +437,7 @@
 		EEFE52991B13911D008CC8F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Pedro Alcaide";
 				TargetAttributes = {

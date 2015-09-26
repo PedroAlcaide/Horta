@@ -70,6 +70,7 @@ class UserManager : UserDAOCKDelegate{
             return nil
         }
         
+        println( user.email )
         return user
         
     }

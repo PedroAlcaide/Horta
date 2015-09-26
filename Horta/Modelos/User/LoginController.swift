@@ -60,8 +60,8 @@
 //  Controlador de login do usuário.
 
 import Foundation
-//import FBSDKCoreKit
-//import FBSDKLoginKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 //------------------------------------------------------------------------------------------
 class LoginController {
@@ -86,17 +86,17 @@ class LoginController {
     init(){
 //        println( "Conectar inicializado" );
         FBSDKProfile.enableUpdatesOnAccessTokenChange( true );
-        classId      += 1;
-        nomeUsuario   = "";
-        emailUsuario  = "";
-        userLogged    = 0;
-        userIsAdmin   = false;
+        classId      += 1
+        nomeUsuario   = ""
+        emailUsuario  = ""
+        userLogged    = 0
+        userIsAdmin   = false
         
-        println("Class id: \(classId)");
+        println("Class id: \(classId)")
     }
     //------------------------------------------------------------------------------------------
     final func getUserStatus() -> Int {
-        return self.userLogged!;
+        return self.userLogged!
     }
     //------------------------------------------------------------------------------------------
     final func getUserPicture() -> UIView? {
@@ -110,15 +110,15 @@ class LoginController {
     }
     //------------------------------------------------------------------------------------------
     final func getUserName() -> String? {
-//        if self.userLogged == 2 {
-//            println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
-//            self.nomeUsuario = FBSDKProfile.currentProfile().name;
-//        }
+        if self.userLogged == 2 {
+            println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
+            self.nomeUsuario = FBSDKProfile.currentProfile().name;
+        }
 
         return nomeUsuario! as String;
     }
     //------------------------------------------------------------------------------------------
-    final func getUserEmail() -> String? {
+//    final func getUserEmail() -> String? {
 //        if self.userLogged == 2 {
 //            println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
 //            self.nomeUsuario = FBSDKProfile.currentProfile().name;
@@ -127,14 +127,14 @@ class LoginController {
 //        return nomeUsuario! as String;
 //    }
 //    //------------------------------------------------------------------------------------------
-//    final func getUserEmail() -> String? {
-////        if self.userLogged == 2 {
-////            println( "Get facebook user email: \(FBSDKProfile.currentProfile())" );
-////            self.nomeUsuario = FBSDKProfile.currentProfile().name;
-////        }
-//
-//        return emailUsuario! as String;
-//    }
+    final func getUserEmail() -> String? {
+        if self.userLogged == 2 {
+            println( "Get facebook user email: \(FBSDKProfile.currentProfile())" );
+            self.emailUsuario = FBSDKProfile.currentProfile().name
+        }
+        
+        return self.emailUsuario! as String;
+    }
 //    //------------------------------------------------------------------------------------------
 //    final func loginFacebook() -> ( nome: String?, email: String? ) {
 //
@@ -192,15 +192,16 @@ class LoginController {
 //}
 ////------------------------------------------------------------------------------------------
 
-        return emailUsuario! as String;
-    }
+//        return emailUsuario! as String;
+//    }
     //------------------------------------------------------------------------------------------
     final func loginFacebook() -> ( nome: String?, email: String? ) {
 
         self.userLogged   = 0;
         self.nomeUsuario  = "";
         self.emailUsuario = "";
-        facebook();
+        
+        let loginResult = facebook()
         
         return ( nomeUsuario! as String, emailUsuario! as String );
     }
@@ -235,18 +236,24 @@ class LoginController {
                 
                 if result.grantedPermissions != nil {
                     if  result.grantedPermissions!.contains( "public_profile" ) {
-                        self.userLogged  = 2;
+                        self.userLogged  = 2
                     }
                 }
 
             })
         }
         else {
-            self.userLogged = 2;
-            println( "Conectado com o Facebook. \(self.userLogged)" );
+            self.userLogged = 2
+            println( "Conectado com o Facebook. \(self.userLogged)" )
         }
         
-        return false;
+        if self.userLogged > 0 {
+            return true
+        }
+        else {
+            return false
+            
+        }        
     }
 }
 //------------------------------------------------------------------------------------------

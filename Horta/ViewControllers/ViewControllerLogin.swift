@@ -40,8 +40,21 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if (userManager?.getUserLogged() != nil){
+//        if (userManager?.getUserLogged() != nil){
+//        }
+    }
+    
+    func ValidateLoginAndContinue() {
+        /* Valida o login do usuário, seja pelo facebook, próprio aplicativo ou outro método
+           e prossegue para a tela de hortas do app */
+        if self.userLogin.getUserStatus() > 0 {
+            println( "USUARIO AUTENTICADO" )
             self.performSegueWithIdentifier("ListaHortaSegue", sender: self)
+            
+        }
+        else {
+            println( "USUARIO NÃO AUTENTICADO" )
+            
         }
     }
     
@@ -57,7 +70,8 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     }
     
     @IBAction func login_ConnectToFacebook( sender: UIButton ) {
-        userLogin.loginFacebook();
+        let user = self.userLogin.loginFacebook()
+        ValidateLoginAndContinue()
     }
     
     @IBAction func prepareForUnwind(segue:UIStoryboardSegue){
