@@ -104,9 +104,9 @@ class Validator {
         
         for textField in fields{
             
-            var stringTrim = Tools().TRIM(textField.text)
+            let stringTrim = Tools().TRIM(textField.text!)
             
-            if (count(stringTrim) < 1){
+            if (stringTrim.characters.count < 1){
                 
                 LayoutConfigurator.personalizeFieldError(textField)
                 
@@ -138,7 +138,7 @@ class Validator {
     
     func checkPassword(textField:UITextField)->Bool{
         
-        if  (count(textField.text) < 6){
+        if  (textField.text!.characters.count < 6){
             LayoutConfigurator.personalizeFieldError(textField)
             return false
             

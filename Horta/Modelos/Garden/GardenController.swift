@@ -50,28 +50,28 @@ class GardenController: NSObject {
         return itemArray;
     }
     //-------------------------------------------------------------------------
-    func setNomeResponsavel( # id: Int, nome: String ) {
+    func setNomeResponsavel( id  id: Int, nome: String ) {
         let item: layout_item_horta = itemArray[ id ];
         item.setNomeResponsavel( nome );
         linked_nomeResponsavel.text = nome;
         updateInfo( id );
     }
     //-------------------------------------------------------------------------
-    func setNomeItem( # id:  Int, nome: String ){
+    func setNomeItem( id  id:  Int, nome: String ){
         let item: layout_item_horta = itemArray[ id ];
         item.setNomeItem( nome );
         linked_nomeItem.text = nome;
         updateInfo( id );
     }
     //-------------------------------------------------------------------------
-    func setItemImg( # id: Int, img: UIImage ){
+    func setItemImg( id  id: Int, img: UIImage ){
         let item: layout_item_horta = itemArray[ id ];
         item.imgView.image = img;
         updateInfo( id );
     }
     //-------------------------------------------------------------------------
-    func addItem( #idCanteiro: Int, imgItem: UIImage ) -> () {
-        var newItem = NSBundle.mainBundle().loadNibNamed("layout_item_horta", owner: self, options: nil )[0] as! layout_item_horta;
+    func addItem( idCanteiro idCanteiro: Int, imgItem: UIImage ) -> () {
+        let newItem = NSBundle.mainBundle().loadNibNamed("layout_item_horta", owner: self, options: nil )[0] as! layout_item_horta;
         newItem.setCanteiroID( idCanteiro );
         newItem.setImage( imgItem );
         
@@ -79,7 +79,7 @@ class GardenController: NSObject {
     }
     //-------------------------------------------------------------------------
     func removeItem( id: Int ){
-        var idx: Int;
+        var idx : Int;
         
         itemArray.removeAtIndex( id );        
         updateInfo( 0 );

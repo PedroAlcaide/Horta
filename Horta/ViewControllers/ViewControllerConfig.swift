@@ -51,11 +51,11 @@ class ViewControllerConfig: UIViewController {
     }
     //----------------------------------------------------------------------------------
     @IBAction func userConfig_setUserName( sender: UITextField ) {
-        userConfig.setUserName( sender.text );
+        userConfig.setUserName( sender.text! );
     }
     //----------------------------------------------------------------------------------
     @IBAction func userConfig_setUserEmail( sender: UITextField ) {
-        userConfig.setUserEmail( sender.text );
+        userConfig.setUserEmail( sender.text! );
     }
     //----------------------------------------------------------------------------------
     @IBAction func userConfig_logOut( sender: UIButton ) {

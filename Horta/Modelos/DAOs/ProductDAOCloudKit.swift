@@ -39,14 +39,14 @@ class ProductDAOCloudKit{
     
     func saveProduct(newProduct:Product, gardenID : CKReference){
         
-        var record = CKRecord(recordType: PRODUCT)
+        let record = CKRecord(recordType: PRODUCT)
         record.setObject(newProduct.name, forKey: NAME)
         record.setObject(newProduct.description, forKey: DESCRIPTION)
         record.setObject(newProduct.photo, forKey: PHOTO)
         record.setObject(newProduct.quantity, forKey: QUANTITY)
         record.setObject(gardenID, forKey: HORTA)
         
-        var modify = CKModifyRecordsOperation()
+        let modify = CKModifyRecordsOperation()
         modify.recordsToSave = [CKRecord] (arrayLiteral: record)
         modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
         
@@ -55,7 +55,7 @@ class ProductDAOCloudKit{
             if error != nil{
                 // HOUVE ALGUM ERRO
                 
-                self.delegate?.errorThrowed(error)
+                self.delegate?.errorThrowed(error!)
             }else{
                 
                 // Gravou com sucesso
@@ -71,11 +71,11 @@ class ProductDAOCloudKit{
     
     func updateProduct(product :Product){
         
-        publicDB.fetchRecordWithID(product.recordID, completionHandler: { (record, error) -> Void in
+        publicDB.fetchRecordWithID(product.recordID!, completionHandler: { (record, error) -> Void in
             
             if  error != nil{
                 
-                self.delegate?.errorThrowed(error)
+                self.delegate?.errorThrowed(error!)
                 
             }else{
                 
@@ -89,9 +89,9 @@ class ProductDAOCloudKit{
     
     func getAllProductsInGarden(gardenReference : CKReference){
         
-        var predicate = NSPredicate(format: "\(HORTA) = %@", gardenReference)
+        let predicate = NSPredicate(format: "\(HORTA) = %@", gardenReference)
         
-        var query = CKQuery(recordType: PRODUCT, predicate: predicate)
+        let query = CKQuery(recordType: PRODUCT, predicate: predicate)
         
         publicDB.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
             
@@ -99,9 +99,9 @@ class ProductDAOCloudKit{
             if  (error == nil){
                 
                 
-                if  (results.count > 0){
+                if  (results!.count > 0){
                     
-                    var productsArray : Array<Product> = self.transformArrayProducts(results)
+                    let productsArray : Array<Product> = self.transformArrayProducts(results!)
                     self.delegate?.receiveProducts(productsArray)
                     
                 }
@@ -119,8 +119,8 @@ class ProductDAOCloudKit{
         
         for var i = 0 ;i < results.count;++i{
             
-            var product = ProductManager().creatProduct()
-            var record = results[0] as! CKRecord
+            let product = ProductManager().creatProduct()
+            let record = results[0] as! CKRecord
             
             product.recordID = record.recordID
             product.name = record.objectForKey(self.NAME) as? String

@@ -93,6 +93,7 @@ class LoginController {
         userIsAdmin   = false
         
         println("Class id: \(classId)")
+        print("Class id: \(classId)");
     }
     //------------------------------------------------------------------------------------------
     final func getUserStatus() -> Int {
@@ -207,31 +208,31 @@ class LoginController {
     }
     //------------------------------------------------------------------------------------------
     func logout() {
-        println( "User logged out." );
+        print( "User logged out." );
         userLogged = 0;
         closeAllLoggedAccounts();
     }
     //------------------------------------------------------------------------------------------
     private func closeAllLoggedAccounts() -> () {
 
-        println( "Desconectando todas as contas..." );
+        print( "Desconectando todas as contas..." );
         facebookLoginManager.logOut();
                 
     }
     //------------------------------------------------------------------------------------------
     private func facebook() -> Bool {
-        println( "conectando com Facebook..." );
+        print( "conectando com Facebook..." );
         
         // Usuário não está logado
         if FBSDKAccessToken.currentAccessToken() == nil {
         
-            println( "conectando usuário com o Facebook..." );
+            print( "conectando usuário com o Facebook..." );
             
             facebookLoginManager.logInWithReadPermissions( ["public_profile"], handler: {
                 (result: FBSDKLoginManagerLoginResult!, error: NSError!) -> () in
 
                 if error != nil {
-                    println( "\(error.description)" );
+                    print( "\(error.description)" );
                 }
                 
                 if result.grantedPermissions != nil {
@@ -245,6 +246,8 @@ class LoginController {
         else {
             self.userLogged = 2
             println( "Conectado com o Facebook. \(self.userLogged)" )
+            self.userLogged = 2;
+            print( "Conectado com o Facebook. \(self.userLogged)" );
         }
         
         if self.userLogged > 0 {

@@ -14,7 +14,7 @@ class Script {
         
         for (var i = 0;i < quant;i++){
             
-            var user = User()
+            let user = User()
             user.name = "name\(i)"
             user.surname = "surname\(i)"
             user.email = "email\(i)@gmail.com"
@@ -30,7 +30,7 @@ class Script {
         
         for (var i = 0; i < quant;i++){
             
-            var garden = GardenManager().getNewGarden()
+            let garden = GardenManager().getNewGarden()
             garden.name = "name\(i)"
             garden.address?.address = "adress\(i)"
             

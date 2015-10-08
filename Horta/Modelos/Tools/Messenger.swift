@@ -15,7 +15,7 @@ class Messenger {
     static func alertErrorCloudKit(code : Int)->UIAlertView{
         
         var alert : UIAlertView?
-        var title = "Erro de requisição"
+        let title = "Erro de requisição"
         switch (code){
         
         case 3,4:
@@ -38,7 +38,7 @@ class Messenger {
     
     static func alertErrorEmailCadastrado()->UIAlertView{
         
-       var alert = UIAlertView(title: "Erro ao cadastrar", message: "Erro, E-mail já cadastrado.", delegate: nil, cancelButtonTitle: "OK")
+       let alert = UIAlertView(title: "Erro ao cadastrar", message: "Erro, E-mail já cadastrado.", delegate: nil, cancelButtonTitle: "OK")
         
         return alert
         
@@ -46,7 +46,7 @@ class Messenger {
     
     static func alertErrorUserNotFound()->UIAlertView{
         
-        var alert = UIAlertView(title: "Erro no login", message: "Usuario não localizado", delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: "Erro no login", message: "Usuario não localizado", delegate: nil, cancelButtonTitle: "OK")
         
         return alert
         
@@ -55,7 +55,7 @@ class Messenger {
     
     static func alertErrorUnconnectedCloudKit()->UIAlertView{
         
-        var alert = UIAlertView(title: "Erro", message: "É necessário que o dispositivo esteja logado no cloudKit", delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: "Erro", message: "É necessário que o dispositivo esteja logado no cloudKit", delegate: nil, cancelButtonTitle: "OK")
         
         return alert
 
@@ -64,7 +64,7 @@ class Messenger {
     
     static func alertErrorCharactersPassword()->UIAlertView{
         
-        var alert = UIAlertView(title: "Erro", message: "A senha requer no mínimo 6 caracteres", delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: "Erro", message: "A senha requer no mínimo 6 caracteres", delegate: nil, cancelButtonTitle: "OK")
         
         return alert
         
@@ -72,7 +72,7 @@ class Messenger {
     
     static func alertErrorDivergentFields()->UIAlertView{
         
-        var alert = UIAlertView(title: "Erro", message: "Campos Divergentes", delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: "Erro", message: "Campos Divergentes", delegate: nil, cancelButtonTitle: "OK")
         
         return alert
         
@@ -80,7 +80,7 @@ class Messenger {
     
     static func alertErrorEmptyFields()->UIAlertView{
         
-        var alert = UIAlertView(title: "Erro", message: "Campos não preenchidos", delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: "Erro", message: "Campos não preenchidos", delegate: nil, cancelButtonTitle: "OK")
         
         return alert
         
@@ -89,7 +89,7 @@ class Messenger {
     
     static func alertErrorUnknow()->UIAlertView{
         
-        var alert = UIAlertView(title: "Erro", message: "Erro desconhecido", delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: "Erro", message: "Erro desconhecido", delegate: nil, cancelButtonTitle: "OK")
         
         return alert
     }

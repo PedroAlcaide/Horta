@@ -12,7 +12,8 @@ import CloudKit
 protocol GardenDAOCKDelegate{
     
     func gardenSavedSuccessfull(gardenID:CKRecordID)
-    //func getGardensByUser(gardenArray:NSMutableArray)
+    func savedRelationashipSucessfull()
+    func getGardensByUser(gardenArray:NSMutableArray)
     
 }
 
@@ -43,7 +44,7 @@ class GardenDAOCLoudKit {
     
     func saveGardenBD(newGarden:GardenDB){
         
-        var record = CKRecord(recordType: GARDENDB)
+        let record = CKRecord(recordType: GARDENDB)
         record.setObject(newGarden.name, forKey: NAME)
         record.setObject(newGarden.address, forKey: ADDRESS)
         record.setObject(newGarden.photo, forKey: PHOTO)
@@ -54,10 +55,10 @@ class GardenDAOCLoudKit {
         
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
-            if  (error != nil && error.code != 23){
-                    print("falha ao gravar jardim")
+            if  (error != nil){
+                    print("falha ao gravar jardim", terminator: "")
             }else{
-                self.delegate?.gardenSavedSuccessfull(record.recordID)
+                self.delegate?.gardenSavedSuccessfull(record!.recordID)
             }
             
         })
@@ -70,14 +71,14 @@ class GardenDAOCLoudKit {
     
     func updateGarden(garden :GardenDB){
         
-        publicBD.fetchRecordWithID(garden.recordID, completionHandler: { (record, error) -> Void in
+        publicBD.fetchRecordWithID(garden.recordID!, completionHandler: { (record, error) -> Void in
             
             if  error != nil{
                 
-                print("falar ao atualizar jardim")
+                print("falar ao atualizar jardim", terminator: "")
                 
             }else{
-                print("atualizou garden")
+                print("atualizou garden", terminator: "")
             }
         })
         
@@ -88,11 +89,11 @@ class GardenDAOCLoudKit {
     
     func saveRelationshipParticipant(gardenRef:CKReference,userRef:CKReference){
         
-        var record = CKRecord(recordType: TABLE_PARTICIPANTE)
+        let record = CKRecord(recordType: TABLE_PARTICIPANTE)
         record.setObject(gardenRef, forKey: ID_GARDEN)
         record.setObject(userRef, forKey: ID_PART)
         
-        var modify = CKModifyRecordsOperation()
+        let modify = CKModifyRecordsOperation()
         modify.recordsToSave = [CKRecord] (arrayLiteral: record)
         modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
         
@@ -101,7 +102,7 @@ class GardenDAOCLoudKit {
             if  (error != nil){
                 //self.delegate?.errorThrowed(error)
             }else{
-                print("Gravou participante")
+                print("Gravou participante", terminator: "")
             }
             
         })
@@ -137,12 +138,14 @@ class GardenDAOCLoudKit {
 //        modify.recordsToSave = [CKRecord] (arrayLiteral: record!)
 //        modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
         
-        publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
+        publicBD.saveRecord(record!, completionHandler: { (record, error) -> Void in
             
             if  (error != nil){
                 //self.delegate?.errorThrowed(error)
+                print("erro ao gravar relacionamento")
             }else{
-                print("Gravou relacionamento")
+                self.delegate?.savedRelationashipSucessfull()
+                
             }
             
         })
@@ -166,7 +169,7 @@ class GardenDAOCLoudKit {
             // QUERY FOR FETCH GARDEN BY ADMIN
             
             predicate = NSPredicate(format: "\(ID_ADMIN) == %@", userID)
-            query = CKQuery(recordType: TABLE_ADMIN, predicate: predicate)
+            query = CKQuery(recordType: TABLE_ADMIN, predicate: predicate!)
 
             
         }else{
@@ -174,11 +177,11 @@ class GardenDAOCLoudKit {
             // QUERY FOR FETCH GARDEN ON PARTICIPANT
             
             predicate = NSPredicate(format: "\(ID_PART) == %@", userID)
-            query = CKQuery(recordType: TABLE_PARTICIPANTE, predicate: predicate)
+            query = CKQuery(recordType: TABLE_PARTICIPANTE, predicate: predicate!)
         }
         
         
-        self.publicBD.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+        self.publicBD.performQuery(query!, inZoneWithID: nil) { (results, error) -> Void in
             
             
             // VERIFICA SE DEU ERRO
@@ -187,12 +190,12 @@ class GardenDAOCLoudKit {
                 
                 // VERIFICA SE RECUPEROU ALGUM VALOR DO BD
                 
-                if  (results.count > 0){
+                if  (results!.count > 0){
                     
-                    var idGardenArray = NSMutableArray()
-                    for record in results{
+                    let idGardenArray = NSMutableArray()
+                    for record in results!{
                         
-                        var gardenReference: CKReference = record.objectForKey(self.ID_GARDEN) as! CKReference
+                        let gardenReference: CKReference = record.objectForKey(self.ID_GARDEN) as! CKReference
                         idGardenArray.addObject(gardenReference)
                         
                     }
@@ -201,12 +204,12 @@ class GardenDAOCLoudKit {
                     
                     
                 }else{
-                    print("nenhum dado encontrado")
+                    print("nenhum dado encontrado", terminator: "")
                 }
                 
                 
             }else{
-                print("algum erro no cloudkit")
+                print("algum erro no cloudkit", terminator: "")
             }
             
             
@@ -220,21 +223,20 @@ class GardenDAOCLoudKit {
         if (garden != nil){
             
             gardensArray.addObject(garden!)
-            var seila = gardensArray
+            //var seila = gardensArray
         }
         
         if  (idGardenArray.count == 0){
             
-            //chamar delegate
-            //return self.delegate?.getGardensByUser()
-            
-            
+            // CHAMAR DELEGATE
+            self.delegate?.getGardensByUser(gardensArray)
+
         }
         
         
         
-        var gardenReference: CKReference = idGardenArray.lastObject as! CKReference
-        var gardenID = gardenReference.recordID
+        let gardenReference: CKReference = idGardenArray.lastObject as! CKReference
+        let gardenID = gardenReference.recordID
         idGardenArray.removeLastObject()
         
         self.getGarden(gardenID, idGardensArray: idGardenArray, gardensArray: gardensArray)
@@ -243,18 +245,15 @@ class GardenDAOCLoudKit {
     
     func getGarden(gardenID:CKRecordID, idGardensArray:NSMutableArray, gardensArray:NSMutableArray){
         
-        var predicate = NSPredicate(format: "\(ID_GARDEN) == %@", gardenID)
-        var query = CKQuery(recordType: GARDENDB, predicate: predicate)
-        
-        publicBD.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+        publicBD.fetchRecordWithID(gardenID) { (result, error) -> Void in
             
-            if  (error != nil){
+            if  (error == nil){
                 
                 
-                if  (results.count > 0){
+                if  (result != nil){
                     
-                    var gardenResult = results[0] as! CKRecord
-                    var getGarden = GardenDB()
+                    let gardenResult : CKRecord = result!
+                    let getGarden = GardenDB()
                     
                     getGarden.recordID = gardenResult.recordID
                     getGarden.name = gardenResult.objectForKey(self.NAME) as? String
@@ -267,23 +266,25 @@ class GardenDAOCLoudKit {
                     
                     
                 }else{
-                    // NENHUM DADO ENCONTRADO - implementar delegate
-                    print("nenhum dado encontrado")
+                    print("nenhum encontrado")
                 }
+                    
+                
+                    
+                    
                 
                 
             }else{
                 
                 // error cloud kit - implementar delegate
-                print("erro cloudkit")
+                print("erro cloudkit", terminator: "")
             }
             
             
             
+        
         }
-        
-        
-        
+            
         
     }
     

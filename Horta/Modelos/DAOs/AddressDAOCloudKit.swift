@@ -39,7 +39,7 @@ class AddressDAOCLoudKit {
     
     func saveAddress(newAddress:Address){
         
-        var record = CKRecord(recordType: ADDRESS)
+        let record = CKRecord(recordType: ADDRESS)
         record.setObject(newAddress.address, forKey: LOGRADOURO)
         //record.setObject(newAddress.number, forKey: NUMBER)
         //record.setObject(newAddress.complement, forKey: COMPLEMENT)
@@ -48,7 +48,7 @@ class AddressDAOCLoudKit {
         record.setObject(newAddress.city, forKey: CITY)
         record.setObject(newAddress.state, forKey: STATE)
         
-        var modify = CKModifyRecordsOperation()
+        let modify = CKModifyRecordsOperation()
         modify.recordsToSave = [CKRecord] (arrayLiteral: record)
         modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
         
@@ -56,9 +56,9 @@ class AddressDAOCLoudKit {
             
             if  (error != nil){
                 
-                print("falha ao gravar endereco")
+                print("falha ao gravar endereco", terminator: "")
             }else{
-                newAddress.recordID = record.recordID
+                newAddress.recordID = record!.recordID
                 self.delegate?.saveSuccessfull(newAddress)
                 
             }
@@ -69,17 +69,41 @@ class AddressDAOCLoudKit {
     
     func updateAddress(address : Address){
         
-        publicBD.fetchRecordWithID(address.recordID, completionHandler: { (record, error) -> Void in
+        publicBD.fetchRecordWithID(address.recordID!, completionHandler: { (record, error) -> Void in
             
             if  error != nil{
                 
-                print("falha ao atualizar endereco")
+                print("falha ao atualizar endereco", terminator: "")
                 
             }else{
                 self.delegate?.updateSuccessfull()
-                print("atualizou endereco")
+                print("atualizou endereco", terminator: "")
             }
         })
+        
+    }
+    
+    func getAddressByUser(gardenArray : NSMutableArray, gardensNewArray : NSMutableArray,garden : Garden? ){
+        
+        
+        if (garden != nil){
+            
+            gardensNewArray.addObject(garden!)
+            
+        }
+        
+        if (gardenArray.count == 0){
+            
+            // CHAMAR DELEGATE
+            
+        }
+        
+        
+    }
+    
+    func getAddressByID(addressID:CKRecordID, gardenArray : NSMutableArray, gardensNewArray : NSMutableArray){
+        
+        
         
     }
 

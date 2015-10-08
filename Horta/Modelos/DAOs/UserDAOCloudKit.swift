@@ -37,17 +37,17 @@ class UserDAOCloudKit: UserDAO{
     
     func consultUserEmail(newUser: User,aux:Int){
         
-        var predicate = NSPredicate(format: "EMAIL = %@", String(newUser.email!))
+        let predicate = NSPredicate(format: "EMAIL = %@", String(newUser.email!))
         
-        var query = CKQuery(recordType: USER, predicate: predicate)
+        let query = CKQuery(recordType: USER, predicate: predicate)
         publicDB.performQuery(query, inZoneWithID: nil, completionHandler: {
-            (records: [AnyObject]!, error: NSError!) in
+            (records: [CKRecord]?, error: NSError?) in
             
             if error != nil{
                 // DEU ERRO NO CLOUD KIT
-                self.delegate?.errorCloudKitThrowed(error)
+                self.delegate?.errorCloudKitThrowed(error!)
             } else {
-                if records.count != 0 {
+                if records!.count != 0 {
                     // DADOS JA CADASTRADOS
                     self.delegate?.othersErrosThrowed(ErrorManager.ERROR1)
                     //print("usuario ja existe")
@@ -107,23 +107,23 @@ class UserDAOCloudKit: UserDAO{
     
     
     func saveUser(user : User){
-        var record = CKRecord(recordType: USER)
+        let record = CKRecord(recordType: USER)
         record.setObject(user.name, forKey: NAME)
         record.setObject(user.surname, forKey: SURNAME)
         record.setObject(user.email, forKey: EMAIL)
         record.setObject(user.password, forKey: PASSWORD)
-        var modify = CKModifyRecordsOperation()
+        let modify = CKModifyRecordsOperation()
         modify.recordsToSave = [CKRecord](arrayLiteral: record)
         modify.savePolicy = CKRecordSavePolicy.IfServerRecordUnchanged
         publicDB.saveRecord(record, completionHandler: { (record, error) in
             
             if error != nil {
                 // ERROR NO CLOUD KIT
-                self.delegate?.errorCloudKitThrowed(error)
+                self.delegate?.errorCloudKitThrowed(error!)
                 
             } else {
                 // USUARIO SALVO
-                user.recordID = record.recordID
+                user.recordID = record!.recordID
                 //print("usuario salvo")
                 self.delegate?.saveSuccefull(user)
                 
@@ -136,19 +136,19 @@ class UserDAOCloudKit: UserDAO{
     func updateUser(user : User){
         
         
-        publicDB.fetchRecordWithID(user.recordID, completionHandler: { (record, error) -> Void in
+        publicDB.fetchRecordWithID(user.recordID!, completionHandler: { (record, error) -> Void in
             
             
-            record.setObject(user.name, forKey: self.NAME)
-            record.setObject(user.surname, forKey: self.SURNAME)
-            record.setObject(user.email, forKey: self.EMAIL)
-            record.setObject(user.password, forKey: self.PASSWORD)
+            record!.setObject(user.name, forKey: self.NAME)
+            record!.setObject(user.surname, forKey: self.SURNAME)
+            record!.setObject(user.email, forKey: self.EMAIL)
+            record!.setObject(user.password, forKey: self.PASSWORD)
             
             if  error != nil{
                 
                 // ERROR CLOUD KIT
                 
-                self.delegate?.errorCloudKitThrowed(error)
+                self.delegate?.errorCloudKitThrowed(error!)
                 
                 
                 
@@ -166,27 +166,32 @@ class UserDAOCloudKit: UserDAO{
     
     func getUser(email:String, password:String){
         
-        var predicate = NSPredicate(format: "\(EMAIL) = %@ && \(PASSWORD) = %@", email , password)
-        var query = CKQuery(recordType: USER, predicate: predicate)
+        let predicate = NSPredicate(format: "\(EMAIL) = %@ && \(PASSWORD) = %@", email , password)
+        let query = CKQuery(recordType: USER, predicate: predicate)
         
         publicDB.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
             
             if  (error == nil){
                 
-                if  (results.count > 0){
+                if  (results!.count > 0){
                     
                     // USUARIO LOCALIZADO
                     
-                    var queryResult = results[0] as! CKRecord
-                    var user = UserManager().creatuser()
+                    for result in results!{
+                        
+                        let queryResult = result
+                        let user = UserManager().creatuser()
+                        
+                        user.recordID = queryResult.recordID
+                        user.name = queryResult.objectForKey(self.NAME) as? String
+                        user.surname = queryResult.objectForKey(self.SURNAME) as? String
+                        user.email = queryResult.objectForKey(self.EMAIL) as? String
+                        user.password = queryResult.objectForKey(self.PASSWORD) as? String
+                        
+                        self.delegate?.getUserAuthenticated(user)
+
+                    }
                     
-                    user.recordID = queryResult.recordID
-                    user.name = queryResult.objectForKey(self.NAME) as? String
-                    user.surname = queryResult.objectForKey(self.SURNAME) as? String
-                    user.email = queryResult.objectForKey(self.EMAIL) as? String
-                    user.password = queryResult.objectForKey(self.PASSWORD) as? String
-                    
-                    self.delegate?.getUserAuthenticated(user)
                     
                 }else{
                     // USUARIO NAO LOCALIZADO
@@ -198,7 +203,7 @@ class UserDAOCloudKit: UserDAO{
                 
                 // ERROR CLOUD KIT
                 
-                self.delegate?.errorCloudKitThrowed(error)
+                self.delegate?.errorCloudKitThrowed(error!)
             }
             
             

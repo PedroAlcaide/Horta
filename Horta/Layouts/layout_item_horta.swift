@@ -25,7 +25,7 @@ class layout_item_horta: UIView {
 //        
 //    }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         self.idCanteiro = 0;
         self.nomeResponsavel = "";
         self.nomeItem = "";

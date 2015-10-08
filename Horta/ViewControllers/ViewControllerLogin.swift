@@ -116,7 +116,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             
-            var alert = ErrorManager().errorToIndex(errorIndex)
+            let alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
         })
@@ -126,7 +126,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         
         
        // dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            var array = [self.txtEmail,self.txtSenha] as Array<UITextField>
+            let array = [self.txtEmail,self.txtSenha] as Array<UITextField>
         
             
             if (self.validator?.validateDataSignIn(array) == true){
@@ -135,7 +135,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
                     self.alertLoading = AlertViewLoading()
                     self.alertLoading?.show()
                 })
-                self.userManager?.toAuthentication(self.txtEmail.text, password: self.txtSenha.text)
+                self.userManager?.toAuthentication(self.txtEmail.text!, password: self.txtSenha.text!)
             }
         //})
         
@@ -147,7 +147,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.alertLoading?.close()
-            var alert = ErrorManager().errorsCloudKit(error.code)
+            let alert = ErrorManager().errorsCloudKit(error.code)
             alert.delegate = self
             alert.show()
         })
@@ -157,7 +157,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     func othersErrosThrowed(errorIndex: Int) {
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             self.alertLoading?.close()
-            var alert = ErrorManager().errorToIndex(errorIndex)
+            let alert = ErrorManager().errorToIndex(errorIndex)
             alert.delegate = self
             alert.show()
         })
