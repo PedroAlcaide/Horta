@@ -43,9 +43,11 @@
 		84F7FF0D1B165DB500E66A13 /* ProductDAOCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF0C1B165DB500E66A13 /* ProductDAOCloudKit.swift */; };
 		84F7FF101B1664ED00E66A13 /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7FF0F1B1664ED00E66A13 /* ProductManager.swift */; };
 		84FB98C91B18F19C003E62C0 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB98C81B18F19C003E62C0 /* Script.swift */; };
-		D691FF651B1670E700D413FC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691FF631B1670E700D413FC /* FBSDKCoreKit.framework */; };
-		D691FF661B1670E700D413FC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D691FF641B1670E700D413FC /* FBSDKLoginKit.framework */; };
+		D64823591BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64823571BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift */; };
+		D648235A1BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64823581BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib */; };
 		D691FF691B1672C000D413FC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691FF681B1672C000D413FC /* LoginController.swift */; };
+		D6A72A931BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A72A911BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift */; };
+		D6A72A941BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A72A921BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib */; };
 		D6C694041B1CEE2F00827224 /* ViewControllerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C694031B1CEE2F00827224 /* ViewControllerConfig.swift */; };
 		D6C694071B1CEF3900827224 /* UserConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C694061B1CEF3900827224 /* UserConfig.swift */; };
 		D6C6940E1B1CFE4200827224 /* ViewControllerHorta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C6940D1B1CFE4200827224 /* ViewControllerHorta.swift */; };
@@ -53,6 +55,7 @@
 		D6C694121B1D00DF00827224 /* GardenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C694111B1D00DF00827224 /* GardenController.swift */; };
 		D6C694181B1D073E00827224 /* layout_item_horta.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C694171B1D073E00827224 /* layout_item_horta.swift */; };
 		D6C81FFA1B1F72AE005F39AC /* layout_item_horta.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C81FF91B1F72AE005F39AC /* layout_item_horta.xib */; };
+		D6FDAFC41BD99B2D00003F2F /* UpdateItemDisplayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FDAFC31BD99B2D00003F2F /* UpdateItemDisplayDelegate.swift */; };
 		EE7B56FD1B18EA0A00967A33 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */; };
 		EE7B57011B19057300967A33 /* HortaTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7B57001B19057300967A33 /* HortaTable.swift */; };
 		EEF139711B1E5278009DC7C2 /* CriarHorta.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF139701B1E5278009DC7C2 /* CriarHorta.swift */; };
@@ -117,9 +120,11 @@
 		84F7FF0C1B165DB500E66A13 /* ProductDAOCloudKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductDAOCloudKit.swift; path = Modelos/DAOs/ProductDAOCloudKit.swift; sourceTree = "<group>"; };
 		84F7FF0F1B1664ED00E66A13 /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProductManager.swift; path = Modelos/Product/ProductManager.swift; sourceTree = "<group>"; };
 		84FB98C81B18F19C003E62C0 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Script.swift; path = Modelos/Tools/Script.swift; sourceTree = "<group>"; };
-		D691FF631B1670E700D413FC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Horta/Frameworks/Facebook/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		D691FF641B1670E700D413FC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Horta/Frameworks/Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		D64823571BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemHorta_CollectionViewController.swift; path = Layouts/ItemHorta_CollectionViewController.swift; sourceTree = "<group>"; };
+		D64823581BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemHorta_CollectionViewController.xib; path = Layouts/ItemHorta_CollectionViewController.xib; sourceTree = "<group>"; };
 		D691FF681B1672C000D413FC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Modelos/User/LoginController.swift; sourceTree = "<group>"; };
+		D6A72A911BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemHorta_CollectionViewCell.swift; path = Layouts/Celulas/ItemHorta_CollectionViewCell.swift; sourceTree = "<group>"; };
+		D6A72A921BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemHorta_CollectionViewCell.xib; path = Layouts/Celulas/ItemHorta_CollectionViewCell.xib; sourceTree = "<group>"; };
 		D6C694021B1CED5600827224 /* facebook_bridging_header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = facebook_bridging_header.h; path = Frameworks/Facebook/facebook_bridging_header.h; sourceTree = "<group>"; };
 		D6C694031B1CEE2F00827224 /* ViewControllerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerConfig.swift; path = ViewControllers/ViewControllerConfig.swift; sourceTree = "<group>"; };
 		D6C694061B1CEF3900827224 /* UserConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserConfig.swift; path = Modelos/User/UserConfig.swift; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		D6C694111B1D00DF00827224 /* GardenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenController.swift; path = Modelos/Garden/GardenController.swift; sourceTree = "<group>"; };
 		D6C694171B1D073E00827224 /* layout_item_horta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = layout_item_horta.swift; path = Layouts/layout_item_horta.swift; sourceTree = "<group>"; };
 		D6C81FF91B1F72AE005F39AC /* layout_item_horta.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = layout_item_horta.xib; path = Layouts/layout_item_horta.xib; sourceTree = "<group>"; };
+		D6FDAFC31BD99B2D00003F2F /* UpdateItemDisplayDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UpdateItemDisplayDelegate.swift; path = Layouts/UpdateItemDisplayDelegate.swift; sourceTree = "<group>"; };
 		EE7B56FC1B18EA0A00967A33 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		EE7B57001B19057300967A33 /* HortaTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HortaTable.swift; sourceTree = "<group>"; };
 		EEF139701B1E5278009DC7C2 /* CriarHorta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CriarHorta.swift; sourceTree = "<group>"; };
@@ -153,8 +159,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F5D36A1B16C4B400D8304C /* CloudKit.framework in Frameworks */,
-				D691FF651B1670E700D413FC /* FBSDKCoreKit.framework in Frameworks */,
-				D691FF661B1670E700D413FC /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,21 +322,40 @@
 			name = Product;
 			sourceTree = "<group>";
 		};
+		D6A72A901BE2CBCC007EEBF5 /* Celulas */ = {
+			isa = PBXGroup;
+			children = (
+				D6A72A911BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift */,
+				D6A72A921BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib */,
+			);
+			name = Celulas;
+			sourceTree = "<group>";
+		};
 		D6C6940C1B1CFDFB00827224 /* Layouts */ = {
 			isa = PBXGroup;
 			children = (
+				D6A72A901BE2CBCC007EEBF5 /* Celulas */,
+				D6FDAFC21BD99AB900003F2F /* Protocols */,
 				D6C694171B1D073E00827224 /* layout_item_horta.swift */,
 				D6C81FF91B1F72AE005F39AC /* layout_item_horta.xib */,
+				D64823571BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift */,
+				D64823581BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib */,
 			);
 			name = Layouts;
+			sourceTree = "<group>";
+		};
+		D6FDAFC21BD99AB900003F2F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D6FDAFC31BD99B2D00003F2F /* UpdateItemDisplayDelegate.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		EEFE52981B13911D008CC8F7 = {
 			isa = PBXGroup;
 			children = (
 				84F5D3691B16C4B400D8304C /* CloudKit.framework */,
-				D691FF631B1670E700D413FC /* FBSDKCoreKit.framework */,
-				D691FF641B1670E700D413FC /* FBSDKLoginKit.framework */,
 				EEFE52A31B13911D008CC8F7 /* Horta */,
 				EEFE52BC1B13911D008CC8F7 /* HortaTests */,
 				EEFE52A21B13911D008CC8F7 /* Products */,
@@ -437,8 +460,6 @@
 		EEFE52991B13911D008CC8F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
@@ -446,7 +467,6 @@
 				TargetAttributes = {
 					EEFE52A01B13911D008CC8F7 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = FH5CMKBGNN;
 						SystemCapabilities = {
 							com.apple.iCloud = {
 								enabled = 1;
@@ -483,10 +503,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6A72A941BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib in Resources */,
 				D6C81FFA1B1F72AE005F39AC /* layout_item_horta.xib in Resources */,
 				84F5D36C1B16C5F500D8304C /* iphone.png in Resources */,
 				EEFE52AF1B13911D008CC8F7 /* Main.storyboard in Resources */,
 				EEFE52B41B13911D008CC8F7 /* LaunchScreen.xib in Resources */,
+				D648235A1BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib in Resources */,
 				EEFE52B11B13911D008CC8F7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +549,7 @@
 				84F7FF0B1B165C4400E66A13 /* Product.swift in Sources */,
 				84024FD71B17A2520089B9DD /* GardenManager.swift in Sources */,
 				EEF139711B1E5278009DC7C2 /* CriarHorta.swift in Sources */,
+				D64823591BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift in Sources */,
 				8464B0041B13ACE8004BC0B6 /* UserDAOCloudKit.swift in Sources */,
 				84F7FF101B1664ED00E66A13 /* ProductManager.swift in Sources */,
 				8449C49C1B276B5F00EEBE36 /* IHKeyboardAvoiding.m in Sources */,
@@ -537,6 +560,7 @@
 				D6C694071B1CEF3900827224 /* UserConfig.swift in Sources */,
 				8449C4981B27645E00EEBE36 /* AlertViewLoading.m in Sources */,
 				84F5D3631B16BA4500D8304C /* Garden.swift in Sources */,
+				D6FDAFC41BD99B2D00003F2F /* UpdateItemDisplayDelegate.swift in Sources */,
 				EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */,
 				84F7FF091B164BF400E66A13 /* ExceptionFactory.swift in Sources */,
 				84F7FEFF1B16447100E66A13 /* DivergenceException.swift in Sources */,
@@ -551,6 +575,7 @@
 				840175561B261E7600202AFD /* ErrorManager.swift in Sources */,
 				8464B0021B13ACE8004BC0B6 /* DaoFactory.swift in Sources */,
 				84F7FF051B1649E300E66A13 /* UserNotFound.swift in Sources */,
+				D6A72A931BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift in Sources */,
 				84FB98C91B18F19C003E62C0 /* Script.swift in Sources */,
 				84024FD51B1799980089B9DD /* AddressDAOCloudKit.swift in Sources */,
 				D6C6940E1B1CFE4200827224 /* ViewControllerHorta.swift in Sources */,
@@ -689,6 +714,7 @@
 					"$(SRCROOT)/Horta/Frameworks/Facebook",
 				);
 				INFOPLIST_FILE = Horta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Senac.BEPiD.Challenge.02.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,6 +735,7 @@
 					"$(SRCROOT)/Horta/Frameworks/Facebook",
 				);
 				INFOPLIST_FILE = Horta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Senac.BEPiD.Challenge.02.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

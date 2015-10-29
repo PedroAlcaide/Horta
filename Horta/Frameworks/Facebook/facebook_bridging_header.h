@@ -9,8 +9,8 @@
 #ifndef Horta_Facebook_Bridging_Header_h
 #define Horta_Facebook_Bridging_Header_h
 
-#import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <FBSDKLoginKit/FBSDKLoginKit.h>
+//#import <FBSDKCoreKit/FBSDKCoreKit.h>
+//#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "AlertViewLoading.h"
 #import "CustomIOSAlertView.h"
 #import "IHKeyboardAvoiding.h"

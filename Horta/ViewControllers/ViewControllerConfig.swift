@@ -59,7 +59,7 @@ class ViewControllerConfig: UIViewController {
     }
     //----------------------------------------------------------------------------------
     @IBAction func userConfig_logOut( sender: UIButton ) {
-        userLogin.logout();
+//        userLogin.logout();
     }
     //----------------------------------------------------------------------------------
     @IBAction func userConfig_alertaSomenteHortasUsuario( sender: UISwitch ) {
@@ -80,7 +80,7 @@ class ViewControllerConfig: UIViewController {
     //----------------------------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        userLogin.loginFacebook();
+//        userLogin.loginFacebook();
         
         userConfig.loadUserDefaults();
         // Do any additional setup after loading the view, typically from a nib.

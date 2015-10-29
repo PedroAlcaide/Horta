@@ -7,82 +7,95 @@
 //
 
 import Foundation
+import UIKit
 
 class GardenController: NSObject {
     static let sharedInstance = GardenController();
 
-    private var itemArray: [layout_item_horta]
-    private var linked_IDCanteiro: UILabel!;
-    private var linked_itemImage: UIImageView!;
-    private var linked_nomeResponsavel: UILabel!;
-    private var linked_nomeItem: UILabel!;
+    //private var itemArray: [layout_item_horta]
+    private var productArray: Array<layout_item_horta> = []
+    
+//    private var linked_IDCanteiro: UILabel!;
+//    private var linked_itemImage: UIImageView!;
+//    private var linked_nomeResponsavel: UILabel!;
+//    private var linked_nomeItem: UILabel!;
 //    private var item: layout_item_horta!;
         
-    override init(){
-        itemArray = [];
-    }
+//    override init(){
+//        itemArray = [];
+//    }
+    
+//    //-------------------------------------------------------------------------
+//    func linkNomeItemWithUI( object: UILabel ) {
+//        linked_nomeItem = object;
+//    }
+//    //-------------------------------------------------------------------------
+//    func linkNomeResponsavelWithUI( object: UILabel ) {
+//        linked_nomeResponsavel = object;
+//    }
+//    //-------------------------------------------------------------------------
+//    func linkItemImageWithUI( img: UIImageView ) {
+//        linked_itemImage = img;
+//    }
+//    //-------------------------------------------------------------------------
+//    func linkCanteiroIDWithUI( object: UILabel ){
+//        linked_IDCanteiro = object;
+//    }
     //-------------------------------------------------------------------------
-    func linkNomeItemWithUI( object: UILabel ) {
-        linked_nomeItem = object;
-    }
+//    func updateInfo( id: Int ){
+//        let item: layout_item_horta = itemArray[ id ];
+//        linked_IDCanteiro.text = "#" + String( item.idCanteiro + 1);
+//        linked_itemImage.image = item.imgView.image;
+//        linked_nomeResponsavel.text = item.getNomeResponsavel();
+//        linked_nomeItem.text = item.getNomeItem();
+//    }
     //-------------------------------------------------------------------------
-    func linkNomeResponsavelWithUI( object: UILabel ) {
-        linked_nomeResponsavel = object;
-    }
-    //-------------------------------------------------------------------------
-    func linkItemImageWithUI( img: UIImageView ) {
-        linked_itemImage = img;
-    }
-    //-------------------------------------------------------------------------
-    func linkCanteiroIDWithUI( object: UILabel ){
-        linked_IDCanteiro = object;
-    }
-    //-------------------------------------------------------------------------
-    func updateInfo( id: Int ){
-        let item: layout_item_horta = itemArray[ id ];
-        linked_IDCanteiro.text = "#" + String( item.idCanteiro + 1);
-        linked_itemImage.image = item.imgView.image;
-        linked_nomeResponsavel.text = item.getNomeResponsavel();
-        linked_nomeItem.text = item.getNomeItem();
-    }
-    //-------------------------------------------------------------------------
-    func getItens() -> [UIView] {
-        return itemArray;
+    func getItems() -> Array<layout_item_horta>? {
+        
+        return self.productArray
     }
     //-------------------------------------------------------------------------
     func setNomeResponsavel( id  id: Int, nome: String ) {
-        let item: layout_item_horta = itemArray[ id ];
+        let item: layout_item_horta = self.productArray[ id ];
         item.setNomeResponsavel( nome );
-        linked_nomeResponsavel.text = nome;
-        updateInfo( id );
+//        linked_nomeResponsavel.text = nome;
+//        updateInfo( id );
     }
     //-------------------------------------------------------------------------
     func setNomeItem( id  id:  Int, nome: String ){
-        let item: layout_item_horta = itemArray[ id ];
+        let item: layout_item_horta = self.productArray[ id ];
         item.setNomeItem( nome );
-        linked_nomeItem.text = nome;
-        updateInfo( id );
+//        linked_nomeItem.text = nome;
+//        updateInfo( id );
     }
     //-------------------------------------------------------------------------
     func setItemImg( id  id: Int, img: UIImage ){
-        let item: layout_item_horta = itemArray[ id ];
+        let item: layout_item_horta = self.productArray[ id ];
         item.imgView.image = img;
-        updateInfo( id );
+//        updateInfo( id );
     }
     //-------------------------------------------------------------------------
-    func addItem( idCanteiro idCanteiro: Int, imgItem: UIImage ) -> () {
-        let newItem = NSBundle.mainBundle().loadNibNamed("layout_item_horta", owner: self, options: nil )[0] as! layout_item_horta;
-        newItem.setCanteiroID( idCanteiro );
-        newItem.setImage( imgItem );
+    func addItem( idCanteiro idCanteiro: Int, imgItem: UIImage, delegate: UpdateItemDisplayDelegate ) -> () {
+        let item = NSBundle.mainBundle().loadNibNamed("layout_item_horta", owner: self, options: nil )[0] as! layout_item_horta;
         
-        itemArray.append( newItem );
+        let product = Product()
+        
+        product.name = "Novo Produto"
+        product.quantity = 10
+        
+        item.product = product
+//        newItem.setCanteiroID( idCanteiro );
+        item.setImage( imgItem );
+        item.productDelegate = delegate
+        
+        self.productArray.append( item )
     }
     //-------------------------------------------------------------------------
     func removeItem( id: Int ){
-        var idx : Int;
+        //var idx : Int;
         
-        itemArray.removeAtIndex( id );        
-        updateInfo( 0 );
+        self.productArray.removeAtIndex( id );
+        //updateInfo( 0 );
     }
     //-------------------------------------------------------------------------
 }

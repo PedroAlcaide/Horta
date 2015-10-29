@@ -47,15 +47,15 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     func ValidateLoginAndContinue() {
         /* Valida o login do usuário, seja pelo facebook, próprio aplicativo ou outro método
            e prossegue para a tela de hortas do app */
-        if self.userLogin.getUserStatus() > 0 {
-            println( "USUARIO AUTENTICADO" )
+//        if self.userLogin.getUserStatus() > 0 {
+//            print( "USUARIO AUTENTICADO" )
             self.performSegueWithIdentifier("ListaHortaSegue", sender: self)
             
-        }
-        else {
-            println( "USUARIO NÃO AUTENTICADO" )
-            
-        }
+//        }
+//        else {
+//            print( "USUARIO NÃO AUTENTICADO" )
+//            
+//        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool // called when 'return' key pressed. return NO to ignore.
@@ -70,7 +70,7 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
     }
     
     @IBAction func login_ConnectToFacebook( sender: UIButton ) {
-        let user = self.userLogin.loginFacebook()
+//        let user = self.userLogin.loginFacebook()
         ValidateLoginAndContinue()
     }
     

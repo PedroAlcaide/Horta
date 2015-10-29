@@ -102,12 +102,13 @@ class UserConfig {
     //--------------------------------------------------------------------------------
     func getUserPicture() -> UIView? {
         
-        if userShowPicture {
-            return loginController.getUserPicture()!;
-        }
-        else {
-            return nil;
-        }
+//        if userShowPicture {
+//            return loginController.getUserPicture()!;
+//        }
+//        else {
+//            return nil;
+//        }
+        return nil
     }
     //--------------------------------------------------------------------------------
     func loadUserDefaults() -> () {
@@ -124,24 +125,27 @@ class UserConfig {
     }
     //--------------------------------------------------------------------------------
     private func loadUserEmail()-> String {
-        let email: String? = userDefaults.stringForKey( "userEmail" );
+//        let email: String? = userDefaults.stringForKey( "userEmail" );
         
-        if email != nil {
-            return email!;
-        }
-        else {
-            return loginController.getUserEmail()!;
-        }
+//        if email != nil {
+//            return email!;
+//        }
+//        else {
+//            return loginController.getUserEmail()!;
+//        }
+        
+        return ""
     }
     //--------------------------------------------------------------------------------
     private func loadUserName()-> String {
-        var name: String? = userDefaults.stringForKey( "userName" );
+//        var name: String? = userDefaults.stringForKey( "userName" );
         
-        if ( name == nil || name == "" ){
-            name = loginController.getUserName()!;
-        }
-        
-        return name!;
+//        if ( name == nil || name == "" ){
+//            name = loginController.getUserName()!;
+//        }
+//        
+//        return name!;
+        return ""
     }
     //--------------------------------------------------------------------------------
     private func loadUserHortas() -> [String] {
