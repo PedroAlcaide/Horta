@@ -12,11 +12,14 @@ import UIKit
 private let reuseIdentifier = "ItemHorta_CollectionViewCell"
 
 //----------------------------------------------------------------------
-class ItemHorta_CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class ItemHorta_CollectionViewController: UIViewController, UICollectionViewDataSource,
+    UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UpdateItemDisplayDelegate {
     
     @IBOutlet weak var collection: UICollectionView!
     
     var products: Array<Product>?
+    
+    var updateInfoDelegate: UpdateItemDisplayDelegate?
     
     //----------------------------------------------------------------------
     override func viewDidLoad() {
@@ -57,6 +60,12 @@ class ItemHorta_CollectionViewController: UIViewController, UICollectionViewData
     // MARK: UICollectionViewDataSource
 
     //----------------------------------------------------------------------
+    func updateInfoOnDisplay( product: Product ) {
+        
+        self.updateInfoDelegate?.updateInfoOnDisplay( product )
+    }
+
+    //----------------------------------------------------------------------
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -66,14 +75,19 @@ class ItemHorta_CollectionViewController: UIViewController, UICollectionViewData
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         
-        return (self.products?.count)!
+        return (self.products!.count)
     }
 
     //----------------------------------------------------------------------
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! ItemHorta_CollectionViewCell
         
-        cell.product = self.products![ indexPath.row ]
+        let product = self.products![ indexPath.row ]
+        
+        cell.product = product
+        cell.productImg.image = UIImage( named: product.photo! )
+        cell.updateInfoDelegate = self
+        
         // Configure the cell
     
         return cell

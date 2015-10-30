@@ -9,7 +9,7 @@
 import UIKit
 
 //---------------------------------------------------------------------------
-class PagedScrollViewController: UIViewController, UIScrollViewDelegate /*,UpdateItemDisplayDelegate*/ {
+class PagedScrollViewController: UIViewController, UIScrollViewDelegate, UpdateItemDisplayDelegate {
     
     var gardenController = GardenController.sharedInstance;
     
@@ -32,6 +32,7 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate /*,Updat
         super.viewDidLoad()
         
         self.itemHorta_CVC = ItemHorta_CollectionViewController( nibName: "ItemHorta_CollectionViewController", bundle: nil )
+        self.itemHorta_CVC.productDelegate = self
         
         /** SIMULAÇÃO DE PRODUTOS NA HORTA */
         var products: Array<Product> = []
@@ -40,12 +41,15 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate /*,Updat
         let product3 = Product()
         let product4 = Product()
         
-        product1.photo = "alface"
-        product2.photo = "cebola"
-        product3.photo = "cenoura"
-        product4.photo = "alface"
+        product1.photo = "batata.png"
+        product2.photo = "cebola.png"
+        product3.photo = "cenoura.png"
+        product4.photo = "alface.png"
         
         products.append( product1 )
+        products.append( product2 )
+        products.append( product3 )
+        products.append( product4 )
         
         self.itemHorta_CVC.products = products
         /** FIM DA SIMULAÇÃO */
@@ -117,12 +121,12 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate /*,Updat
     }
     
     //---------------------------------------------------------------------------
-    func updateInfoOnDisplay( product: layout_item_horta ) {
+    func updateInfoOnDisplay( product: Product ) {
         
-        
+        self.imgView.image = UIImage( named: product.photo! )
     }
     
-    //---------------------------------------------------------------------------
+    //----------------------------------------------------------------------
     func loadVisiblePages() {
         // First, determine which page is currently visible
         let pageWidth = scrollView.frame.size.width

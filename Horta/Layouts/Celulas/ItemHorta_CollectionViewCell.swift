@@ -14,19 +14,18 @@ class ItemHorta_CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productImg: UIImageView!
     
     var updateInfoDelegate: UpdateItemDisplayDelegate?
-    var product: Product?
+    var product: Product = Product()
     
     //---------------------------------------------------------------------
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.productImg.image = UIImage( named: product!.photo! )
         // Initialization code
     }
     //---------------------------------------------------------------------
     @IBAction func didSelectItem() {
         
-        self.updateInfoDelegate?.updateInfoOnDisplay( self.product! )
+        self.updateInfoDelegate?.updateInfoOnDisplay( self.product )
     }
     
     //---------------------------------------------------------------------
