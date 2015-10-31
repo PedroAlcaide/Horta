@@ -45,6 +45,7 @@
 		84FB98C91B18F19C003E62C0 /* Script.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB98C81B18F19C003E62C0 /* Script.swift */; };
 		D64823591BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64823571BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift */; };
 		D648235A1BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64823581BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib */; };
+		D6828E331BE41AB000A1AF31 /* AddNewProductDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6828E321BE41AB000A1AF31 /* AddNewProductDelegate.swift */; };
 		D691FF691B1672C000D413FC /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D691FF681B1672C000D413FC /* LoginController.swift */; };
 		D6A72A931BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A72A911BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift */; };
 		D6A72A941BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6A72A921BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib */; };
@@ -122,6 +123,7 @@
 		84FB98C81B18F19C003E62C0 /* Script.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Script.swift; path = Modelos/Tools/Script.swift; sourceTree = "<group>"; };
 		D64823571BE2C3CF0002D88C /* ItemHorta_CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemHorta_CollectionViewController.swift; path = Layouts/ItemHorta_CollectionViewController.swift; sourceTree = "<group>"; };
 		D64823581BE2C3CF0002D88C /* ItemHorta_CollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemHorta_CollectionViewController.xib; path = Layouts/ItemHorta_CollectionViewController.xib; sourceTree = "<group>"; };
+		D6828E321BE41AB000A1AF31 /* AddNewProductDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddNewProductDelegate.swift; path = Layouts/AddNewProductDelegate.swift; sourceTree = "<group>"; };
 		D691FF681B1672C000D413FC /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = Modelos/User/LoginController.swift; sourceTree = "<group>"; };
 		D6A72A911BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ItemHorta_CollectionViewCell.swift; path = Layouts/Celulas/ItemHorta_CollectionViewCell.swift; sourceTree = "<group>"; };
 		D6A72A921BE2CC58007EEBF5 /* ItemHorta_CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ItemHorta_CollectionViewCell.xib; path = Layouts/Celulas/ItemHorta_CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				D6FDAFC31BD99B2D00003F2F /* UpdateItemDisplayDelegate.swift */,
+				D6828E321BE41AB000A1AF31 /* AddNewProductDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				84F7A5931B267A3B0047A29B /* ValidadorManager.swift in Sources */,
 				D691FF691B1672C000D413FC /* LoginController.swift in Sources */,
 				8464B0051B13ACE8004BC0B6 /* UserDAODefaults.swift in Sources */,
+				D6828E331BE41AB000A1AF31 /* AddNewProductDelegate.swift in Sources */,
 				D6C694071B1CEF3900827224 /* UserConfig.swift in Sources */,
 				8449C4981B27645E00EEBE36 /* AlertViewLoading.m in Sources */,
 				84F5D3631B16BA4500D8304C /* Garden.swift in Sources */,

@@ -24,6 +24,9 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate, UpdateI
    // var pageImages: [UIImage] = []
     var pageImages: [UIView] = [];
     var pageViews: [UIView?] = [];
+    var selectedProduct = Product()
+    
+    var productsArray: Array<Product> = []
     
     private var itemHorta_CVC = ItemHorta_CollectionViewController()
     
@@ -32,183 +35,102 @@ class PagedScrollViewController: UIViewController, UIScrollViewDelegate, UpdateI
         super.viewDidLoad()
         
         self.itemHorta_CVC = ItemHorta_CollectionViewController( nibName: "ItemHorta_CollectionViewController", bundle: nil )
-        self.itemHorta_CVC.productDelegate = self
+        self.itemHorta_CVC.updateInfoDelegate = self
         
         /** SIMULAÇÃO DE PRODUTOS NA HORTA */
-        var products: Array<Product> = []
-        let product1 = Product()
-        let product2 = Product()
-        let product3 = Product()
-        let product4 = Product()
-        
-        product1.photo = "batata.png"
-        product2.photo = "cebola.png"
-        product3.photo = "cenoura.png"
-        product4.photo = "alface.png"
-        
-        products.append( product1 )
-        products.append( product2 )
-        products.append( product3 )
-        products.append( product4 )
-        
-        self.itemHorta_CVC.products = products
+//        let product1 = Product()
+//        let product2 = Product()
+//        let product3 = Product()
+//        let product4 = Product()
+//        let product5 = Product()
+//        let product6 = Product()
+//        
+//        product1.photo = "batata.png"
+//        product2.photo = "cebola.png"
+//        product3.photo = "cenoura.png"
+//        product4.photo = "alface.png"
+//        product5.photo = "brocolis"
+//        product6.photo = "abobora"
+//        
+//        product1.name = "batata"
+//        product2.name = "cebola"
+//        product3.name = "cenoura"
+//        product4.name = "alface"
+//        product5.name = "brocolis"
+//        product6.name = "abobora"
+//        
+//        product1.description = "Batata"
+//        product2.description = "Cebola"
+//        product3.description = "Cenoura"
+//        product4.description = "Alface"
+//        product5.description = "Brócolis"
+//        product6.description = "Abóbora"
+//
+//        self.productsArray.append( product1 )
+//        self.productsArray.append( product2 )
+//        self.productsArray.append( product3 )
+//        self.productsArray.append( product4 )
+//        self.productsArray.append( product5 )
+//        self.productsArray.append( product6 )
         /** FIM DA SIMULAÇÃO */
         
+        self.itemHorta_CVC.productsArray = self.productsArray
         self.itemHortaContainer.addSubview( self.itemHorta_CVC.view )
-//        scrollView.delegate = self
-        // 1
-//        pageImages = [UIImage(named: "batata.png")!,
-//            UIImage(named: "alface.png")!,
-//            UIImage(named: "cebola.png")!,
-//            UIImage(named: "cenoura.png")!,
-//            UIImage(named: "alface.png")!]
-
-//        gardenController.linkCanteiroIDWithUI( lblIDCanteiro ); // Conecta o componente da tela com o código
-//        gardenController.linkItemImageWithUI( imgView ); // Conecta o componente da tela com o código
-//        gardenController.linkNomeResponsavelWithUI( nomeResponsavel );
-//        gardenController.linkNomeItemWithUI( nomeItem );
-        
-//        self.pageImages = self.gardenController.getItems()!
-//        
-//        for i in 0...3 {
-//            let img = UIImage( named: "cebola" );
-//            gardenController.addItem( idCanteiro: i, imgItem: img!, delegate: self );
-//            var item = NSBundle.mainBundle().loadNibNamed("layout_item_horta", owner: self, options: nil )[0] as! layout_item_horta;
-            //item.setTextLabelIDCanteiro( "#" + String(i + 1) );
-           // pageImages.append( item );
-//        }
-        
-        // Carrega os itens da horta
-//        let items = gardenController.getItems();
-//        for i in items! {
-//            pageImages.append( i.imgView );
-//        }
-//        
-//        // Altera as imagens
-//        gardenController.setItemImg( id: 1, img: UIImage( named:"alface")! );
-//        gardenController.setItemImg( id: 2, img: UIImage( named:"batata")! );
-//        gardenController.setItemImg( id: 3, img: UIImage( named:"cenoura")! );
-//        
-//        //gardenController.setNomeResponsavel(id: 0, nome: "Alessandra" );
-//        //gardenController.setNomeResponsavel(id: 1, nome: "João" );
-//        //gardenController.setNomeResponsavel(id: 2, nome: "Adamastor" );
-//        //gardenController.setNomeResponsavel(id: 3, nome: "Janaína" );
-//
-//        gardenController.setNomeItem(id: 0, nome: "cebola");
-//        gardenController.setNomeItem(id: 1, nome: "alface");
-//        gardenController.setNomeItem(id: 2, nome: "batata");
-//        gardenController.setNomeItem(id: 3, nome: "cenoura");
-//        
-//        //gardenController.updateInfo( 0 );
-//        let pageCount = pageImages.count
-//        
-//        // 2
-//        pageControl.currentPage = 1
-//        pageControl.numberOfPages = pageCount
-//        
-//        // 3
-//        for _ in 0..<pageCount {
-//            pageViews.append(nil)
-//        }
-//        
-//        // 4
-//        let pagesScrollViewSize = scrollView.frame.size
-//        scrollView.contentSize = CGSize(width: pagesScrollViewSize.width * CGFloat( pageImages.count ),
-//            height: pagesScrollViewSize.height)
-//        
-//        // 5
-//        loadVisiblePages()
     }
     
     //---------------------------------------------------------------------------
     func updateInfoOnDisplay( product: Product ) {
         
         self.imgView.image = UIImage( named: product.photo! )
+        self.nomeItem.text = product.description
+        self.selectedProduct = product
     }
     
     //----------------------------------------------------------------------
-    func loadVisiblePages() {
-        // First, determine which page is currently visible
-        let pageWidth = scrollView.frame.size.width
-        let page = Int(floor((scrollView.contentOffset.x * 2.0 + pageWidth) / (pageWidth * 2.0)))
-        
-        // Update the page control
-        pageControl.currentPage = page
-        
-        // Work out which pages you want to load
-        let firstPage = page - 1
-        let lastPage = page + 1
-        
-        // Purge anything before the first page
-        for var index = 0; index < firstPage; ++index {
-            purgePage(index)
-        }
-        
-        // Load pages in our range
-        for index in firstPage...lastPage {
-            loadPage(index)
-        }
-        
-        // Purge anything after the last page
-        for var index = lastPage+1; index < pageImages.count; ++index {
-            purgePage(index)
-        }
-    }
-    
-    //---------------------------------------------------------------------------
-    func loadPage(page: Int) {
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        
-        // Load an individual page, first checking if you've already loaded it
-        if let _ = pageViews[page] {
-            // Do nothing. The view is already loaded.
-            return
-        } else {
-            var frame = scrollView.bounds
-            frame.origin.x = frame.size.width * CGFloat(page);
-            frame.origin.y = 0.0
-            frame = CGRectInset(frame, 10.0, 0.0)
-            
-            //let newPageView = UIImageView(image: pageImages[page])
-            let newPageView: UIView = UIView();
-            newPageView.addSubview(pageImages[page]);
-            
-          //  newPageView.contentMode =
-            newPageView.frame = frame
-            scrollView.addSubview(newPageView)
-            pageViews[page] = newPageView
-        }
-    }
-    
-    //---------------------------------------------------------------------------
-    func purgePage(page: Int) {
-        if page < 0 || page >= pageImages.count {
-            // If it's outside the range of what you have to display, then do nothing
-            return
-        }
-        
-        // Remove a page from the scroll view and reset the container array
-        if let pageView = pageViews[page] {
-            pageView.removeFromSuperview()
-            pageViews[page] = nil
-        }
-    }
-    
-    //---------------------------------------------------------------------------
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        // Load the pages that are now on screen
-        loadVisiblePages()
-    }
-
-    //---------------------------------------------------------------------------
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    //---------------------------------------------------------------------------
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using [segue destinationViewController].
+        
+        if segue.identifier == "AdicionarProduto" {
+            if let vc = segue.destinationViewController as? AdicionarProduto {
+                vc.productArray = self.productsArray
+            }
+        }
+    }
+
+    //---------------------------------------------------------------------------
+    @IBAction func deletarProduto() {
+        
+        var i: Int = 0
+        
+        for p in self.productsArray {
+            if self.selectedProduct.recordID == p.recordID {
+                
+                self.productsArray.removeAtIndex( i )
+                self.itemHorta_CVC.productsArray = self.productsArray
+                self.itemHorta_CVC.collection.reloadData()
+                
+                if self.productsArray.count > 0 {
+                    let product = self.productsArray[ 0 ]
+                    self.updateInfoOnDisplay( product )
+                }
+                else {
+                    self.imgView.image = nil
+                }
+                
+                return
+            }
+    
+            i += 1
+        }
+    }
+    
     //---------------------------------------------------------------------------
 }
 //---------------------------------------------------------------------------

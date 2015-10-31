@@ -763,32 +763,8 @@
                                 <rect key="frame" x="146" y="166" width="68" height="81"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cenoura-icon" translatesAutoresizingMaskIntoConstraints="NO" id="0aE-oF-Fsx">
-                                <rect key="frame" x="216" y="397" width="84" height="77"/>
-                                <animations/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="colher" translatesAutoresizingMaskIntoConstraints="NO" id="fbW-8L-yHz">
                                 <rect key="frame" x="70" y="482" width="75" height="60"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alface_icon" translatesAutoresizingMaskIntoConstraints="NO" id="UGI-dq-nSc">
-                                <rect key="frame" x="79" y="323" width="81" height="77"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="abobora-icon" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-3t-nE9">
-                                <rect key="frame" x="217" y="323" width="83" height="77"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="oJ6-In-NCl">
-                                <rect key="frame" x="146" y="323" width="83" height="77"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brocolis-icon" translatesAutoresizingMaskIntoConstraints="NO" id="79P-z3-Wre">
-                                <rect key="frame" x="146" y="397" width="83" height="77"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confirmar" translatesAutoresizingMaskIntoConstraints="NO" id="7bl-Ru-2dq">
-                                <rect key="frame" x="212" y="489" width="98" height="86"/>
                                 <animations/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="#1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Fc-1r-NPP">
@@ -806,7 +782,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Olivia Clearwater" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1H2-hG-vLO">
-                                <rect key="frame" x="129" y="149" width="160" height="21"/>
+                                <rect key="frame" x="141" y="149" width="148" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -861,74 +837,84 @@
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fechar" translatesAutoresizingMaskIntoConstraints="NO" id="SS4-13-rT4">
-                                <rect key="frame" x="278" y="30" width="81" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unY-Ei-nOg" userLabel="btnAbobora">
+                                <rect key="frame" x="218" y="321" width="85" height="80"/>
                                 <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="batata-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ITT-zw-YL4">
-                                <rect key="frame" x="77" y="397" width="83" height="77"/>
-                                <animations/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o24-Mm-kBR">
-                                <rect key="frame" x="90" y="332" width="61" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bw-3W-Omp">
-                                <rect key="frame" x="157" y="332" width="62" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unY-Ei-nOg">
-                                <rect key="frame" x="227" y="332" width="62" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz2-py-cGN">
-                                <rect key="frame" x="88" y="406" width="62" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICx-UD-wB7">
-                                <rect key="frame" x="156" y="406" width="62" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IC-tf-uNl">
-                                <rect key="frame" x="227" y="406" width="62" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-2N-xUw">
-                                <rect key="frame" x="223" y="489" width="77" height="79"/>
-                                <animations/>
-                                <state key="normal">
+                                <state key="normal" image="abobora-icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="41s-B1-P6E" kind="show" id="PLI-eM-cGz"/>
+                                    <action selector="selectAbobora" destination="xLJ-UC-AXe" eventType="touchUpInside" id="PWd-I1-8dS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2M-1j-lu4">
-                                <rect key="frame" x="288" y="28" width="71" height="63"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qz2-py-cGN" userLabel="btnBatata">
+                                <rect key="frame" x="72" y="394" width="85" height="80"/>
                                 <animations/>
-                                <state key="normal">
+                                <state key="normal" image="batata-icon">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="41s-B1-P6E" kind="show" id="ki1-Xg-E5V"/>
+                                    <action selector="selectBatata" destination="xLJ-UC-AXe" eventType="touchUpInside" id="6kB-ui-1p6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICx-UD-wB7" userLabel="btnBrocolis">
+                                <rect key="frame" x="145" y="394" width="85" height="80"/>
+                                <animations/>
+                                <state key="normal" image="brocolis-icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectBrocolis" destination="xLJ-UC-AXe" eventType="touchUpInside" id="Fz3-L3-wRF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9IC-tf-uNl" userLabel="btnCenoura">
+                                <rect key="frame" x="217" y="394" width="85" height="80"/>
+                                <animations/>
+                                <state key="normal" image="cenoura-icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCenoura" destination="xLJ-UC-AXe" eventType="touchUpInside" id="bqY-f0-NoJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o24-Mm-kBR" userLabel="btnAlface">
+                                <rect key="frame" x="72" y="321" width="85" height="80"/>
+                                <animations/>
+                                <state key="normal" image="alface_icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectAlface" destination="xLJ-UC-AXe" eventType="touchUpInside" id="Chx-vC-MqO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bw-3W-Omp" userLabel="btnCebola">
+                                <rect key="frame" x="145" y="321" width="85" height="80"/>
+                                <animations/>
+                                <state key="normal" image="cebola-icon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectCebola" destination="xLJ-UC-AXe" eventType="touchUpInside" id="JKt-Ti-CCf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2M-1j-lu4" userLabel="btnCancel">
+                                <rect key="frame" x="276" y="30" width="85" height="64"/>
+                                <animations/>
+                                <state key="normal" image="fechar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="41s-B1-P6E" kind="show" identifier="Cancel" id="ki1-Xg-E5V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-2N-xUw" userLabel="btnConfirmar">
+                                <rect key="frame" x="210" y="488" width="103" height="92"/>
+                                <animations/>
+                                <state key="normal" image="confirmar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="41s-B1-P6E" kind="show" identifier="SaveProduct" id="PLI-eM-cGz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -937,12 +923,12 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="adicionar1" destination="o24-Mm-kBR" id="O6q-nB-doq"/>
-                        <outlet property="adicionar2" destination="1bw-3W-Omp" id="eGH-cn-gb7"/>
-                        <outlet property="adicionar3" destination="unY-Ei-nOg" id="4v9-LM-h5O"/>
-                        <outlet property="adicionar4" destination="qz2-py-cGN" id="Smj-l2-FJA"/>
-                        <outlet property="adicionar5" destination="ICx-UD-wB7" id="B0L-Ci-rNq"/>
-                        <outlet property="adicionar6" destination="9IC-tf-uNl" id="8Cf-r7-wHp"/>
+                        <outlet property="btnAbobora" destination="unY-Ei-nOg" id="uuh-A5-gto"/>
+                        <outlet property="btnAlface" destination="o24-Mm-kBR" id="OWC-mo-pPS"/>
+                        <outlet property="btnBatata" destination="qz2-py-cGN" id="Cyj-cG-e40"/>
+                        <outlet property="btnBrocolis" destination="ICx-UD-wB7" id="cDe-Pe-1xp"/>
+                        <outlet property="btnCebola" destination="1bw-3W-Omp" id="8Ff-dY-EBh"/>
+                        <outlet property="btnCenoura" destination="9IC-tf-uNl" id="iIi-fX-jO4"/>
                         <outlet property="datacolheita" destination="3Hn-zc-Iy1" id="m5U-SO-3pd"/>
                         <outlet property="dataplantado" destination="QLd-Lj-tmj" id="Y5s-Xs-ZWH"/>
                         <outlet property="nomehorta" destination="yUU-sB-tLv" id="H5N-W2-nsC"/>
@@ -952,7 +938,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MSq-h6-EJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1171.5" y="-226.5"/>
+            <point key="canvasLocation" x="-1011.5" y="-227.5"/>
         </scene>
         <!--Criar Horta-->
         <scene sceneID="x7c-Bn-S72">
@@ -1312,14 +1298,6 @@
                                 <rect key="frame" x="55" y="156" width="266" height="347"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lixeira" translatesAutoresizingMaskIntoConstraints="NO" id="vHl-gL-xT8">
-                                <rect key="frame" x="43" y="419" width="76" height="75"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adicionar" translatesAutoresizingMaskIntoConstraints="NO" id="vm9-Cq-Hag">
-                                <rect key="frame" x="233" y="419" width="98" height="75"/>
-                                <animations/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horta das Corujas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDR-ff-9C2">
                                 <rect key="frame" x="77" y="28" width="224" height="31"/>
                                 <animations/>
@@ -1396,16 +1374,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQW-5G-gFA">
-                                <rect key="frame" x="233" y="420" width="104" height="65"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="xLJ-UC-AXe" kind="show" id="mO4-pC-amh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boY-AO-cU3">
                                 <rect key="frame" x="6" y="20" width="63" height="55"/>
                                 <animations/>
@@ -1434,10 +1402,28 @@
                                 <rect key="frame" x="211" y="242" width="43" height="42"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola" translatesAutoresizingMaskIntoConstraints="NO" id="2Ii-G0-R9P">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ii-G0-R9P">
                                 <rect key="frame" x="69" y="229" width="134" height="127"/>
                                 <animations/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cq-Bz-v5c" userLabel="btnLixeira">
+                                <rect key="frame" x="55" y="418" width="77" height="76"/>
+                                <animations/>
+                                <state key="normal" image="lixeira"/>
+                                <connections>
+                                    <action selector="deletarProduto" destination="41s-B1-P6E" eventType="touchUpInside" id="vo5-oD-9zw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQW-5G-gFA" userLabel="btnAddProduct">
+                                <rect key="frame" x="233" y="418" width="98" height="78"/>
+                                <animations/>
+                                <state key="normal" image="adicionar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xLJ-UC-AXe" kind="show" identifier="AdicionarProduto" id="mO4-pC-amh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
@@ -1532,7 +1518,6 @@
         <image name="alface_icon" width="145" height="139"/>
         <image name="batata-icon" width="145" height="139"/>
         <image name="brocolis-icon" width="145" height="139"/>
-        <image name="cebola" width="272" height="308"/>
         <image name="cebola-icon" width="145" height="139"/>
         <image name="cenoura-icon" width="145" height="139"/>
         <image name="colher" width="103" height="107"/>
@@ -1567,10 +1552,10 @@
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="L5k-YF-6c9"/>
-        <segue reference="ki1-Xg-E5V"/>
         <segue reference="z6L-ux-f9L"/>
         <segue reference="AbF-SC-ZPO"/>
         <segue reference="taJ-ka-zMO"/>
+        <segue reference="ki1-Xg-E5V"/>
+        <segue reference="L5k-YF-6c9"/>
     </inferredMetricsTieBreakers>
 </document>
