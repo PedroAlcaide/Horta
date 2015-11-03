@@ -13,7 +13,11 @@ class Garden {
     
     var recordID : CKRecordID?
     var name : String?
-    var address : Address?
+    var address : String?
+    var postCode : String?
+    var district : String?
+    var city : String?
+    var state : String?
     var photo : NSData?
     
     

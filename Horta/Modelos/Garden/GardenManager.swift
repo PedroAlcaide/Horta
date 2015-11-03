@@ -16,7 +16,7 @@ protocol GardenManagerDelegate{
     
 }
 
-class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
+class GardenManager : GardenDAOCKDelegate{
   
     
         
@@ -30,7 +30,6 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
             
         daoCloudKit = DaoFactory().getGardenDAOCloudKit()
         addressManager = AddressManager()
-        addressManager.delegate = self
         daoCloudKit.delegate = self
         
     }
@@ -39,35 +38,35 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     func getNewGarden()->Garden{
             
         let newGarden = Garden()
-        newGarden.address = addressManager.getNewAddress()
         return newGarden
             
     }
     
     
-    func getNewGardenDB()->GardenDB{
-        
-        return GardenDB()
-        
-    }
+//    func getNewGardenDB()->GardenDB{
+//        
+//        return GardenDB()
+//        
+//    }
     
     
     func saveGardenAndAddress(newGarden:Garden){
         
         currentGarden = newGarden
-        addressManager.saveAddress(newGarden.address!)
+        daoCloudKit.saveNewGarden(newGarden)
+        //addressManager.saveAddress(newGarden.address!)
         
     }
     
     func updateGardenAndAddress(garden:Garden){
         
         currentGarden = garden
-        addressManager.saveAddress(garden.address!)
+        //addressManager.saveAddress(garden.address!)
         
     }
     
 
-    
+    /*
     func gardenToGardenDB(garden: Garden)->GardenDB{
         
         let newGardenDB = self.getNewGardenDB()
@@ -88,7 +87,7 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         
         return newGarden
         
-    }
+    }*/
     
     
     func getGardenByUser(userRecord:CKRecordID,isAdmin:Bool){
@@ -100,7 +99,7 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
     
     
     
-        
+        /*
         // Methods AddressManagerDelegate
         
         func addressSavedSuccessfull(newAddress: Address) {
@@ -111,7 +110,7 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         func updateSuccessfull() {
             daoCloudKit.updateGarden(self.gardenToGardenDB(currentGarden!))
         }
-    
+        */
     
     
     
@@ -139,14 +138,21 @@ class GardenManager : AddressManagerDelegate, GardenDAOCKDelegate{
         
     }
     
+    func errorThrow(){
+        
+        print("deu erro")
+        
+    }
+    
+    
     func getGardensByUser(gardenDBArray: NSMutableArray) {
         
-        let arrayGarden = NSMutableArray()
+        //let arrayGarden = NSMutableArray()
         
         while (gardenDBArray.count == 0){
-            let gardenDB = gardenDBArray.lastObject as! GardenDB
-            gardenDBArray.removeLastObject()
-            arrayGarden.addObject(self.gardenDBtoGarden(gardenDB))
+            let garden = gardenDBArray.lastObject as! Garden
+            //gardenDBArray.removeLastObject()
+            //arrayGarden.addObject(self.gardenDBtoGarden(gardenDB))
             
         }
         

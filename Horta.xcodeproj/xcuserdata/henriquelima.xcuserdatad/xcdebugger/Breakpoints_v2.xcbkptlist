@@ -95,8 +95,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
             endingLineNumber = "83"
-            landmarkName = "getGardenByUser(_:isAdmin:)"
-            landmarkType = "5">
+            landmarkName = "GardenManager"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -111,7 +111,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "124"
             endingLineNumber = "124"
-            landmarkName = "savedRelationashipSucessfull()"
+            landmarkName = "gardenSavedSuccessfull(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -32,7 +32,7 @@ class Script {
             
             let garden = GardenManager().getNewGarden()
             garden.name = "name\(i)"
-            garden.address?.address = "adress\(i)"
+            garden.address = "adress\(i)"
             
         }
         

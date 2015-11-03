@@ -14,6 +14,7 @@ protocol GardenDAOCKDelegate{
     func gardenSavedSuccessfull(gardenID:CKRecordID)
     func savedRelationashipSucessfull()
     func getGardensByUser(gardenArray:NSMutableArray)
+    func errorThrow()
     
 }
 
@@ -24,8 +25,13 @@ class GardenDAOCLoudKit {
     var delegate : GardenDAOCKDelegate?
     let NAME = "Nome"
     let PHOTO = "Foto"
-    let GARDENDB = "GardenDB"
+    let GARDEN = "Horta"
     let ADDRESS = "Endereco"
+    let DISTRICT = "Bairro"
+    let POSTCODE = "CEP"
+    let STATE = "Estado"
+    let CITY = "Cidade"
+    
     
     let TABLE_PARTICIPANTE = "HORTA_PARTICIPANTE"
     let TABLE_ADMIN = "HORTA_ADMIN"
@@ -42,11 +48,15 @@ class GardenDAOCLoudKit {
     
     // SALVAR JARDIM
     
-    func saveGardenBD(newGarden:GardenDB){
+    func saveNewGarden(newGarden:Garden){
         
-        let record = CKRecord(recordType: GARDENDB)
+        let record = CKRecord(recordType: GARDEN)
         record.setObject(newGarden.name, forKey: NAME)
         record.setObject(newGarden.address, forKey: ADDRESS)
+        record.setObject(newGarden.city, forKey: CITY)
+        record.setObject(newGarden.district, forKey: DISTRICT)
+        record.setObject(newGarden.state, forKey: STATE)
+        record.setObject(newGarden.postCode, forKey: POSTCODE)
         record.setObject(newGarden.photo, forKey: PHOTO)
         
         //var modify = CKModifyRecordsOperation()

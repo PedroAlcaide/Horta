@@ -105,11 +105,11 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, Gard
                 self.alertLoading?.show()
             })
             garden?.name = nome.text
-            garden?.address?.address = endereco.text
-            garden?.address?.postCode = cep.text
-            garden?.address?.district = bairro.text
-            garden?.address?.city = cidade.text
-            garden?.address?.state = estado.text
+            garden?.address = endereco.text
+            garden?.postCode = cep.text
+            garden?.district = bairro.text
+            garden?.city = cidade.text
+            garden?.state = estado.text
             
             gardenManager?.saveGardenAndAddress(garden!)
             
