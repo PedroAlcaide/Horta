@@ -336,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YKL-iD-drw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3323.5" y="-307.5"/>
+            <point key="canvasLocation" x="-3277.5" y="-161.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rhX-Z3-pf6">
@@ -364,9 +364,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="rg0-Da-8NQ" kind="show" id="wi4-7Z-5E1"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="soon" translatesAutoresizingMaskIntoConstraints="NO" id="K7S-iz-G3Q">
                                 <rect key="frame" x="67" y="248" width="240" height="195"/>
@@ -380,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWC-s0-k5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2417.5" y="-265.5"/>
+            <point key="canvasLocation" x="-1634.5" y="-1109.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lYd-bn-pBX">
@@ -636,9 +633,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="rg0-Da-8NQ" kind="show" id="z6L-ux-f9L"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="jhg-au-dim">
                                 <rect key="frame" x="52" y="590" width="271" height="33"/>
@@ -652,7 +646,6 @@
                                 </state>
                                 <connections>
                                     <action selector="userConfig_logOut:" destination="hjz-VH-KCz" eventType="touchUpInside" id="bpa-qc-fMu"/>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="taJ-ka-zMO"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="60S-Ub-x3G">
@@ -905,9 +898,6 @@
                                 <state key="normal" image="fechar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="41s-B1-P6E" kind="show" identifier="Cancel" id="ki1-Xg-E5V"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KpU-2N-xUw" userLabel="btnConfirmar">
                                 <rect key="frame" x="210" y="488" width="103" height="92"/>
@@ -915,9 +905,6 @@
                                 <state key="normal" image="confirmar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="41s-B1-P6E" kind="show" identifier="SaveProduct" id="PLI-eM-cGz"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -1137,7 +1124,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zph-ea-38F" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7cf-Pl-BvC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2908.5" y="-307.5"/>
+            <point key="canvasLocation" x="-2798.5" y="-317.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gvh-eZ-JwY">
@@ -1259,7 +1246,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2P-xg-NLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2011.5" y="-265.5"/>
+            <point key="canvasLocation" x="-2798.5" y="521.5"/>
         </scene>
         <!--Paged Scroll View Controller-->
         <scene sceneID="9vD-v2-rYK">
@@ -1379,9 +1366,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Rgt-X0-mhb" kind="show" id="L5k-YF-6c9"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Canteiros" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-lP-UPl">
                                 <rect key="frame" x="133" y="91" width="94" height="21"/>
@@ -1438,7 +1422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhk-sx-mdY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1609.5" y="-256.5"/>
+            <point key="canvasLocation" x="-1739.5" y="-8.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Jr6-yu-DQr">
@@ -1462,9 +1446,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="TdC-fj-RhH"/>
-                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiX-ZC-tS9">
                                 <rect key="frame" x="-6" y="73" width="381" height="594"/>
@@ -1505,6 +1486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fS6-v8-8CN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1078" y="298.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1550,10 +1532,4 @@
         <image name="voltar" width="120" height="102"/>
         <image name="voltar2" width="118" height="103"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="W5n-e9-flp"/>
-        <segue reference="k74-kw-DU0"/>
-        <segue reference="wi4-7Z-5E1"/>
-        <segue reference="taJ-ka-zMO"/>
-    </inferredMetricsTieBreakers>
 </document>
