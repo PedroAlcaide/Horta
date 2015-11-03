@@ -66,8 +66,6 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, Gard
     
     @IBAction func submitData(sender: AnyObject) {
         
-        
-        
         validador = Validator()
         validador?.delegate = self
         validador?.iCloudAccountValidation()

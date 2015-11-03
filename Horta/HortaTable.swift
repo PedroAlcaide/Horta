@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource, GardenManagerDelegate {
     
     
     
@@ -18,8 +18,10 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var gardenManager : GardenManager?
     var user:User?
+    var arrayGardens: NSMutableArray?
     
     override func viewDidLoad() {
+        self.arrayGardens = NSMutableArray()
         self.table.delegate = self
         self.table.dataSource = self
         
@@ -27,6 +29,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.segmentControl.setTitle("Admin", forSegmentAtIndex: 1)
         
         self.gardenManager = GardenManager()
+        self.gardenManager?.delegate = self
         self.user = UserManager().getUserLogged()
     }
     
@@ -59,15 +62,41 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return (self.arrayGardens?.count)!;
         
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.table.dequeueReusableCellWithIdentifier("CustomCell") as! CustomCell
         //var cell = self.table.dequeueReusableCellWithIdentifier("CustomCell") as! UITableViewCell
+        let garden = self.arrayGardens?.objectAtIndex(indexPath.row) as! Garden
         cell.lblHorta.text = "Danado"
+        cell.lblGardenName.text = garden.name
+        cell.lblDistrict.text = garden.district
         return cell
     }
+    
+    
+    // METODOS GARDEN_MANAGER DELEGATE
+    
+    func errorThrowed(error:NSError){
+        
+        print("chamou metodo erro")
+        
+    }
+    func gardenOperationSuccessfull(){
+        print("chamou metodo sucesso")
+    }
+    func getGardensSucessful(arrayGardens:NSMutableArray){
+        self.arrayGardens = arrayGardens
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            
+            self.table.reloadData()
+        })
+        
+        print("chamou metodo vetor")
+    }
+    
     
 }

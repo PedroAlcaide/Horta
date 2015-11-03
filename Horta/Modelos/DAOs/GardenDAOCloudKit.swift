@@ -13,7 +13,7 @@ protocol GardenDAOCKDelegate{
     
     func gardenSavedSuccessfull(gardenID:CKRecordID)
     func savedRelationashipSucessfull()
-    func getGardensByUser(gardenArray:NSMutableArray)
+    func getGardensSucessful(gardenArray:NSMutableArray)
     func errorThrow()
     
 }
@@ -227,7 +227,7 @@ class GardenDAOCLoudKit {
     }
     
     
-    func getListGarden(idGardenArray:NSMutableArray, gardensArray:NSMutableArray, garden:GardenDB?){
+    func getListGarden(idGardenArray:NSMutableArray, gardensArray:NSMutableArray, garden:Garden?){
         
         
         if (garden != nil){
@@ -239,11 +239,10 @@ class GardenDAOCLoudKit {
         if  (idGardenArray.count == 0){
             
             // CHAMAR DELEGATE
-            self.delegate?.getGardensByUser(gardensArray)
+            self.delegate?.getGardensSucessful(gardensArray)
+            return
 
         }
-        
-        
         
         let gardenReference: CKReference = idGardenArray.lastObject as! CKReference
         let gardenID = gardenReference.recordID
@@ -263,12 +262,17 @@ class GardenDAOCLoudKit {
                 if  (result != nil){
                     
                     let gardenResult : CKRecord = result!
-                    let getGarden = GardenDB()
+                    let getGarden = Garden()
                     
                     getGarden.recordID = gardenResult.recordID
                     getGarden.name = gardenResult.objectForKey(self.NAME) as? String
-                    getGarden.address = gardenResult.objectForKey(self.ADDRESS) as? CKReference
-                    getGarden.photo = gardenResult.objectForKey(self.PHOTO) as? NSData
+                    getGarden.address = gardenResult.objectForKey(self.ADDRESS) as? String
+                    getGarden.district = gardenResult.objectForKey(self.DISTRICT) as? String
+                    getGarden.postCode = gardenResult.objectForKey(self.POSTCODE) as? String
+                    getGarden.state = gardenResult.objectForKey(self.STATE) as? String
+                    getGarden.city = gardenResult.objectForKey(self.CITY) as? String
+                    
+                    //getGarden.photo = gardenResult.objectForKey(self.PHOTO) as? NSData
                     
                     
                     // implementar delegate

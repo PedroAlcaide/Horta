@@ -9,10 +9,11 @@
 import Foundation
 import CloudKit
 
-protocol GardenManagerDelegate{
+ @objc protocol GardenManagerDelegate{
     
     func errorThrowed(error:NSError)
     func gardenOperationSuccessfull()
+    optional func getGardensSucessful(arrayGardens:NSMutableArray)
     
 }
 
@@ -145,21 +146,10 @@ class GardenManager : GardenDAOCKDelegate{
     }
     
     
-    func getGardensByUser(gardenDBArray: NSMutableArray) {
-        
-        //let arrayGarden = NSMutableArray()
-        
-        while (gardenDBArray.count == 0){
-            let garden = gardenDBArray.lastObject as! Garden
-            //gardenDBArray.removeLastObject()
-            //arrayGarden.addObject(self.gardenDBtoGarden(gardenDB))
-            
-        }
+    func getGardensSucessful(gardenDBArray: NSMutableArray) {
         
         
-        
-        
-        
+        self.delegate?.getGardensSucessful!(gardenDBArray)
     }
     
         

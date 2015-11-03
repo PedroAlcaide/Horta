@@ -13,7 +13,9 @@ class CustomCell: UITableViewCell {
     
     @IBOutlet weak var lblHorta: UILabel!
 
+    @IBOutlet weak var lblGardenName: UILabel!
     
+    @IBOutlet weak var lblDistrict: UILabel!
     
     
     

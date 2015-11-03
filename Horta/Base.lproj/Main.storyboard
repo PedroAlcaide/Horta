@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rg0-Da-8NQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
@@ -302,6 +302,8 @@
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
+                                            <outlet property="lblDistrict" destination="hw4-pn-oJn" id="hfT-mh-ICn"/>
+                                            <outlet property="lblGardenName" destination="SFN-hD-9E9" id="PRx-P1-A91"/>
                                             <outlet property="lblHorta" destination="vLh-Qt-yVV" id="CxV-mR-ujE"/>
                                         </connections>
                                     </tableViewCell>
@@ -378,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWC-s0-k5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2452.5" y="-376.5"/>
+            <point key="canvasLocation" x="-2417.5" y="-265.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="lYd-bn-pBX">
@@ -1240,9 +1242,6 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="hjz-VH-KCz" kind="show" id="4YR-2K-Xmc"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regar" translatesAutoresizingMaskIntoConstraints="NO" id="YmP-Ne-xrz">
                                 <rect key="frame" x="121" y="380" width="73" height="69"/>
@@ -1552,10 +1551,9 @@
         <image name="voltar2" width="118" height="103"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="z6L-ux-f9L"/>
-        <segue reference="AbF-SC-ZPO"/>
+        <segue reference="W5n-e9-flp"/>
+        <segue reference="k74-kw-DU0"/>
+        <segue reference="wi4-7Z-5E1"/>
         <segue reference="taJ-ka-zMO"/>
-        <segue reference="ki1-Xg-E5V"/>
-        <segue reference="L5k-YF-6c9"/>
     </inferredMetricsTieBreakers>
 </document>
