@@ -148,13 +148,14 @@
                                 <animations/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jj9-rf-tFQ">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jj9-rf-tFQ">
                                 <rect key="frame" x="0.0" y="96" width="375" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <color key="tintColor" red="0.42793936493366469" green="0.75324949424214127" blue="0.51998573039878682" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="changeViews:" destination="rg0-Da-8NQ" eventType="valueChanged" id="vbE-JJ-2Ai"/>
                                 </connections>
@@ -799,14 +800,6 @@
                                 <rect key="frame" x="46" y="63" width="284" height="507"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confirmar" translatesAutoresizingMaskIntoConstraints="NO" id="QCm-Sf-M8r">
-                                <rect key="frame" x="131" y="562" width="112" height="85"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fechar" translatesAutoresizingMaskIntoConstraints="NO" id="dbF-Jm-8Ya">
-                                <rect key="frame" x="283" y="49" width="84" height="61"/>
-                                <animations/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Criar nova horta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00K-zf-kEw">
                                 <rect key="frame" x="106" y="94" width="162" height="21"/>
                                 <animations/>
@@ -838,26 +831,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXc-ho-jz9">
-                                <rect key="frame" x="140" y="562" width="95" height="85"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitData:" destination="4DF-Rx-iC0" eventType="touchUpInside" id="Nu0-IH-k1R"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcC-2Y-p3y">
-                                <rect key="frame" x="297" y="49" width="62" height="61"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="back:" destination="4DF-Rx-iC0" eventType="touchUpInside" id="pna-Bn-mq1"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informações" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-yf-pOP">
                                 <rect key="frame" x="120" y="123" width="135" height="21"/>
                                 <animations/>
@@ -877,11 +850,32 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-Gf-z76">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-Gf-z76">
                                 <rect key="frame" x="71" y="394" width="238" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXc-ho-jz9">
+                                <rect key="frame" x="128" y="512" width="101" height="95"/>
+                                <animations/>
+                                <state key="normal" image="confirmar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitData:" destination="4DF-Rx-iC0" eventType="touchUpInside" id="Nu0-IH-k1R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcC-2Y-p3y">
+                                <rect key="frame" x="261" y="28" width="120" height="83"/>
+                                <animations/>
+                                <state key="normal" image="fechar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="4DF-Rx-iC0" eventType="touchUpInside" id="pna-Bn-mq1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -923,12 +917,8 @@
                                 <rect key="frame" x="21" y="51" width="49" height="45"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hortacomu" translatesAutoresizingMaskIntoConstraints="NO" id="Xok-Cg-YRs">
-                                <rect key="frame" x="34" y="296" width="311" height="153"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vila Madalena" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drc-IO-hZz">
-                                <rect key="frame" x="26" y="184" width="118" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="bairro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drc-IO-hZz">
+                                <rect key="frame" x="26" y="228" width="118" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -941,28 +931,6 @@
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pessoas" translatesAutoresizingMaskIntoConstraints="NO" id="cni-Ud-Y7l">
-                                <rect key="frame" x="240" y="206" width="30" height="26"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="muda" translatesAutoresizingMaskIntoConstraints="NO" id="uQ3-mL-Eq2">
-                                <rect key="frame" x="298" y="206" width="28" height="26"/>
-                                <animations/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5m-25-gxj">
-                                <rect key="frame" x="272" y="206" width="18" height="22"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-xa-cdb">
-                                <rect key="frame" x="327" y="207" width="18" height="19"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DRg-Ys-ET8">
                                 <rect key="frame" x="132" y="61" width="106" height="26"/>
                                 <animations/>
@@ -970,32 +938,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIY-8C-oYn">
-                                <rect key="frame" x="132" y="236" width="98" height="46"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="41s-B1-P6E" kind="show" id="W5n-e9-flp"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0N-uZ-uqF">
-                                <rect key="frame" x="34" y="464" width="311" height="96"/>
-                                <animations/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regar_aviso" translatesAutoresizingMaskIntoConstraints="NO" id="WF7-ts-iBO">
-                                <rect key="frame" x="59" y="369" width="75" height="80"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adubo_aviso" translatesAutoresizingMaskIntoConstraints="NO" id="XC6-Wc-Aw6">
-                                <rect key="frame" x="251" y="369" width="75" height="80"/>
-                                <animations/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="estado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4y-n8-ufc">
+                                <rect key="frame" x="225" y="184" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOR-4w-ISl">
                                 <rect key="frame" x="21" y="51" width="49" height="43"/>
                                 <animations/>
@@ -1006,18 +954,36 @@
                                     <action selector="back:" destination="Rgt-X0-mhb" eventType="touchUpInside" id="xUf-MN-Zc6"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="regar" translatesAutoresizingMaskIntoConstraints="NO" id="YmP-Ne-xrz">
-                                <rect key="frame" x="121" y="380" width="73" height="69"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="endereco" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-02-NXz">
+                                <rect key="frame" x="26" y="184" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0N-uZ-uqF">
+                                <rect key="frame" x="32" y="298" width="311" height="195"/>
                                 <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="adubo" translatesAutoresizingMaskIntoConstraints="NO" id="U1H-NN-Pzr">
-                                <rect key="frame" x="186" y="380" width="75" height="69"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIY-8C-oYn">
+                                <rect key="frame" x="115" y="579" width="128" height="61"/>
                                 <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="visitar" translatesAutoresizingMaskIntoConstraints="NO" id="epe-dk-S06">
-                                <rect key="frame" x="117" y="232" width="113" height="56"/>
-                                <animations/>
-                            </imageView>
+                                <state key="normal" image="visitar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="41s-B1-P6E" kind="show" id="W5n-e9-flp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="cidade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u38-6S-wMg">
+                                <rect key="frame" x="225" y="228" width="118" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1025,7 +991,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="btnBack" destination="XOR-4w-ISl" id="AwK-zZ-6eH"/>
+                        <outlet property="lblAddress" destination="dK4-02-NXz" id="j4H-RR-tE5"/>
                         <outlet property="lblBairro" destination="drc-IO-hZz" id="rT5-PO-K2a"/>
+                        <outlet property="lblCidade" destination="u38-6S-wMg" id="2nr-9F-LTn"/>
+                        <outlet property="lblEstado" destination="K4y-n8-ufc" id="vtu-Qc-OxM"/>
                         <outlet property="lblName" destination="7NU-XZ-gDE" id="nBC-dU-aPE"/>
                         <outlet property="txtDescription" destination="B0N-uZ-uqF" id="Emz-Ti-soI"/>
                         <outlet property="txtView" destination="B0N-uZ-uqF" id="pTb-VV-OtL"/>
@@ -1281,7 +1250,6 @@
         <image name="abobora-icon" width="145" height="139"/>
         <image name="add" width="120" height="100"/>
         <image name="adicionar" width="154" height="122"/>
-        <image name="adubo" width="127" height="109"/>
         <image name="adubo_aviso" width="127" height="132"/>
         <image name="alface_icon" width="145" height="139"/>
         <image name="batata-icon" width="145" height="139"/>
@@ -1298,16 +1266,12 @@
         <image name="fundo2" width="640" height="1168"/>
         <image name="fundo_login" width="640" height="1169"/>
         <image name="gramado" width="740" height="191"/>
-        <image name="hortacomu" width="259" height="195"/>
         <image name="lixeira" width="120" height="122"/>
         <image name="login" width="505" height="60"/>
         <image name="logout" width="505" height="60"/>
-        <image name="muda" width="52" height="42"/>
-        <image name="pessoas" width="52" height="42"/>
         <image name="placa_grande" width="446" height="612"/>
         <image name="placa_maximizada" width="487" height="888"/>
         <image name="plantar" width="74" height="104"/>
-        <image name="regar" width="123" height="109"/>
         <image name="regar_aviso" width="123" height="129"/>
         <image name="rolagem" width="640" height="307"/>
         <image name="soon" width="476" height="434"/>

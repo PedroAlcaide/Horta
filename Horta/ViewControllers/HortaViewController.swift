@@ -13,9 +13,14 @@ class HortaDetailsViewController: UIViewController {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblBairro: UILabel!
     @IBOutlet weak var txtView: UITextView!
+    @IBOutlet weak var lblAddress: UILabel!
     
     @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var btnBack: UIButton!
+    
+    @IBOutlet weak var lblEstado: UILabel!
+    @IBOutlet weak var lblCidade: UILabel!
+    
     
     var garden : Garden?
     
@@ -26,6 +31,11 @@ class HortaDetailsViewController: UIViewController {
         self.lblBairro.text = self.garden?.district
         self.txtView.text = self.garden?.address
         self.txtDescription.text = self.garden?.description
+        self.lblAddress.text = self.garden?.address
+        self.lblEstado.text = self.garden?.state
+        self.lblCidade.text = self.garden?.city
+        
+        
 
         // Do any additional setup after loading the view.
     }

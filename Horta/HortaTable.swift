@@ -26,8 +26,8 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         self.table.delegate = self
         self.table.dataSource = self
         
-        self.segmentControl.setTitle("Participo", forSegmentAtIndex: 0)
-        self.segmentControl.setTitle("Admin", forSegmentAtIndex: 1)
+        self.segmentControl.setTitle("Outras", forSegmentAtIndex: 0)
+        self.segmentControl.setTitle("Minha", forSegmentAtIndex: 1)
         
         self.gardenManager = GardenManager()
         self.gardenManager?.delegate = self
