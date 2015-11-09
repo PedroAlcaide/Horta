@@ -50,9 +50,9 @@ class Validator {
         
         if (self.isAllFilledFields(fields) == true){
             
-            if (self.compareEqualFields(fields[2], field2: fields[3]) && self.compareEqualFields(fields[4], field2: fields[5])){
+            if (self.compareEqualFields(fields[3], field2: fields[4])){
                 
-                if (self.checkPassword(fields[4]) == false){
+                if (self.checkPassword(fields[3]) == false){
                     
                     self.delegate?.errorThrowedValidator(ErrorManager.ERROR4)
                     return false

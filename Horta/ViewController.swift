@@ -35,7 +35,6 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     @IBOutlet weak var nome: UITextField!
     @IBOutlet weak var sobrenome: UITextField!
     @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var confirmaremail: UITextField!
     @IBOutlet weak var senha: UITextField!
     @IBOutlet weak var confirmarsenha: UITextField!
     
@@ -73,7 +72,6 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
         nome.delegate = self
         sobrenome.delegate = self
         email.delegate = self
-        confirmaremail.delegate = self
         confirmarsenha.delegate = self
         senha.delegate = self
         
@@ -151,7 +149,7 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     func iCloudAccountAvaliable() {
         
         
-        let array = [nome,sobrenome, email, confirmaremail, senha, confirmarsenha] as Array<UITextField>
+        let array = [nome,sobrenome, email, senha, confirmarsenha] as Array<UITextField>
         let correct = validador?.validateDataSignUp(array)
         
         if  (correct == true){
