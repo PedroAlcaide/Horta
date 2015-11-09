@@ -126,8 +126,18 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, Gard
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func errorThrowed(error: NSError) {
-        self.errorThrowedValidator(error.code)
+    func errorThrowed(message:String){
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            
+            var alert = UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
+            
+            
+        }
+        
+        
+        
     }
     
 }

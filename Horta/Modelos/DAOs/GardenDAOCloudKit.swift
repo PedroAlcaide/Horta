@@ -14,7 +14,7 @@ protocol GardenDAOCKDelegate{
     func gardenSavedSuccessfull(gardenID:CKRecordID)
     func savedRelationashipSucessfull()
     func getGardensSucessful(gardenArray:NSMutableArray)
-    func errorThrow()
+    func errorThrow(message:String)
     
 }
 
@@ -38,7 +38,6 @@ class GardenDAOCLoudKit {
     let ID_GARDEN = "IDHorta"
     let ID_PART = "IDParticipante"
     let ID_ADMIN = "IDAdmin"
-    
     
     init(){
         
@@ -66,7 +65,8 @@ class GardenDAOCLoudKit {
         publicBD.saveRecord(record, completionHandler: { (record, error) -> Void in
             
             if  (error != nil){
-                    print("falha ao gravar jardim", terminator: "")
+                
+                self.delegate?.errorThrow("falha ao gravar jardim")
             }else{
                 self.delegate?.gardenSavedSuccessfull(record!.recordID)
             }
@@ -78,7 +78,7 @@ class GardenDAOCLoudKit {
     }
     
     // ATUALAIZAR JARDIM
-    
+    /*
     func updateGarden(garden :GardenDB){
         
         publicBD.fetchRecordWithID(garden.recordID!, completionHandler: { (record, error) -> Void in
@@ -92,7 +92,7 @@ class GardenDAOCLoudKit {
             }
         })
         
-    }
+    }*/
     
     // SALVAR RELACIONAMENTO ENTER JARDIM E PARTICIPANTE
     
@@ -112,7 +112,8 @@ class GardenDAOCLoudKit {
             if  (error != nil){
                 //self.delegate?.errorThrowed(error)
             }else{
-                print("Gravou participante", terminator: "")
+                
+                self.delegate?.errorThrow("Erro ao acessar o banco de dados")
             }
             
         })
@@ -120,6 +121,7 @@ class GardenDAOCLoudKit {
         publicBD.addOperation(modify)
         
     }
+    
     
     // SALVAR RELACIONAMENTO ENTRE JARDIM E ADMIN
     
@@ -152,7 +154,7 @@ class GardenDAOCLoudKit {
             
             if  (error != nil){
                 //self.delegate?.errorThrowed(error)
-                print("erro ao gravar relacionamento")
+                self.delegate?.errorThrow("Erro ao acessar o banco de dados")
             }else{
                 self.delegate?.savedRelationashipSucessfull()
                 
@@ -163,6 +165,46 @@ class GardenDAOCLoudKit {
         //publicBD.addOperation(modify)
         
         
+        
+    }
+    
+    // GET ALL GARDENS
+    
+    func getAllGardens(userID:CKReference){
+        
+        let predicate = NSPredicate(format: "\(ID_ADMIN) != %@", userID)
+        let query = CKQuery(recordType: TABLE_ADMIN, predicate: predicate)
+        
+    
+        self.publicBD.performQuery(query, inZoneWithID: nil) { (results, error) -> Void in
+            
+            if  (error == nil){
+                
+                if (results!.count > 0){
+                    
+                    var gardenArray = NSMutableArray()
+                    
+                    for record in results!{
+                        
+                        let gardenReference: Garden = record.objectForKey(self.ID_GARDEN) as! Garden
+                        gardenArray.addObject(gardenReference)
+                        
+                    }
+                    
+                    self.delegate?.getGardensSucessful(gardenArray)
+
+                    
+                }
+                
+                
+                
+            }else{
+                self.delegate?.errorThrow("Erro ao acessar o banco de dados")
+            }
+            
+            
+            
+        }
         
     }
     
@@ -186,8 +228,8 @@ class GardenDAOCLoudKit {
             
             // QUERY FOR FETCH GARDEN ON PARTICIPANT
             
-            predicate = NSPredicate(format: "\(ID_PART) == %@", userID)
-            query = CKQuery(recordType: TABLE_PARTICIPANTE, predicate: predicate!)
+            predicate = NSPredicate(format: "\(ID_ADMIN) != %@", userID)
+            query = CKQuery(recordType: TABLE_ADMIN, predicate: predicate!)
         }
         
         
@@ -214,12 +256,12 @@ class GardenDAOCLoudKit {
                     
                     
                 }else{
-                    print("nenhum dado encontrado", terminator: "")
+                    self.delegate?.errorThrow("Nenhum dado encontrado")
                 }
                 
                 
             }else{
-                print("algum erro no cloudkit", terminator: "")
+                self.delegate?.errorThrow("Erro ao acessar o banco de dados")
             }
             
             
@@ -280,7 +322,7 @@ class GardenDAOCLoudKit {
                     
                     
                 }else{
-                    print("nenhum encontrado")
+                    self.delegate?.errorThrow("Nenhum dado encontrado")
                 }
                     
                 
@@ -291,7 +333,7 @@ class GardenDAOCLoudKit {
             }else{
                 
                 // error cloud kit - implementar delegate
-                print("erro cloudkit", terminator: "")
+                self.delegate?.errorThrow("Erro ao acessar o banco de dados")
             }
             
             

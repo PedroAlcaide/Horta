@@ -14,6 +14,7 @@
 		84024FD71B17A2520089B9DD /* GardenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD61B17A2520089B9DD /* GardenManager.swift */; };
 		84024FD91B17A2E90089B9DD /* AddressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FD81B17A2E90089B9DD /* AddressManager.swift */; };
 		84024FDB1B17F92F0089B9DD /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84024FDA1B17F92F0089B9DD /* Tools.swift */; };
+		843F72471BF133E400B634A2 /* HortaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843F72461BF133E400B634A2 /* HortaViewController.swift */; };
 		8449C4981B27645E00EEBE36 /* AlertViewLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449C4951B27645D00EEBE36 /* AlertViewLoading.m */; };
 		8449C4991B27645E00EEBE36 /* CustomIOSAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449C4971B27645D00EEBE36 /* CustomIOSAlertView.m */; };
 		8449C49C1B276B5F00EEBE36 /* IHKeyboardAvoiding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8449C49B1B276B5F00EEBE36 /* IHKeyboardAvoiding.m */; };
@@ -89,6 +90,7 @@
 		84024FD61B17A2520089B9DD /* GardenManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GardenManager.swift; path = Modelos/Garden/GardenManager.swift; sourceTree = "<group>"; };
 		84024FD81B17A2E90089B9DD /* AddressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddressManager.swift; path = Modelos/Others/AddressManager.swift; sourceTree = "<group>"; };
 		84024FDA1B17F92F0089B9DD /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Tools.swift; path = Modelos/Tools/Tools.swift; sourceTree = "<group>"; };
+		843F72461BF133E400B634A2 /* HortaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HortaViewController.swift; path = ViewControllers/HortaViewController.swift; sourceTree = "<group>"; };
 		8449C4941B27645D00EEBE36 /* AlertViewLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertViewLoading.h; path = Modelos/Tools/CustomAlerts/AlertViewLoading.h; sourceTree = "<group>"; };
 		8449C4951B27645D00EEBE36 /* AlertViewLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertViewLoading.m; path = Modelos/Tools/CustomAlerts/AlertViewLoading.m; sourceTree = "<group>"; };
 		8449C4961B27645D00EEBE36 /* CustomIOSAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomIOSAlertView.h; path = Modelos/Tools/CustomAlerts/CustomIOSAlertView.h; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				D6C694031B1CEE2F00827224 /* ViewControllerConfig.swift */,
 				EE7B57001B19057300967A33 /* HortaTable.swift */,
 				D6C6940D1B1CFE4200827224 /* ViewControllerHorta.swift */,
+				843F72461BF133E400B634A2 /* HortaViewController.swift */,
 			);
 			name = Controladores;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				D6FDAFC41BD99B2D00003F2F /* UpdateItemDisplayDelegate.swift in Sources */,
 				EEFE52A71B13911D008CC8F7 /* AppDelegate.swift in Sources */,
 				84F7FF091B164BF400E66A13 /* ExceptionFactory.swift in Sources */,
+				843F72471BF133E400B634A2 /* HortaViewController.swift in Sources */,
 				84F7FEFF1B16447100E66A13 /* DivergenceException.swift in Sources */,
 				8464B0031B13ACE8004BC0B6 /* User.swift in Sources */,
 				84024FD91B17A2E90089B9DD /* AddressManager.swift in Sources */,

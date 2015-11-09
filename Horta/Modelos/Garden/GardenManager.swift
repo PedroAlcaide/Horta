@@ -11,7 +11,7 @@ import CloudKit
 
  @objc protocol GardenManagerDelegate{
     
-    func errorThrowed(error:NSError)
+    func errorThrowed(message:String)
     func gardenOperationSuccessfull()
     optional func getGardensSucessful(arrayGardens:NSMutableArray)
     
@@ -139,9 +139,9 @@ class GardenManager : GardenDAOCKDelegate{
         
     }
     
-    func errorThrow(){
+    func errorThrow(message:String){
         
-        print("deu erro")
+        self.delegate?.errorThrowed(message)
         
     }
     

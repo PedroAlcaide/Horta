@@ -101,12 +101,6 @@ class AddressDAOCLoudKit {
         
     }
     
-    func getAddressByID(addressID:CKRecordID, gardenArray : NSMutableArray, gardensNewArray : NSMutableArray){
         
-        
-        
-    }
-
-    
     
 }
