@@ -15,6 +15,7 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, Gard
     @IBOutlet weak var endereco: UITextField!
     @IBOutlet weak var cidade: UITextField!
     
+    @IBOutlet weak var txtDescricao: UITextField!
     @IBOutlet weak var estado: UITextField!
     
     @IBOutlet weak var bairro: UITextField!
@@ -41,6 +42,7 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, Gard
         cidade.delegate = self
         estado.delegate = self
         bairro.delegate = self
+        self.txtDescricao.delegate = self
         
         // Preparando jardim
         gardenManager = GardenManager()
@@ -108,9 +110,9 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, Gard
             garden?.district = bairro.text
             garden?.city = cidade.text
             garden?.state = estado.text
+            garden?.description = self.txtDescricao.text
             
             gardenManager?.saveGardenAndAddress(garden!)
-            
             
         }
         

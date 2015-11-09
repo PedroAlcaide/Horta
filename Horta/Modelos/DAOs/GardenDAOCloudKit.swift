@@ -31,6 +31,7 @@ class GardenDAOCLoudKit {
     let POSTCODE = "CEP"
     let STATE = "Estado"
     let CITY = "Cidade"
+    let DESCRIPTION = "Descricao"
     
     
     let TABLE_PARTICIPANTE = "HORTA_PARTICIPANTE"
@@ -57,6 +58,7 @@ class GardenDAOCLoudKit {
         record.setObject(newGarden.state, forKey: STATE)
         record.setObject(newGarden.postCode, forKey: POSTCODE)
         record.setObject(newGarden.photo, forKey: PHOTO)
+        record.setObject(newGarden.description, forKey: DESCRIPTION)
         
         //var modify = CKModifyRecordsOperation()
         //modify.recordsToSave = [CKRecord] (arrayLiteral: record)
@@ -313,6 +315,7 @@ class GardenDAOCLoudKit {
                     getGarden.postCode = gardenResult.objectForKey(self.POSTCODE) as? String
                     getGarden.state = gardenResult.objectForKey(self.STATE) as? String
                     getGarden.city = gardenResult.objectForKey(self.CITY) as? String
+                    getGarden.description = gardenResult.objectForKey(self.DESCRIPTION) as? String
                     
                     //getGarden.photo = gardenResult.objectForKey(self.PHOTO) as? NSData
                     

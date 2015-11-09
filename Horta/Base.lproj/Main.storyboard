@@ -268,34 +268,29 @@
                                 <animations/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jzo-vT-Nmq">
-                                <rect key="frame" x="29" y="409" width="316" height="30"/>
+                                <rect key="frame" x="29" y="437" width="316" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aht-HJ-W6W">
-                                <rect key="frame" x="29" y="357" width="316" height="30"/>
+                                <rect key="frame" x="29" y="385" width="316" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jej-4q-fkq">
-                                <rect key="frame" x="29" y="304" width="316" height="30"/>
+                                <rect key="frame" x="29" y="332" width="316" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Li e concordo com os termos de politica de uso" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3Q-aR-TRs">
-                                <rect key="frame" x="114" y="456" width="245" height="21"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZfA-Jc-fYX">
+                                <rect key="frame" x="29" y="227" width="316" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E0V-Pk-CLL">
-                                <rect key="frame" x="83" y="455" width="19" height="22"/>
-                                <animations/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cadastro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVZ-bj-f4m">
                                 <rect key="frame" x="99" y="48" width="176" height="39"/>
                                 <animations/>
@@ -304,22 +299,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tne-7h-yOd">
-                                <rect key="frame" x="29" y="251" width="316" height="30"/>
+                                <rect key="frame" x="29" y="279" width="316" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geE-2C-lkp">
-                                <rect key="frame" x="242" y="485" width="103" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Confirmar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="confirma:" destination="EMs-2B-ZLQ" eventType="touchUpInside" id="BiS-xA-K4D"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdM-b2-yAP">
                                 <rect key="frame" x="29" y="19" width="64" height="68"/>
                                 <animations/>
@@ -330,12 +314,17 @@
                                     <action selector="back:" destination="EMs-2B-ZLQ" eventType="touchUpInside" id="Bb6-Jk-bJq"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZfA-Jc-fYX">
-                                <rect key="frame" x="29" y="199" width="316" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geE-2C-lkp">
+                                <rect key="frame" x="242" y="484" width="103" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
-                            </textField>
+                                <state key="normal" title="Confirmar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirma:" destination="EMs-2B-ZLQ" eventType="touchUpInside" id="BiS-xA-K4D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -814,30 +803,6 @@
                                 <rect key="frame" x="131" y="562" width="112" height="85"/>
                                 <animations/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Rvu-SL-3nk">
-                                <rect key="frame" x="82" y="419" width="86" height="79"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="VG3-HL-E2w">
-                                <rect key="frame" x="151" y="419" width="84" height="79"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="0n5-zu-y5I">
-                                <rect key="frame" x="217" y="419" width="84" height="79"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="bfW-Qy-bhb">
-                                <rect key="frame" x="82" y="483" width="86" height="79"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="aLh-IL-XNe">
-                                <rect key="frame" x="151" y="483" width="84" height="79"/>
-                                <animations/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cebola-icon" translatesAutoresizingMaskIntoConstraints="NO" id="eFk-XT-vVI">
-                                <rect key="frame" x="217" y="483" width="84" height="79"/>
-                                <animations/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fechar" translatesAutoresizingMaskIntoConstraints="NO" id="dbF-Jm-8Ya">
                                 <rect key="frame" x="283" y="49" width="84" height="61"/>
                                 <animations/>
@@ -846,13 +811,6 @@
                                 <rect key="frame" x="106" y="94" width="162" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="O que pode ser plantado?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55D-We-5CA">
-                                <rect key="frame" x="87" y="400" width="212" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -900,48 +858,6 @@
                                     <action selector="back:" destination="4DF-Rx-iC0" eventType="touchUpInside" id="pna-Bn-mq1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="64T-Yo-enK">
-                                <rect key="frame" x="165" y="429" width="57" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Khc-kb-eQV">
-                                <rect key="frame" x="230" y="429" width="57" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0hl-Kw-239">
-                                <rect key="frame" x="97" y="493" width="57" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cX-Ig-qY9">
-                                <rect key="frame" x="165" y="493" width="57" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibc-4X-lWP">
-                                <rect key="frame" x="231" y="493" width="57" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhR-Kn-3MA">
-                                <rect key="frame" x="97" y="429" width="57" height="59"/>
-                                <animations/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informações" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-yf-pOP">
                                 <rect key="frame" x="120" y="123" width="135" height="21"/>
                                 <animations/>
@@ -961,6 +877,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i9t-Gf-z76">
+                                <rect key="frame" x="71" y="394" width="238" height="94"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -970,15 +891,10 @@
                         <outlet property="bairro" destination="w56-pD-oxD" id="h5M-RH-Rtp"/>
                         <outlet property="cep" destination="YxH-Bh-nmU" id="diI-UH-kHf"/>
                         <outlet property="cidade" destination="BWL-Qc-V9r" id="NXK-C8-VRO"/>
-                        <outlet property="criar1" destination="EhR-Kn-3MA" id="MUe-Sn-te9"/>
-                        <outlet property="criar2" destination="64T-Yo-enK" id="6P6-9j-3iw"/>
-                        <outlet property="criar3" destination="Khc-kb-eQV" id="qyv-sh-Fub"/>
-                        <outlet property="criar4" destination="0hl-Kw-239" id="PkV-9G-SX4"/>
-                        <outlet property="criar5" destination="6cX-Ig-qY9" id="RaH-FF-b54"/>
-                        <outlet property="criar6" destination="Ibc-4X-lWP" id="0br-FY-OeE"/>
                         <outlet property="endereco" destination="NAd-iP-EHP" id="GfU-hx-vLa"/>
                         <outlet property="estado" destination="hBS-q8-9A2" id="isB-nf-4zo"/>
                         <outlet property="nome" destination="Mb2-Vd-wPT" id="zoi-9A-4tj"/>
+                        <outlet property="txtDescricao" destination="i9t-Gf-z76" id="LhB-hp-vuz"/>
                         <segue destination="7cf-Pl-BvC" kind="unwind" identifier="BackHortaTable" unwindAction="hortaTableBack:" id="Fm0-7z-fs7"/>
                     </connections>
                 </viewController>
@@ -1111,6 +1027,7 @@
                         <outlet property="btnBack" destination="XOR-4w-ISl" id="AwK-zZ-6eH"/>
                         <outlet property="lblBairro" destination="drc-IO-hZz" id="rT5-PO-K2a"/>
                         <outlet property="lblName" destination="7NU-XZ-gDE" id="nBC-dU-aPE"/>
+                        <outlet property="txtDescription" destination="B0N-uZ-uqF" id="Emz-Ti-soI"/>
                         <outlet property="txtView" destination="B0N-uZ-uqF" id="pTb-VV-OtL"/>
                     </connections>
                 </viewController>

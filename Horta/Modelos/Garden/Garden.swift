@@ -18,6 +18,7 @@ class Garden {
     var district : String?
     var city : String?
     var state : String?
+    var description : String?
     var photo : NSData?
     
     
