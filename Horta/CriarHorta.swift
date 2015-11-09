@@ -132,7 +132,7 @@ class CriarHorta: UIViewController, UITextFieldDelegate, ValidatorDelegate, Gard
         
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             
-            var alert = UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "OK")
             alert.show()
             
             

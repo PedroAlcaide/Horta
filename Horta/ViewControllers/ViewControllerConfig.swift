@@ -94,6 +94,15 @@ class ViewControllerConfig: UIViewController {
         userPicture?.addSubview( userConfig.getUserPicture()! );
     }
     
+    
+    @IBAction func back(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
