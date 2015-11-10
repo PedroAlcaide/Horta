@@ -40,11 +40,15 @@ class UserDAODefaults{
         user.email = userDefaults.objectForKey(EMAIL) as? String
         user.password = userDefaults.objectForKey(PASSWORD) as? String
         let stringID = userDefaults.objectForKey(RECORDID) as? String
-       // print(stringID
+       // //print(stringID
             if (stringID == nil){
                 return nil
             }
         user.recordID = CKRecordID(recordName: stringID!)
         return user
+    }
+    
+    func logoutUser(){
+        userDefaults.removePersistentDomainForName(NSBundle.mainBundle().bundleIdentifier!)
     }
 }

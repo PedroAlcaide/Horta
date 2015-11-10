@@ -56,7 +56,7 @@ class AddressDAOCLoudKit {
             
             if  (error != nil){
                 
-                print("falha ao gravar endereco", terminator: "")
+                //print("falha ao gravar endereco", terminator: "")
             }else{
                 newAddress.recordID = record!.recordID
                 self.delegate?.saveSuccessfull(newAddress)
@@ -73,11 +73,11 @@ class AddressDAOCLoudKit {
             
             if  error != nil{
                 
-                print("falha ao atualizar endereco", terminator: "")
+                //print("falha ao atualizar endereco", terminator: "")
                 
             }else{
                 self.delegate?.updateSuccessfull()
-                print("atualizou endereco", terminator: "")
+                //print("atualizou endereco", terminator: "")
             }
         })
         

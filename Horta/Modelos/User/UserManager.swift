@@ -70,7 +70,7 @@ class UserManager : UserDAOCKDelegate{
             return nil
         }
         
-        print( user!.email )
+        //print( user!.email )
         return user
         
     }
@@ -79,7 +79,7 @@ class UserManager : UserDAOCKDelegate{
     
     func saveSuccefull(user: User) {
         daoDefaults.saveUser(user)
-        //print("usuario salvo daoDefault")
+        ////print("usuario salvo daoDefault")
         self.delegate?.userOperationSucessfull(user)
         
     }
@@ -99,6 +99,8 @@ class UserManager : UserDAOCKDelegate{
     
     
     
-    
+    func logoutUser(){
+        daoDefaults.logoutUser()
+    }
     
 }

@@ -32,7 +32,7 @@
 ////    private var userFBPicture: FBSDKProfilePictureView = FBSDKProfilePictureView?;//UIImage = UIImage();
 //    
 //    init(){
-////        println( "Conectar inicializado" );
+////        //println( "Conectar inicializado" );
 //        FBSDKProfile.enableUpdatesOnAccessTokenChange( true );
 //        classId      += 1;
 //        nomeUsuario   = "";
@@ -40,11 +40,11 @@
 //        userLogged    = 0;
 //        userIsAdmin   = false;
 //        
-//        println("Class id: \(classId)");
+//        //println("Class id: \(classId)");
 //    }
 //    //------------------------------------------------------------------------------------------
 //    final func getUserPicture() -> UIView? {
-////        println("recuperando imagem");
+////        //println("recuperando imagem");
 ////        if self.userLogged == 2 {
 ////           FBSDKProfilePictureView().profileID = FBSDKProfile.currentProfile().userID;
 ////            return FBSDKProfilePictureView();
@@ -84,7 +84,7 @@ class LoginController {
 ////    private var userFBPicture: FBSDKProfilePictureView = FBSDKProfilePictureView?;//UIImage = UIImage();
 //    
 //    init(){
-////        println( "Conectar inicializado" );
+////        //println( "Conectar inicializado" );
 //        FBSDKProfile.enableUpdatesOnAccessTokenChange( true );
 //        classId      += 1
 //        nomeUsuario   = ""
@@ -92,8 +92,8 @@ class LoginController {
 //        userLogged    = 0
 //        userIsAdmin   = false
 //        
-//        print("Class id: \(classId)")
-//        print("Class id: \(classId)");
+//        //print("Class id: \(classId)")
+//        //print("Class id: \(classId)");
 //    }
     //------------------------------------------------------------------------------------------
 //    final func getUserStatus() -> Int {
@@ -101,7 +101,7 @@ class LoginController {
 //    }
     //------------------------------------------------------------------------------------------
 //    final func getUserPicture() -> UIView? {
-//        println("recuperando imagem");
+//        //println("recuperando imagem");
 //        if self.userLogged == 2 {
 //           FBSDKProfilePictureView().profileID = FBSDKProfile.currentProfile().userID;
 //            return FBSDKProfilePictureView();
@@ -112,7 +112,7 @@ class LoginController {
     //------------------------------------------------------------------------------------------
 //    final func getUserName() -> String? {
 //        if self.userLogged == 2 {
-//            print( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
+//            //print( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
 //            self.nomeUsuario = FBSDKProfile.currentProfile().name;
 //        }
 //
@@ -121,7 +121,7 @@ class LoginController {
     //------------------------------------------------------------------------------------------
 //    final func getUserEmail() -> String? {
 //        if self.userLogged == 2 {
-//            println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
+//            //println( "Get facebook user name: \(FBSDKProfile.currentProfile().name)" );
 //            self.nomeUsuario = FBSDKProfile.currentProfile().name;
 //        }
 //
@@ -130,7 +130,7 @@ class LoginController {
 //    //------------------------------------------------------------------------------------------
 //    final func getUserEmail() -> String? {
 //        if self.userLogged == 2 {
-//            print( "Get facebook user email: \(FBSDKProfile.currentProfile())" );
+//            //print( "Get facebook user email: \(FBSDKProfile.currentProfile())" );
 //            self.emailUsuario = FBSDKProfile.currentProfile().name
 //        }
 //        
@@ -148,31 +148,31 @@ class LoginController {
 //    }
 //    //------------------------------------------------------------------------------------------
 //    func logout() {
-//        println( "User logged out." );
+//        //println( "User logged out." );
 //        userLogged = 0;
 //        closeAllLoggedAccounts();
 //    }
 //    //------------------------------------------------------------------------------------------
 //    private func closeAllLoggedAccounts() -> () {
 //
-//        println( "Desconectando todas as contas..." );
+//        //println( "Desconectando todas as contas..." );
 //        facebookLoginManager.logOut();
 //                
 //    }
 //    //------------------------------------------------------------------------------------------
 //    private func facebook() -> Bool {
-//        println( "conectando com Facebook..." );
+//        //println( "conectando com Facebook..." );
 //        
 //        // Usuário não está logado
 //        if FBSDKAccessToken.currentAccessToken() == nil {
 //        
-//            println( "conectando usuário com o Facebook..." );
+//            //println( "conectando usuário com o Facebook..." );
 //            
 //            facebookLoginManager.logInWithReadPermissions( ["public_profile"], handler: {
 //                (result: FBSDKLoginManagerLoginResult!, error: NSError!) -> () in
 //
 //                if error != nil {
-//                    println( "\(error.description)" );
+//                    //println( "\(error.description)" );
 //                }
 //                
 //                if result.grantedPermissions != nil {
@@ -185,7 +185,7 @@ class LoginController {
 //        }
 //        else {
 //            self.userLogged = 2;
-//            println( "Conectado com o Facebook. \(self.userLogged)" );
+//            //println( "Conectado com o Facebook. \(self.userLogged)" );
 //        }
 //        
 //        return false;
@@ -208,31 +208,31 @@ class LoginController {
 //    }
     //------------------------------------------------------------------------------------------
 //    func logout() {
-//        print( "User logged out." );
+//        //print( "User logged out." );
 //        userLogged = 0;
 //        closeAllLoggedAccounts();
 //    }
     //------------------------------------------------------------------------------------------
 //    private func closeAllLoggedAccounts() -> () {
 //
-//        print( "Desconectando todas as contas..." );
+//        //print( "Desconectando todas as contas..." );
 //        facebookLoginManager.logOut();
 //        
 //    }
     //------------------------------------------------------------------------------------------
 //    private func facebook() -> Bool {
-//        print( "conectando com Facebook..." );
+//        //print( "conectando com Facebook..." );
 //        
 //        // Usuário não está logado
 //        if FBSDKAccessToken.currentAccessToken() == nil {
 //        
-//            print( "conectando usuário com o Facebook..." );
+//            //print( "conectando usuário com o Facebook..." );
 //            
 //            facebookLoginManager.logInWithReadPermissions( ["public_profile"], handler: {
 //                (result: FBSDKLoginManagerLoginResult!, error: NSError!) -> () in
 //
 //                if error != nil {
-//                    print( "\(error.description)" );
+//                    //print( "\(error.description)" );
 //                }
 //                
 //                if result.grantedPermissions != nil {
@@ -245,9 +245,9 @@ class LoginController {
 //        }
 //        else {
 //            self.userLogged = 2
-//            print( "Conectado com o Facebook. \(self.userLogged)" )
+//            //print( "Conectado com o Facebook. \(self.userLogged)" )
 //            self.userLogged = 2;
-//            print( "Conectado com o Facebook. \(self.userLogged)" );
+//            //print( "Conectado com o Facebook. \(self.userLogged)" );
 //        }
 //        
 //        if self.userLogged > 0 {

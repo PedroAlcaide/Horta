@@ -51,12 +51,12 @@ class ViewControllerLogin: UIViewController, ValidatorDelegate, UserManagerDeleg
         /* Valida o login do usuário, seja pelo facebook, próprio aplicativo ou outro método
            e prossegue para a tela de hortas do app */
             //if self.userLogin.getUserStatus() > 0 {
-            //print( "USUARIO AUTENTICADO" )
+            ////print( "USUARIO AUTENTICADO" )
             //self.performSegueWithIdentifier("ListaHortaSegue", sender: self)
             
         //}
 //        else {
-//            print( "USUARIO NÃO AUTENTICADO" )
+//            //print( "USUARIO NÃO AUTENTICADO" )
 //            
 //        }
     }

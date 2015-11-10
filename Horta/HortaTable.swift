@@ -35,6 +35,12 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         self.changeViews(self.segmentControl)
     }
     
+    @IBAction func back(sender: AnyObject) {
+        UserManager().logoutUser()
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
     
     @IBAction func changeViews(sender: AnyObject) {
         
@@ -50,7 +56,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         
         //self.segmentControl.selectedSegmentIndex
         
-        print("mudou view", terminator: "")
+        //print("mudou view", terminator: "")
         
     }
     
@@ -96,7 +102,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         
        dispatch_async(dispatch_get_main_queue()) { () -> Void in
         
-        var alert = UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "OK")
+        let alert = UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "OK")
         alert.show()
         
         
@@ -106,7 +112,7 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource, G
         
     }
     func gardenOperationSuccessfull(){
-        print("chamou metodo sucesso")
+        //print("chamou metodo sucesso")
     }
     func getGardensSucessful(arrayGardens:NSMutableArray){
         self.arrayGardens = arrayGardens
@@ -116,14 +122,14 @@ class HortaView: UIViewController, UITableViewDelegate, UITableViewDataSource, G
             self.table.reloadData()
         })
         
-        print("chamou metodo vetor")
+        //print("chamou metodo vetor")
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "SegueHortaDetails" {
             if let vc = segue.destinationViewController as? HortaDetailsViewController {
-                vc.garden = self.arrayGardens?.objectAtIndex(indiceVetor!) as! Garden
+                vc.garden = self.arrayGardens?.objectAtIndex(indiceVetor!) as? Garden
             }
         }
         

@@ -50,7 +50,7 @@ class UserDAOCloudKit: UserDAO{
                 if records!.count != 0 {
                     // DADOS JA CADASTRADOS
                     self.delegate?.othersErrosThrowed(ErrorManager.ERROR1)
-                    //print("usuario ja existe")
+                    ////print("usuario ja existe")
                 }
                 else {
                     
@@ -124,7 +124,7 @@ class UserDAOCloudKit: UserDAO{
             } else {
                 // USUARIO SALVO
                 user.recordID = record!.recordID
-                //print("usuario salvo")
+                ////print("usuario salvo")
                 self.delegate?.saveSuccefull(user)
                 
             }
@@ -196,7 +196,7 @@ class UserDAOCloudKit: UserDAO{
                 }else{
                     // USUARIO NAO LOCALIZADO
                     self.delegate?.othersErrosThrowed(ErrorManager.ERROR2)
-                    //print("Usuario nao localizado")
+                    ////print("Usuario nao localizado")
                 }
                 
             }else{
@@ -210,6 +210,8 @@ class UserDAOCloudKit: UserDAO{
         }
         
     }
+    
+    
     
 }
     

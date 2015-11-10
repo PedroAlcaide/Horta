@@ -80,7 +80,7 @@ class UserConfig {
     }
     //--------------------------------------------------------------------------------
     func getUserAlertColheitaRegar() -> Bool {
-        print("Colheita regar: \(userAlertColheitaRegar)");
+        //print("Colheita regar: \(userAlertColheitaRegar)");
         return userAlertColheitaRegar;
     }
     //--------------------------------------------------------------------------------
@@ -199,7 +199,7 @@ class UserConfig {
     //--------------------------------------------------------------------------------
     private func loadUserAlertColheitaAdubar() -> Bool {
         let opt: Bool? = userDefaults.boolForKey( "userAlertColheitaAdubar" );
-        print( "carregando colheita regar: \(opt)" );
+        //print( "carregando colheita regar: \(opt)" );
         if opt != nil{
             return opt!;
         }

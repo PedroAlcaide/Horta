@@ -87,10 +87,10 @@ class GardenDAOCLoudKit {
             
             if  error != nil{
                 
-                print("falar ao atualizar jardim", terminator: "")
+                //print("falar ao atualizar jardim", terminator: "")
                 
             }else{
-                print("atualizou garden", terminator: "")
+                //print("atualizou garden", terminator: "")
             }
         })
         
@@ -184,7 +184,7 @@ class GardenDAOCLoudKit {
                 
                 if (results!.count > 0){
                     
-                    var gardenArray = NSMutableArray()
+                    let gardenArray = NSMutableArray()
                     
                     for record in results!{
                         
@@ -338,13 +338,11 @@ class GardenDAOCLoudKit {
                 // error cloud kit - implementar delegate
                 self.delegate?.errorThrow("Erro ao acessar o banco de dados")
             }
-            
-            
-            
-        
+
         }
-            
         
     }
+    
+    
     
 }

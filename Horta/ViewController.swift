@@ -61,7 +61,9 @@ class ViewController: UIViewController,UserManagerDelegate, ValidatorDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        IHKeyboardAvoiding.setAvoidingView(self.view)
+        if UIDevice().modelName == "iPhone 4s"{
+            IHKeyboardAvoiding.setAvoidingView(self.view)
+        }
 
        manager = UserManager()
         manager!.delegate = self

@@ -127,7 +127,7 @@ class GardenManager : GardenDAOCKDelegate{
         
         daoCloudKit.saveRelationshipUserAndGarden(gardenReference, adminRef: userReference, isAdmin: true)
         
-        //print("gravou jardim")
+        ////print("gravou jardim")
         //self.delegate?.gardenOperationSuccessfull()
         
     }
